@@ -1,2 +1,2 @@
-# BarberShop-Manager
-Um repositório para desenvolvimento de uma plataforma de agendamento para barbearia
+# Projeto-de-Software
+Projeto da disciplina de Desenvolvimento de Software

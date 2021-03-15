@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+ 
+}
+
+header #menu {
+    display: none;
+}
+
+header .cabecalho {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .cabecalho img {
+    padding: 0;
+    margin: 25px;
+}
+
+#home h1 {
+    padding: 400px 50px;
+    margin: auto;
+    text-align: center;
+}
+
