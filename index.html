@@ -8,7 +8,9 @@
     <title>BarberShop Manager</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
 </head>
 
@@ -16,7 +18,7 @@
     <header>
         <div class="cabecalho">
             <img src="assets/img/bsmlogo.png" alt="logo barbershop">
-            <img src="assets/img/menu.png" alt="menu">
+            <img onclick="abrir_menu()" ondblclick="fechar_menu()" src="assets/img/menu.png" alt="menu">
         </div>
 
         <nav id="menu">
@@ -38,32 +40,32 @@
     </header>
     <main>
         <section id="home">
-            <h1>BarberShop Manager</h1>
-            <p>Uma software de gerenciamento de barbearias</p>
-            <button>Cadastre-se</button>
+            <div class="container-home">
+                <h1>BarberShop Manager</h1>
+                <p>Uma software para gerenciamento de barbearias</p>
+            </div>
+            <div class="botao">
+                <button>Cadastre-se</button>
+            </div>
         </section>
         <section id="servicos">
             <h2>Serviços</h2>
-            <div id="card-1">
+            <div class="container-servicos">
+                <div class="card-1">
 
-            </div>
-            <div id="card-2">
-                <img src="assets/img/servico1.png" alt="servico 1">
-            </div>
-            <div id="card-3">
+                </div>
+                <div class="card-2">
+                    <img src="assets/img/servico1.png" alt="servico 1">
+                </div>
+                <div class="card-3">
 
+                </div>
             </div>
         </section>
         <section id="galeria">
             <h2>Galeria</h2>
-            <div id="img-1">
-                <img src="assets/img/corte1.png" alt="corte de cabelo">
-            </div>
-            <div id="img-2">
-                <img src="assets/img/corte2.png" alt="corte de cabelo">
-            </div>
-            <div id="img-3">
-                <img src="assets/img/corte3.png" alt="corte de cabelo">
+            <div class="colagem">
+                <img src="assets/img/colagem.png" alt="">
             </div>
         </section>
         <section id="sobre">
@@ -74,28 +76,31 @@
         </section>
     </main>
     <footer>
-        <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca">
-        <nav id="rede-social">
-            <ul>
-                <a href="">
-                    <li>
-                        <img src="assets/img/Facebook.png" alt="facebook-barbarmanager">
-                    </li>
-                </a>
-                <a href="">
-                    <li>
-                        <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
-                    </li>
-                </a>
-                <a href="">
-                    <li>
-                        <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
-                    </li>
-                </a>
-            </ul>
-        </nav>
+        <div class="container-footer">
+            <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">
+            <nav id="rede-social">
+                <ul>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
         <p>&copy; Copyright - 2021</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
