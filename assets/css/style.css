@@ -46,6 +46,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+    
 header #menu {
     height: 100%;
     width: 0;
@@ -59,18 +63,40 @@ header #menu {
     padding-top: 60px; 
 }
 
+
 header #menu li {
     text-align: center;
-    color: white;
+    padding: 1rem;
 }
 
-header #menu li:hover {
-    color: c3c3c3;
+header #menu li a{
+    color: var(--branco);
+    display: block;
+    position: relative;
 }
 
-header #menu li:active {
-    text-align: center;
-    color: blue;
+/* hover menu, consertar */
+
+/* header #menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    width: 0;
+    height: 0.3rem;
+    background-color: var(--branco);
+    transition: all 300ms ease-in-out;
+
+}
+
+header #menu li a:hover::after {
+    width: 50%;
+    left: 25%;
+} */
+
+header .fechando_menu  {
+    position: absolute;
+    font-size: 36px;
 }
 
 h2 {
