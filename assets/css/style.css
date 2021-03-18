@@ -56,7 +56,21 @@ header #menu {
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 60px; 
+}
+
+header #menu li {
+    text-align: center;
+    color: white;
+}
+
+header #menu li:hover {
+    color: c3c3c3;
+}
+
+header #menu li:active {
+    text-align: center;
+    color: blue;
 }
 
 h2 {
