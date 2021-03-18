@@ -1,6 +1,6 @@
 * {
     /*Paleta de Cores*/
-    --cor-princial: #E26456;
+    --cor-principal: #E26456;
     --preto: #190806;
     --branco: #f2f2f2;
     --laranja1: #632C26;
@@ -61,6 +61,7 @@ header #menu {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px; 
+    font-size: 18pt;
 }
 
 
@@ -142,7 +143,7 @@ header .cabecalho img {
     margin: auto auto 100px auto;
     width: 200px;
     height: 50px;
-    background-color: var(--cor-princial);
+    background-color: var(--cor-principal);
     
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
