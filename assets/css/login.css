@@ -1,0 +1,50 @@
+/* forma do login */
+
+div.form-login{
+    width: 30%;
+    height: 60vh;
+    margin: auto auto 25px auto;
+    align-items: center;
+    text-align: left;
+}
+
+div.form-login a{
+    color: var(--preto);
+}
+
+div.form-login form {
+    font-size: 14pt;
+    background-color: var(--cinza1);
+}
+
+div.form-login form div {
+    padding: 10px 15px ;
+}
+
+div.form-login form div input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+div form label {
+    color: var(--branco);
+}
+
+/* botao do login */
+
+#botao_login button {
+    display: block;
+    margin: 5px auto auto;
+    width: 200px;
+    height: 40px;
+    background-color: var(--cor-principal);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
+    color: var(--branco);
+    text-transform: uppercase;
+}
