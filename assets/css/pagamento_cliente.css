@@ -1,0 +1,85 @@
+#formulario {
+    background: #545454;
+    width: 400px;
+    height: 900px;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.label_text_color{
+    color: #F2F2F2;
+}
+
+.button {
+    height: 50px;
+    width: 350px;;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#button_confirmar_pagamento{
+    background-color: #E26456;
+    height: 80px;
+    width: 350px;;
+    border-radius: 10px;
+    text-align: center;  
+    color: #808080;
+}
+
+#button_valor {
+    height: 50px;
+    width: 175px;;
+    border-radius: 10px;
+    text-align: center;
+    float: left;
+}
+.input_lado {
+    height: 50px;
+    width: 100px;;
+    border-radius: 10px;
+    text-align: center;
+    float: left;
+}
+
+.text_esquerda {
+    float: left;
+    color: #F2F2F2;
+}
+
+.text_direita {
+    float: center;
+    color: #F2F2F2;
+}
+
+#div_1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.drop_down {
+    height: 50px;
+    width: 350px;;
+    border-radius: 10px;
+    text-align-last: center;
+}
+
+.box_text {
+    height: 280px;
+    width: 350px;;
+    border-radius: 10px;
+    text-align: center;   
+}
+
+.button_div_1 {
+    height: 50px;
+    width: 165px;;
+    border-radius: 10px;
+    text-align: center;
+}
