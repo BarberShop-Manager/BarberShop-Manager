@@ -6,6 +6,8 @@ div.form-login{
     margin: auto auto 25px auto;
     align-items: center;
     text-align: left;
+    justify-content: center;
+    align-items: center;
 }
 
 div.form-login a{

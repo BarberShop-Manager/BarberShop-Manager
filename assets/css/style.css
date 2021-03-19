@@ -46,13 +46,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-<<<<<<< HEAD
-=======
 a {
     text-decoration: none;
 }
     
->>>>>>> 5426f9560d6da97f4cc2e955925bd35c8bcf5cb4
 header #menu {
     height: 100%;
     width: 0;
@@ -62,10 +59,7 @@ header #menu {
     right: 0;
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.5s;
-<<<<<<< HEAD
-    padding-top: 60px;
-=======
+    transition: 0.1s all ease-in-out;
     padding-top: 60px; 
     font-size: 18pt;
 }
@@ -104,13 +98,13 @@ header #menu li a:hover::after {
 header .fechando_menu  {
     position: absolute;
     font-size: 36px;
->>>>>>> 5426f9560d6da97f4cc2e955925bd35c8bcf5cb4
 }
 
 h2 {
     padding: 15px 0;
     margin: 15px 0;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*Cabeçalho*/
@@ -150,11 +144,7 @@ header .cabecalho img {
     margin: auto auto 100px auto;
     width: 200px;
     height: 50px;
-<<<<<<< HEAD
-    background-color: var(--cor-princial);
-=======
     background-color: var(--cor-principal);
->>>>>>> 5426f9560d6da97f4cc2e955925bd35c8bcf5cb4
     
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
