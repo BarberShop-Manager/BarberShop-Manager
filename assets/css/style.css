@@ -46,6 +46,15 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+header .cabecalho #icone_menu{
+    position: fixed;
+    right: 0;
+}
+
 header #menu {
     height: 100%;
     width: 0;
@@ -56,7 +65,27 @@ header #menu {
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding: 0;
+}
+
+
+
+header #menu #fechar {
+    width: 60px;
+    height: auto;
+    top: 0;
+    float: right;
+    padding: 15px;
+    margin: 25px 25px 50px 100%;
+
+    
+}
+
+header #menu ul li {
+    color: var(--branco);
+    font-size: 18pt;
+    padding: 15px;
+    text-decoration: none;  
 }
 
 h2 {
