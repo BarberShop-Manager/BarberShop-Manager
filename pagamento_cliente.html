@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BarberShop Manager</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/pagamento_cliente.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+</head>
+
+
+<body>
+
+
+    <header>
+        <div class="cabecalho">
+            <a href="index.html"><img src="assets/img/bsmlogo.png" alt="Logo"></a>
+            <img onclick="abrir_menu()" src="assets/img/menu.png" alt="menu" />
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#" class="fechando_menu" onclick="fechar_menu()">&times;</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="login_cliente.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+
+        <section id="formulario">
+
+            <form action="">
+
+                <label for="name" class="label_text_color">Nome do cliente</label>
+                <input type="text" name="email" id="name" class="button"
+                    placeholder="Digite seu nome"><br/>
+
+                <label for="" class="label_text_color">Selecionar serviço</label><br/>
+                <select id="serviço" class="drop_down">
+                    <option value="serviço_1">serviço 1</option>
+                    <option value="serviço_2">serviço 2</option>
+                    <option value="serviço_3">serviço 3</option>
+                    <option value="serviço_4">serviço 4</option>
+                </select><br/>
+                
+                <label for="date" class="text_esquerda">Data do serviço</label>
+                <label for="time" class="text_direita">Horário</label><br/>
+                    
+                <div id="div_1">
+
+                        <input type="date" name="date" id="date" class="button_div_1">
+        
+                        <input type="time" name="time" id="time" class="button_div_1">
+    
+                </div>
+
+                <br/>
+                <label for="" class="label_text_color">Selecionar forma de pagamento</label><br/>
+                <select id="pagamento" class="drop_down">
+                    <option value="serviço_1" >Cartão de crédito</option>
+                    <option value="serviço_2">Dinheiro</option>
+                    <option value="serviço_3">Boleto bancário</option>
+                    <option value="serviço_4">Cartão presente</option>
+                </select>
+
+                <label for="valor" class="text_esquerda">Valor</label><br/>
+                <input type="text" name="valor" id="button_valor" 
+                    placeholder="Digite um valor"><br/><br/><br/>
+
+                <label for="name" class="text_esquerda">Observações:</label><br/>
+                <input type="text" name="email" id="name" class="box_text">
+             
+            </form>
+            <br/><br/><br/>
+            <section>
+    
+                <button id ="button_confirmar_pagamento">CONFIRMAR PAGAMENTO</button>
+    
+            </section>
+            <br/>
+
+        </section>
+        <br/>
+
+    </main>
+    
+    
+    <footer>
+        <div class="container-footer">
+            <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer" />
+            <nav id="rede-social">
+                <ul>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager" />
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger" />
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger" />
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <p>&copy; Copyright - 2021</p>
+    </footer>
+
+    <script src="./assets/js/scripts.js"></script>
+
+
+</body>

@@ -46,6 +46,13 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+a {
+    text-decoration: none;
+}
+    
+>>>>>>> 5426f9560d6da97f4cc2e955925bd35c8bcf5cb4
 header #menu {
     height: 100%;
     width: 0;
@@ -56,7 +63,48 @@ header #menu {
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
+<<<<<<< HEAD
     padding-top: 60px;
+=======
+    padding-top: 60px; 
+    font-size: 18pt;
+}
+
+
+header #menu li {
+    text-align: center;
+    padding: 1rem;
+}
+
+header #menu li a{
+    color: var(--branco);
+    display: block;
+    position: relative;
+}
+
+/* hover menu, consertar */
+
+/* header #menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    width: 0;
+    height: 0.3rem;
+    background-color: var(--branco);
+    transition: all 300ms ease-in-out;
+
+}
+
+header #menu li a:hover::after {
+    width: 50%;
+    left: 25%;
+} */
+
+header .fechando_menu  {
+    position: absolute;
+    font-size: 36px;
+>>>>>>> 5426f9560d6da97f4cc2e955925bd35c8bcf5cb4
 }
 
 h2 {
@@ -102,7 +150,11 @@ header .cabecalho img {
     margin: auto auto 100px auto;
     width: 200px;
     height: 50px;
+<<<<<<< HEAD
     background-color: var(--cor-princial);
+=======
+    background-color: var(--cor-principal);
+>>>>>>> 5426f9560d6da97f4cc2e955925bd35c8bcf5cb4
     
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
