@@ -1,3 +1,10 @@
+/* Paleta de cores da pagina */
+*{
+    --cor-principal: #E26456;
+    --branco: #f2f2f2;
+    --cinza2: #545454;
+}
+
 #formulario {
     background: #545454;
     width: 400px;
@@ -11,7 +18,7 @@
 }
 
 .label_text_color{
-    color: #F2F2F2;
+    color: var(--branco);
 }
 
 .button {
@@ -22,12 +29,12 @@
 }
 
 #button_confirmar_pagamento{
-    background-color: #E26456;
+    background-color: var(--cor-principal);
+    color: var(--branco);
     height: 80px;
-    width: 350px;;
+    width: 350px;
     border-radius: 10px;
     text-align: center;  
-    color: #808080;
 }
 
 #button_valor {
@@ -82,4 +89,112 @@
     width: 165px;;
     border-radius: 10px;
     text-align: center;
+}
+
+/* estilo do modal */
+
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+
+.modal {
+    background: var(--cinza2);
+    width: 332px;
+    min-width: 300px;
+    height: 496px;
+    min-height: 300px;
+    padding: 40px;
+    border-radius: 8px;
+    position: relative;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrar .modal {
+    animation: modal 0.3s;
+}
+
+.fechar{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: 18pt;
+    color: #c3c3c3;
+    top: 0;
+    right: 0;
+    background: none;
+}
+
+button.button-confirm{
+    display: block;
+    margin: 0 auto auto;
+    width: 130px;
+    height: 52px;
+    background-color: var(--cor-principal);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
+    color: var(--branco);
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.img_func{
+    margin: -30px 0 5px 25%;
+    border-radius: 100%;
+    width: 117px;
+    height: 119px;
+}
+
+#hora_notifica {
+    margin: 30px 0 0 0;
+    text-align: center;
+    color: var(--branco);
+    font-size: 18;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p.p_notifica {
+    background: var(--branco);
+    margin: 15px auto;
+    text-align: center;
+    width: 35vh;
+    height: 30px;
+    border-radius: 8px;
+}
+
+p.text_1{
+    display:inline;
+    margin: 0 30px 0px 10px;
+    padding: 7px 15px ;
+}
+
+p.text_2{
+    display: inline;
+    padding: 7px 20px;
 }

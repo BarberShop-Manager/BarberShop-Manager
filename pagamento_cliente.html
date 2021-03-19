@@ -35,8 +35,6 @@
         </nav>
     </header>
 
-    
-
     <main>
 
         <section id="formulario">
@@ -85,9 +83,7 @@
             </form>
             <br/><br/><br/>
             <section>
-    
                 <button id ="button_confirmar_pagamento">CONFIRMAR PAGAMENTO</button>
-    
             </section>
             <br/>
 
@@ -123,7 +119,26 @@
         <p>&copy; Copyright - 2021</p>
     </footer>
 
-    <script src="./assets/js/scripts.js"></script>
+    <div id="modal-notifica-pagamento" class="modal-container">
+        <div class="modal">
+            <button class="fechar">&times;</button>
+            <img src="/assets/img/gustavo.jpg" alt="foto do funcionário" class="img_func">
+            
+                <p type="text" class="p_notifica" placeholder="nome">Gustavo Martins</p>
+                <p type="text" class="p_notifica" placeholder="Descrição do Serviço prestando">Corte de Cabelo</p>
+                <p type="number" class="p_notifica text_1" placeholder="Valor">R$ 25,00</p>
+                <p type="text" class="p_notifica text_2" placeholder="Forma de Pagamento">Dinheiro</p>
+                <p  class="p_notifica">Josealdo da Silva</p>
+                <form action="pagamento_cliente.html" method="get">
+                <div>
+                    <button type="submit" value="confirma" class="button-confirm">Confimar</button>
+                </div>
+                <p id="hora_notifica">09:00:00</p>
+            </form>
+        </div>
+    </div>
 
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/modal_pagina_pagamento.js"></script>
 
 </body>
