@@ -177,7 +177,7 @@ header .cabecalho img {
     margin: 15px auto;
 }
 
-
+/*Galeria*/
 
 #galeria .colagem {
     background-image: url("/assets/img/colagem_desktop.png");
@@ -187,12 +187,19 @@ header .cabecalho img {
     background-color: var(--laranja1);
 }
 
+/*Sobre*/
+
 #sobre p {
     text-align: center;
     padding: 25px;
 }
 
+/*Rodape*/
+
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: var(--laranja3);
 }
 
