@@ -15,79 +15,104 @@
 </head>
 
 <body>
-    <header>
-        <div class="cabecalho">
-            <img src="assets/img/bsmlogo.png" alt="logo barbershop">
-            <img onclick="abrir_menu()" ondblclick="fechar_menu()" src="assets/img/menu.png" alt="menu">
-        </div>
+    <!DOCTYPE html>
+    <html lang="pt-br">
 
-        <nav id="menu">
-            <ul>
-                <a href="">
-                    <li>Home</li>
-                </a>
-                <a href="">
-                    <li>Serviços</li>
-                </a>
-                <a href="">
-                    <li>Galeria</li>
-                </a>
-                <a href="">
-                    <li>Sobre</li>
-                </a>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <div class="menuAdm">
-                <div class="cartao-1">
-                    <a href="tabela_de_funcionarios.html"><img src="" alt=""></a>
-                </div>
-                <div class="cartao-2">
-                    <a href="agendamento.htm"><img src="" alt=""></a>
-                </div>
-                <div class="cartao-3">
-                    <img src="" alt="">
-                </div>
-                <div class="cartao-4">
-                    <img src="" alt="">
-                </div>
-                <div class="cartao-5">
-                    <img src="" alt="">
-                </div>
-                <div class="cartao-6">
-                    <img src="" alt="">
-                </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BarberShop Manager</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/menu_principal.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="cabecalho">
+                <img src="assets/img/bsmlogo.png" alt="logo barbershop">
+                <img id="icone_menu" onclick="abrir_menu()" src="assets/img/menu.png" alt="menu">
             </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container-footer">
-            <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">
-            <nav id="rede-social">
+            <nav id="menu">
+                <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
                 <ul>
-                    <a href="">
-                        <li>
-                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager">
-                        </li>
+                    <a href="#home">
+                        <li>Home</li>
                     </a>
-                    <a href="">
-                        <li>
-                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
-                        </li>
+                    <a href="#servicos">
+                        <li>Serviços</li>
                     </a>
-                    <a href="">
-                        <li>
-                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
-                        </li>
+                    <a href="#galeria">
+                        <li>Galeria</li>
+                    </a>
+                    <a href="#sobre">
+                        <li>Sobre</li>
                     </a>
                 </ul>
             </nav>
-        </div>
-        <p>&copy; Copyright - 2021</p>
-    </footer>
-    <script src="./assets/js/scripts.js"></script>
-</body>
+            <div id="esconder" onclick="fechar_menu()">
 
-</html>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div class="menuCliente">
+                    <a href="tabela_de_funcionarios.html">
+                        <div class="cartao-1">
+                            <img src="assets/img/servico2.png" alt="">
+                        </div>
+                    </a>
+                    <a href="agendamento.htm">
+                        <div class="cartao-2">
+                            <img src="assets/img/servico2.png" alt="">
+                        </div>
+                    </a>
+                    <div class="cartao-3">
+                        <img src="" alt="">
+                    </div>
+                    <div class="cartao-4">
+                        <img src="" alt="">
+                    </div>
+                    <div class="cartao-5">
+                        <img src="" alt="">
+                    </div>
+                    <div class="cartao-6">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container-footer">
+                <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">
+                <nav id="rede-social">
+                    <ul>
+                        <a href="">
+                            <li>
+                                <img src="assets/img/Facebook.png" alt="facebook-barbarmanager">
+                            </li>
+                        </a>
+                        <a href="">
+                            <li>
+                                <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
+                            </li>
+                        </a>
+                        <a href="">
+                            <li>
+                                <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
+                            </li>
+                        </a>
+                    </ul>
+                </nav>
+            </div>
+            <p>&copy; Copyright - 2021</p>
+        </footer>
+        <script src="./assets/js/scripts.js"></script>
+    </body>
+
+    </html>

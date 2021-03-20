@@ -1,0 +1,20 @@
+@charset "UTF-8"; 
+
+body main section {
+    padding: 100px 0;
+}
+
+body main section .menuCliente {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+body main section .menuCliente [class^="cartao"] {
+    height: 150px;
+    width: 150px;
+    background-color: var(--cinza2);
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 8px;
+}
+

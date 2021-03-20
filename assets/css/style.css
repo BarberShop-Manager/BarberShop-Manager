@@ -1,38 +1,40 @@
-* {
-    /*Paleta de Cores*/
-    --cor-principal: #E26456;
-    --preto: #190806;
-    --branco: #f2f2f2;
-    --laranja1: #632C26;
-    --laranja2: #634744;
-    --laranja3: #B04E43;
-    --laranja4: #E8A59E;
-    --vermelho1: #632626;
-    --vermelho2: #634444;
-    --vermelho3: #B04343;
-    --vermelho4: #E25656;
-    --vermelho5: #E89E9E;
-    --amarelo1: #635926;
-    --amarelo2: #635E44;
-    --amarelo3: #B09E43;
-    --amarelo4: #E2CB56;
-    --amarelo5: #E8DC9E;
-    --verde1: #3A6326;
-    --verde2: #4E6344;
-    --verde3: #67B043;
-    --verde4: #85E256;
-    --verde5: #B7E89E;
-    --azul1: #264F63;
-    --azul2: #438CB0;
-    --azul3: #445963;
-    --azul4: #56B3E2;
-    --azul5: #9ECFE8;
-    --cinza1: #454545;
-    --cinza2: #545454;
-    --cinza3: #7A7A7A;
-    --cinza4: #9C9C9C;
-    --cinza5: #C3C3C3;
+:root {
+        /*Paleta de Cores*/
+        --cor-principal: #E26456;
+        --preto: #190806;
+        --branco: #f2f2f2;
+        --laranja1: #632C26;
+        --laranja2: #634744;
+        --laranja3: #B04E43;
+        --laranja4: #E8A59E;
+        --vermelho1: #632626;
+        --vermelho2: #634444;
+        --vermelho3: #B04343;
+        --vermelho4: #E25656;
+        --vermelho5: #E89E9E;
+        --amarelo1: #635926;
+        --amarelo2: #635E44;
+        --amarelo3: #B09E43;
+        --amarelo4: #E2CB56;
+        --amarelo5: #E8DC9E;
+        --verde1: #3A6326;
+        --verde2: #4E6344;
+        --verde3: #67B043;
+        --verde4: #85E256;
+        --verde5: #B7E89E;
+        --azul1: #264F63;
+        --azul2: #438CB0;
+        --azul3: #445963;
+        --azul4: #56B3E2;
+        --azul5: #9ECFE8;
+        --cinza1: #454545;
+        --cinza2: #545454;
+        --cinza3: #7A7A7A;
+        --cinza4: #9C9C9C;
+        --cinza5: #C3C3C3;
+}
 
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -46,6 +48,15 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+header .cabecalho #icone_menu{
+    position: fixed;
+    right: 0;
+}
+
 header #menu {
     height: 100%;
     width: 0;
@@ -53,10 +64,43 @@ header #menu {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: var(--cinza2);
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding: 0;
+}
+
+header #menu #fechar {
+    height: auto;
+    width: 50px;
+    float: right;
+    overflow-x: hidden;
+    margin: 25px;
+}
+
+header #menu ul a li {
+    width: auto;
+    height: auto;
+    color: var(--branco);
+    font-size: 18pt;
+    padding: 15px;
+    text-decoration: none;  
+}
+
+header #menu ul {
+    margin-top: 100px;
+}
+
+header #esconder {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    background-color: rgba(25, 8, 6, 0.25);
+    overflow-x: hidden;
+    padding: 0;
 }
 
 h2 {
@@ -97,12 +141,12 @@ header .cabecalho img {
     text-align: center;
 }
 
-#home .botao button {
+#home button {
     display: block;
-    margin: auto auto 100px auto;
+    margin: auto auto 50px auto;
     width: 200px;
     height: 50px;
-    background-color: var(--cor-princial);
+    background-color: var(--cor-principal);
     
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
@@ -135,9 +179,12 @@ header .cabecalho img {
 
 
 
-#galeria .colagem img {
-    width: 100%;
-    height: auto;
+#galeria .colagem {
+    background-image: url("/assets/img/colagem_desktop.png");
+    background-position: center;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-color: var(--laranja1);
 }
 
 #sobre p {
@@ -146,6 +193,8 @@ header .cabecalho img {
 }
 
 footer {
+    bottom: 0;
+    width: 100%;
     background-color: var(--laranja3);
 }
 
@@ -176,3 +225,17 @@ footer .container-footer #rede-social ul li {
     margin: 5px;
 }
 
+/*Alterações do css para versão Desktop*/
+
+@media only screen and (min-width: 1366px) {
+    #home .container-home {
+        padding: 100px 50px;
+    }
+    #home button {
+        margin-bottom: 200px;
+    }
+    header #menu ul a li:hover {
+        background-color: var(--preto);
+    }
+    
+  }

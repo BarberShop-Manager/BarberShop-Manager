@@ -18,31 +18,34 @@
     <header>
         <div class="cabecalho">
             <img src="assets/img/bsmlogo.png" alt="logo barbershop">
-            <img onclick="abrir_menu()" ondblclick="fechar_menu()" src="assets/img/menu.png" alt="menu">
+            <img id="icone_menu" onclick="abrir_menu()" src="assets/img/menu.png" alt="menu">
         </div>
-
         <nav id="menu">
+            <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
             <ul>
-                <a href="">
+                <a href="#home">
                     <li>Home</li>
                 </a>
-                <a href="">
+                <a href="#servicos">
                     <li>Serviços</li>
                 </a>
-                <a href="">
+                <a href="#galeria">
                     <li>Galeria</li>
                 </a>
-                <a href="">
+                <a href="#sobre">
                     <li>Sobre</li>
                 </a>
             </ul>
         </nav>
+        <div id="esconder" onclick="fechar_menu()">
+
+        </div>
     </header>
     <main>
         <section id="buscador_funcionario">
             <div cass="divBusca_fun">
-                <input type="text" id="texbusca" placeholder="Funcionário..."/>
-                <img src="asset/img/Buscar.png" id="btnBusca" alt="Buscar"/>
+                <input type="text" id="texbusca" placeholder="Funcionário..." />
+                <img src="asset/img/Buscar.png" id="btnBusca" alt="Buscar" />
             </div>
         </section>
         <section id="dropFuncionarios">
@@ -57,7 +60,7 @@
         </section>
         <section id="Funcionarios">
             <div>
-<!-- perfil dos funcionários com sua devida avaliação-->
+                <!-- perfil dos funcionários com sua devida avaliação-->
             </div>
         </section>
     </main>

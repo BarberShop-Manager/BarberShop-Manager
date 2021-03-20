@@ -1,8 +1,9 @@
 /* forma do login */
 
 div.form-login{
-    width: 30%;
-    height: 60vh;
+    width: 60%;
+    height: auto;
+    padding: 150px 0;
     margin: auto auto 25px auto;
     align-items: center;
     text-align: left;
