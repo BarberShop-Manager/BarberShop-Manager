@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarberShop Manager</title>
+    
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,9 +21,8 @@
             <img src="assets/img/bsmlogo.png" alt="logo barbershop">
             <img id="icone_menu" onclick="abrir_menu()" src="assets/img/menu.png" alt="menu">
         </div>
-
         <nav id="menu">
-            <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar-branco.png" alt="fechar">
+            <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
             <ul>
                 <a href="#home">
                     <li>Home</li>
@@ -38,6 +38,9 @@
                 </a>
             </ul>
         </nav>
+        <div id="esconder" onclick="fechar_menu()">
+
+        </div>
     </header>
     <main>
         <section id="home">
@@ -64,7 +67,7 @@
         <section id="galeria">
             <h2>Galeria</h2>
             <div class="colagem">
-                <img src="assets/img/colagem.png" alt="">
+
             </div>
         </section>
         <section id="sobre">

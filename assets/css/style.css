@@ -64,30 +64,43 @@ header #menu {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: var(--cinza2);
     overflow-x: hidden;
     transition: 0.5s;
     padding: 0;
 }
 
-
-
 header #menu #fechar {
-    width: 60px;
     height: auto;
-    top: 0;
+    width: 50px;
     float: right;
-    padding: 15px;
-    margin: 25px 25px 50px 100%;
-
-    
+    overflow-x: hidden;
+    margin: 25px;
 }
 
-header #menu ul li {
+header #menu ul a li {
+    width: auto;
+    height: auto;
     color: var(--branco);
     font-size: 18pt;
     padding: 15px;
     text-decoration: none;  
+}
+
+header #menu ul {
+    margin-top: 100px;
+}
+
+header #esconder {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    background-color: rgba(25, 8, 6, 0.25);
+    overflow-x: hidden;
+    padding: 0;
 }
 
 h2 {
@@ -166,9 +179,12 @@ header .cabecalho img {
 
 
 
-#galeria .colagem img {
-    width: 100%;
-    height: auto;
+#galeria .colagem {
+    background-image: url("/assets/img/colagem_desktop.png");
+    background-position: center;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-color: var(--laranja1);
 }
 
 #sobre p {
@@ -206,3 +222,18 @@ footer .container-footer #rede-social ul {
 footer .container-footer #rede-social ul li {
     margin: 5px;
 }
+
+/*Alterações do css para versão Desktop*/
+
+@media only screen and (min-width: 1366px) {
+    #home .container-home {
+        padding: 100px 50px;
+    }
+    #home button {
+        margin-bottom: 200px;
+    }
+    header #menu ul a li:hover {
+        background-color: var(--preto);
+    }
+    
+  }
