@@ -18,3 +18,46 @@ body main section .menuCliente [class^="cartao"] {
     border-radius: 8px;
 }
 
+body main section .menuCliente img {
+    width: 100%;
+}
+
+body footer {
+    bottom:0;
+    width:100%;
+}
+
+@media only screen and (min-width: 720px) {
+    body main section .menuCliente {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }  
+    
+    body main section .menuCliente [class^="cartao"] {
+        height: 200px;
+        width: 200px;
+        background-color: var(--cinza2);
+        padding: 15px;
+        margin: 15px auto;
+        border-radius: 8px;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    body main section .menuCliente {
+        display: grid;
+        width: 60%;
+        margin: auto;
+        grid-template-columns: auto auto auto;
+    }  
+    
+    body main section .menuCliente [class^="cartao"] {
+        height: 200px;
+        width: 200px;
+        background-color: var(--cinza2);
+        padding: 15px;
+        margin: 15px auto;
+        border-radius: 8px;
+    }
+
+  }

@@ -9,6 +9,7 @@
     <title>BarberShop Manager</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/cadastro_cliente.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -44,62 +45,57 @@
         </div>
     </header>
 
-    <section id="cadastro_cliente">
-        <div>
-            <H3>Nome</H3>
-            <input type="text">
-            <h3>Email</h3>
-            <input type="email" name="Login">
-            <h3>Senha</h3>
-            <input type="password" name="Senha">
-            <h3>Confirmar Senha</h3>
-            <input type="password" name="Senha"> <br>
-        </div>
-
-        <div>
-            <a href="cladastro_cliente_sucesso.html">
-                <button>
-                    <h3>Cadastro Acerto</h3>
-                </button>
-            </a>
-
-            <a href="cadastro_cliente_Fail.html">
-                <button>
-                    <h3>Cadastro Erro</h3>
-                </button>
-            </a>
-
-        </div>
-
-        </header>
-
-        <footer>
-            <div class="container-footer">
-                <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">
-                <nav id="rede-social">
-                    <ul>
-                        <a href="">
-                            <li>
-                                <img src="assets/img/Facebook.png" alt="facebook-barbarmanager">
-                            </li>
-                        </a>
-                        <a href="">
-                            <li>
-                                <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
-                            </li>
-                        </a>
-                        <a href="">
-                            <li>
-                                <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
-                            </li>
-                        </a>
-                    </ul>
-                </nav>
+    <section class="cadastro_cliente">
+        <form action="">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text">
             </div>
-            <p>&copy; Copyright - 2021</p>
-        </footer>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="Login">
+            </div>
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" name="Senha">
+            </div>
+            <div>
+                <label for="confirmarsenha">Confimar Senha:</label>
+                <input type="password" name="Senha"> <br>
+            </div>
+            <div id="botao_cadastro">
+                <button>Cadastrar</button>
+            </div>
+        </form>
 
-        <script src="./assets/js/scripts.js"></script>
+    </section>
+    <footer>
+        <div class="container-footer">
+            <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">
+            <nav id="rede-social">
+                <ul>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <p>&copy; Copyright - 2021</p>
+    </footer>
+
+    <script src="./assets/js/scripts.js"></script>
 
 </body>
 
