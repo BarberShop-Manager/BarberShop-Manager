@@ -1,0 +1,87 @@
+h4 {
+    color: var(--branco);
+}
+
+.lista-de-funcionarios {
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.lista-de-funcionarios .busca {
+    display: flex;
+    align-items: center;
+}
+
+.lista-de-funcionarios .busca img{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.lista-de-funcionarios .busca input {
+    width: 100%;
+    height: 50px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14pt;
+    background-color: var(--branco);
+    border: 1px solid var(--preto);
+}
+
+.lista-de-funcionarios .container-funcionarios [class^="card-funcionario"] {
+    background-color: var(--cinza2);
+    border-radius: 8px;
+    display: flex;
+    margin: 50px auto;
+    
+}
+
+.lista-de-funcionarios .container-funcionarios .body-card {
+    padding: 15px;
+}
+
+.lista-de-funcionarios .container-funcionarios .body-card img {
+    border-radius: 8px;
+}
+
+.lista-de-funcionarios .container-funcionarios .body-card a {
+    color: var(--branco);
+    text-decoration: underline;
+}
+
+.lista-de-funcionarios .container-funcionarios p {
+    text-align: center;
+}
+
+.lista-de-funcionarios .container-funcionarios p a {
+    text-decoration: underline;
+    color: var(--preto);
+}
+
+/*Alterações do css para versão Tablet*/
+
+@media only screen and (min-width: 992px) {
+    .lista-de-funcionarios {
+        border-radius: 8px;
+        display: block;
+        width: 40%;
+        height: auto;
+        text-align: left;
+    
+    }
+  }
+
+/*Alterações do css para versão Desktop*/
+
+@media only screen and (min-width: 1366px) {
+    .lista-de-funcionarios {
+        border-radius: 8px;
+        display: block;
+        width: 50%;
+        height: auto;
+        text-align: left;
+
+    }
+}
