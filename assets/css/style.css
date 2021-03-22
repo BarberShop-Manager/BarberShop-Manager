@@ -1,4 +1,4 @@
-* {
+:root {
     /*Paleta de Cores*/
     --cor-principal: #E26456;
     --preto: #190806;
@@ -33,6 +33,9 @@
     --cinza4: #9C9C9C;
     --cinza5: #C3C3C3;
 
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -40,7 +43,6 @@
     border: none;
     list-style-type: none;
 }
-
 body {
     background-color: var(--branco);
     font-family: 'Open Sans', sans-serif;

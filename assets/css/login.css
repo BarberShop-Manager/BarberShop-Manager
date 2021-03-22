@@ -1,44 +1,52 @@
 /* forma do login */
+a{
+    color: black;
+}
 
-div.form-login{
-    width: 30%;
-    height: 60vh;
-    margin: auto auto 25px auto;
-    align-items: center;
-    text-align: left;
+.login{
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 70vh;
 }
 
-div.form-login a{
-    color: var(--preto);
+.login-container{
+    min-height: 300px;
+    width: 320px;
+    box-sizing: border-box;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
 }
 
-div.form-login form {
-    font-size: 14pt;
-    background-color: var(--cinza1);
-}
-
-div.form-login form div {
-    padding: 10px 15px ;
-}
-
-div.form-login form div input {
+.login-form{
     width: 100%;
-    padding: 0.5rem;
+    background: var(--cinza1);
+    display: flex;
+    flex-direction: column;
+    color: var(--branco);
+    padding: 32px;
     border-radius: 8px;
-    margin: 10px 0;
+    align-items: center;
 }
 
-div form label {
-    color: var(--branco);
+.login-form label{
+    margin-top: 20px;
 }
+
+.login_input {
+    height: 40px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 14pt;
+}
+
 
 /* botao do login */
 
-#botao_login button {
+.botao_login{
     display: block;
-    margin: 5px auto auto;
+    margin: 20% auto auto;
     width: 200px;
     height: 40px;
     background-color: var(--cor-principal);
