@@ -9,6 +9,7 @@
     <title>BarberShop Manager</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/perfil_cliente.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -43,29 +44,58 @@
 
         </div>
     </header>
-
-    <section>
-        <p>
-            <img src="assets/img/gabriel1.png" alt="">
-        </p>
-        <div id="Perfil_cliente">
-            <h3>Nome</h3>
-            <input type="text">
-            <h3>Email</h3>
-            <input type="email" name="Login">
-            <h3>Senha</h3>
-            <input type="password" name="Senha">
-            <h3>Telefone</h3>
-            <input type="number">
-            <p>
-                <a href=""><button>
-                        <h3>Salvar</h3>
-                    </button></a>
-            </p>
-        </div>
-
-    </section>
-
+    <main>
+        <section class="perfil-cliente">
+            <div class="grupo-forms">
+                <form id="dados-atuais" action="/action_page.php">
+                    <img src="assets/img/gabriel1.png" alt="">
+                    <fieldset>
+                        <legend>Perfil:</legend>
+                        <div>
+                            <label for="fname">Primeiro Nome:</label>
+                            <input type="text" id="fname" name="fname" value="Gabriel" disabled>
+                        </div>
+                        <div>
+                            <label for="lname">Último nome:</label>
+                            <input type="text" id="lname" name="lname" value="Ferreira" disabled>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" value="ferreira@email.com" disabled>
+                        </div>
+                        <div>
+                            <label for="birthday">Aniversário:</label>
+                            <input type="date" id="aniversaio" name="aniversario" value="2001-08-04" disabled>
+                        </div>
+                    </fieldset>
+                    <div id="botao-alterar">
+                        <button>Alterar dados</button>
+                    </div>
+                </form>
+                <form id="alterar-dados" action="/action_page.php">
+                    <div>
+                        <label for="fname">Primeiro Nome:</label>
+                        <input type="text" id="fname" name="fname" value="Gabriel">
+                    </div>
+                    <div>
+                        <label for="lname">Último nome:</label>
+                        <input type="text" id="lname" name="lname" value="Ferreira">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="ferreira@email.com">
+                    </div>
+                    <div>
+                        <label for="birthday">Aniversário:</label>
+                        <input type="date" id="aniversaio" name="aniversario" value="2001-08-04">
+                    </div>
+                    <div id="alterar">
+                        <button>Alterar dados</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="container-footer">
             <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">

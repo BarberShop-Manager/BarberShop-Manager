@@ -1,0 +1,117 @@
+body main .perfil-cliente {
+    border-radius: 8px;
+    width: 90%;
+    height: auto;
+    padding: 50px 0;
+    margin: auto auto 25px auto;
+    text-align: left;
+}
+
+body main .perfil-cliente img {
+    display: block;
+    margin: auto;
+}
+
+body main .perfil-cliente .grupo-forms {
+    display: flex;
+    justify-content: center;
+}
+
+body main .perfil-cliente form {
+    width: 80%;
+    height: auto;
+    font-size: 14pt;
+    border-radius: 8px;
+    margin: 25px;
+}
+
+body main .perfil-cliente #alterar-dados {
+    display: none;
+    background-color: var(--cinza2);
+    padding: 25px;
+}
+
+body main .perfil-cliente #alterar-dados label {
+    color: var(--branco);
+}
+
+body main .perfil-cliente form fieldset {
+    background-color: #eeeeee;
+    border: 1px solid var(--preto);
+}
+  
+body main .perfil-cliente form fieldset legend {
+    margin: 25px;
+    padding: 25px;
+}
+
+body main .perfil-cliente form div {
+    padding: 10px 15px ;
+}
+
+body main .perfil-cliente form div input {
+    width: 100%;
+    height: 50px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14pt;
+}
+  
+body main .perfil-cliente form input:disabled {
+    background: #dddddd;
+}
+
+/* Botao alterar */
+
+#botao-alterar button {
+    display: block;
+    margin: 25px auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--cor-principal);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
+    color: var(--branco);
+    text-transform: uppercase;
+}
+
+#alterar button {
+    display: none;
+    margin: 25px auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--cor-principal);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
+    color: var(--branco);
+    text-transform: uppercase;
+}
+
+/*Alterações do css para versão Tablet*/
+
+@media only screen and (min-width: 992px) {
+
+}
+
+/*Alterações do css para versão Desktop*/
+
+@media only screen and (min-width: 1366px) {
+    body main .perfil-cliente #alterar-dados {
+        display: block;
+    }
+
+    #botao-alterar button {
+        display: none;
+    }
+
+    #alterar button {
+        display: block;
+    }
+}

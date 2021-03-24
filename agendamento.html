@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarberShop Manager</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/agendamento_cliente.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -42,14 +43,13 @@
         </div>
     </header>
     <main>
-        <section id="home">
-            <div class=TabAgendamento>
+        <section class="container-agendamento">
+            <form>
                 <div class=nome-func>
-                    <h2>Nome do funcionário</h2><br>
+                    <label>Nome do funcionário</label><br>
                     <input type="text">
                 </div>
                 <div class=SlctServiço>
-                    <h2>Selecione um serviço</h2><br>
                     <label for="serviços">Esscolha um serviço</label>
                     <select name="serviços" id="serviços">
                         <option value="serviço1">serviço1</option>
@@ -57,37 +57,41 @@
                         <option value="serviço3">serviço3</option>
                     </select>
                 </div>
-                <div class="DataServiço">
-                    <h2>Data do serviço</h2>
-                    <input type="text">
-                </div>
-                <div class="HourServiço">
-                    <h2>Horário</h2>
-                    <input type="text">
+                <div class="data-hora">
+                    <div class="DataServiço">
+                        <label>Data do serviço</label>
+                        <input type="date">
+                    </div>
+                    <div class="hora-servico">
+                        <label>Horário</label>
+                        <input type="time">
+                    </div>
                 </div>
                 <div class="slctFormPagamento">
-                    <input type="text" placeholder="Selecionde a forma de pagamento">
-                </div>
-                <div class="DDD">
-                    <input type="text" placeholder="DDD">
+                    <label for="pagmanento">Esscolha um serviço</label>
+                    <select name="pagmanento" id="pagamento">
+                        <option value="serviço1">Dinheiro</option>
+                        <option value="serviço2">Cartão</option>
+                        <option value="serviço3">Boleto</option>
+                    </select>
                 </div>
                 <div class="numero">
-                    <input type="text" placeholder="Número">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" placeholder="(DDD)999999999">
                 </div>
                 <div class="OBS">
-                    <h2>Observações:</h2>
-                    <input type="text">
+                    <label>Observações:</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
-                <div class="btnConfimarAgendamento">
-                    <a href="agendamento_sucesso.html"><button>Confirmar<br>agendamento</button></a>
+                <div class="grupo-botao">
+                    <div id="botao-agend-confirm">
+                        <a href="agendamento_sucesso.html"><button>Confirmar Agendamento</button></a>
+                    </div>
+                    <div id="botao-agend-cancel">
+                        <button>Cancelar Pagamento</button>
+                    </div>
                 </div>
-                <div class="btnConfimarAgendamento-Fail">
-                    <a href="agendamento_falha.html"><button>Confirmar<br>agendamento(falha)</button></a>
-                </div>
-                <div class="CancelarAgendamento">
-                    <a href="menu_principal_administrador.html"><button>Cancelar<br>agendamento</button></a>
-                </div>
-            </div>
+            </form>
         </section>
     </main>
     <footer>
