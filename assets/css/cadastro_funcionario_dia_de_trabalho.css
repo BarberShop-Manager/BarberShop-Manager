@@ -1,0 +1,78 @@
+.container-main {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-container{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    background: var(--branco);
+    padding: 0px 20px;
+    min-height: 400px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: left;
+
+}
+
+.dias_de_trabalho{
+    font-size: 28px;
+    text-align: center;
+    background-color:#454545;
+    margin:10px auto;
+    width: 90%;
+    height: 100%; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+
+}
+
+.dia{
+    margin: 5px;
+}
+
+.box-container div h2{
+    text-align: left;
+    padding: 0px;
+}
+
+
+
+.dias_de_trabalho hr{
+    border: 2px solid #E26456;
+    
+
+}
+
+
+.botao_confirmacao {
+    
+    position: absolute;
+    
+    width: 725px;
+
+
+}
+    
+
+#confirm{
+    display: block;
+    margin: auto auto 100px auto;
+    width: 211px;
+    height: 80px;
+    background-color: #E26456;
+    margin: 24px auto;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 17pt;
+    text-transform: uppercase;
+
+}
