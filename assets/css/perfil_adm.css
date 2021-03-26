@@ -1,0 +1,20 @@
+*{
+    --cinza2: #545454;
+    --cinza3: #7A7A7A;
+}
+
+
+.foto_adm{
+    text-align: center;
+}
+
+.container{
+    display: block;
+    background-color: var(--cinza2) ;
+    border-radius: 8px;
+    box-shadow: 0 2px 23px var(--cinza3);
+    width: 499px;
+    height: 540;
+    margin: 20px;
+    position: relative;
+}
