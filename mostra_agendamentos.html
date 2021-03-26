@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/menu_principal.css">
+    <link rel="stylesheet" href="assets/css/mostra_agenda.css">
+    <link href='./assets/css/agenda.compac.css' rel='stylesheet' />
+
     <title>BarberShop Manger</title>
 </head>
+
 <body>
     <header>
         <div class="cabecalho">
@@ -28,38 +32,17 @@
     </header>
 
     <main>
-        <div class="content">
-            <div class="card">
-                <div class="meio-Card"></div>
-                <div class="baixoCard" >
-                    <h2><a href="mostra_agendamentos.html">Atendimentos do Dia</a></h2>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="meio-Card" id="pag_card"></div>
-                <div class="baixoCard" >
-                    <h2><a href="pagamento_cliente.html">Pagamento do Cliente</a></h2>
-                </div>
-            </div>
+        <div class="container">
+            <div id="calendar"></div>
         </div>
 
-        <div class="content">
-            <div class="card">
-                <div class="meio-Card" id="hist_corte"></div>
-                <div class="baixoCard">
-                    <h2><a href="#">Histórico de Cortes</a></h2>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="meio-Card" id="perfil_func"></div>
-                <div class="baixoCard">
-                    <h2><a href="perfil_funcionario.html">Meu Perfil</a></h2>
-                </div>
-            </div>
+        <div>
+            <h2>Filtro de Clientes</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos voluptatum ex praesentium
+                perferendis
+                dolorem inventore voluptatibus nihil, temporibus animi suscipit veniam, quam non necessitatibus libero
+                officiis natus harum quae?.</p>
         </div>
-
     </main>
 
     <footer>
@@ -67,19 +50,19 @@
             <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer" />
             <nav id="rede-social">
                 <ul>
-                    <a href="">
+                    <a href="#">
                         <li>
                             <img src="assets/img/Facebook.png" alt="facebook-barbarmanager" />
                         </li>
                     </a>
-                    <a href="">
+                    <a href="#">
                         <li>
-                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
+                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger" />
                         </li>
                     </a>
-                    <a href="">
+                    <a href="#">
                         <li>
-                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
+                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger" />
                         </li>
                     </a>
                 </ul>
@@ -87,6 +70,12 @@
         </div>
         <p>&copy; Copyright - 2021</p>
     </footer>
+
+
     <script src="./assets/js/scripts.js"></script>
-</body>
+    <script src="./assets/js/mostra_agenda.js"></script>
+    <script src='./assets/js/agenda.compac.js'></script>
+    <script src="./assets/locale/pt-br.js"></script>
+
+
 </html>
