@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let calendar = new FullCalendar.Calendar(calendarEl, {
       headerToolbar: {
-        left: 'prev,next today',
+        left: 'prev,next',
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
       initialDate: '2020-09-12',
       navLinks: true, // can click day/week names to navigate views
       eventlimit:true,
-      dayMaxEvents: true, 
       events: [
         {
           title: 'Business Lunch',
