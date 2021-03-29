@@ -1,0 +1,47 @@
+.container{
+    background: gray;  
+    text-align: center;
+    
+}
+
+
+#cadastro_cliente_fail{
+    text-align: center;
+   margin-top: 15%;
+   background-color: white;
+   margin-left: 40%;
+   margin-right: 40%;
+   border-radius: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+
+   
+
+}
+
+
+.botao-fail{
+    margin: 4%;
+    padding: 10px;
+    background-color:#E25656ed;
+    font-size: 110%;
+    border-radius: 8px;
+    width: 70%;
+
+}
+
+.botao-sucess{
+    margin: 4%;
+    padding: 10px;
+    background-color:#B7E89E;
+    font-size: 110%;
+    border-radius: 8px;
+    width: 40%;
+}
+
+
+.box{
+    padding: 10px;
+    margin: 25px;
+    border-radius: 8px;
+}
