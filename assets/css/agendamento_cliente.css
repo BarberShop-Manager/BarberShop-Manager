@@ -88,6 +88,65 @@ body main .container-agendamento form .data-hora {
     text-transform: uppercase;
 }
 
+
+/*Estilo do modal*/
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+.modal {
+    background: var(--branco);
+    width: 60%;
+    max-width: 300px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 5px 5px rgba(0, 0, 0, .5);
+    text-align: center;
+    position: relative;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+.mostrar .modal {
+    animation: modal .3s;
+}
+
+.fechar {
+    position: absolute;
+    color: var(--preto);
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--branco);
+    cursor: pointer;
+}
+
 /*Alterações do css para versão Tablet*/
 
 @media only screen and (min-width: 992px) {

@@ -84,14 +84,15 @@
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
                 <div class="grupo-botao">
-                    <div id="botao-agend-confirm">
-                        <a href="agendamento_sucesso.html"><button>Confirmar Agendamento</button></a>
-                    </div>
-                    <div id="botao-agend-cancel">
-                        <button>Cancelar Pagamento</button>
-                    </div>
+
                 </div>
             </form>
+            <div id="botao-agend-confirm">
+                <button>Confirmar Agendamento</button>
+            </div>
+            <div id="botao-agend-cancel">
+                <button >Cancelar Pagamento</button>
+            </div>
         </section>
     </main>
     <footer>
@@ -119,7 +120,17 @@
         </div>
         <p>&copy; Copyright - 2021</p>
     </footer>
+
+    <div id="modal-notifica" class="modal-container">
+
+        <div class="modal">
+            <button class="fechar">X</button>
+            <img src="assets/img/checked1.png" alt="Cadastro confirmado">
+            <h3>Agendamento realizado</h3>
+        </div>
+    </div>
     <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/modal.js"></script>
 </body>
 
 </html>
