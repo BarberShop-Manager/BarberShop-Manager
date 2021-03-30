@@ -1,0 +1,37 @@
+*{
+    --branco: #f2f2f2;
+    --vermelho3: #B04343;
+
+}
+
+
+#dados_cliente .dados_cliente{
+    width: 400px;
+    height: 400px;
+    background-color: violet;
+}
+.dados_cliente h2{
+    font-size: 20px;
+    text-align: left;
+}
+
+#btns_cliente .btns_clientes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+#btns_cliente .btns_clientes #desativaCliente button{
+    display: block;
+    margin: 15px auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--vermelho3);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    color: var(--branco);
+}
