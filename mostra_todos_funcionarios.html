@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarberShop Manager</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/Mostra_func.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -45,19 +46,33 @@
         </nav>
     </header>
     <main>
-        <section id="dados_funcionario">
+    <section id="dados_funcionario">
+        <div class="content">
             <div class="dados_funcionario">
                 <h2>Nome Completo:</h2><br>
                 <h2>CPF:</h2><br>
-                <h2>EMAIL</h2><br>
-                <h2>Dias de trabalho</h2>
+                <h2>EMAIL:</h2><br>
+                <h2>Dias de trabalho:</h2>
             </div>
-        </section>
-        <section id="btns_funcionarios">
-            <div>
-                <button class="ativar">Ativar Funcionário</button>
-                <button class="desativar">Desativar Funcionário</button>
-                <button class="Excluir">Excluir Funcionário</button>
+
+            <div class="btns_funcionario">
+                <div id="ativaFunc">
+                    <a href="">
+                    <button>Ativar Funcionário</button>
+                    </a>
+                </div>
+
+                <div id="desativaFunc">
+                    <a href="">
+                    <button>Desativar Funcionário</button>
+                    </a>
+                </div>
+
+                <div id="ExcFunc">
+                    <a href="">
+                    <button>Excluir Funcionário</button>
+                    </a>
+                </div>
             </div>
         </section>
         <section id="graph_funcionarios">
@@ -84,7 +99,7 @@
                 <h2>Quadro de Funcionários</h2>
                 <div class="pesquisar_funcionario">
                     <input type="text">
-                    <img src="assets/img/Buscar.png">
+                    <img src="">
                 </div>
                 <div class="funcionario_list">
                     <!--Aqui ficará a lista com o nome de cada funcionário-->

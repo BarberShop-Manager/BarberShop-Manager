@@ -1,16 +1,16 @@
 
-#dados_cliente{
+#dados_funcionario{
     display: inline-block;
     clear: both;
 }
 
-#dados_cliente .dados_cliente{
+#dados_funcionario .dados_funcionario{
     width: 400px;
     height: 400px;
     background-color: violet;
     margin: 25px;
 }
-.dados_cliente h2{
+.dados_funcionario h2{
     text-align: left;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -18,7 +18,7 @@
 }
 
 
-.btns_clientes #ativaCliente button{
+.btns_funcionario #ativaFunc button{
     display: block;
     margin: 25px;
     width: 400px;
@@ -32,7 +32,7 @@
     color: var(--preto);
 }
 
-.btns_clientes #desativaCliente button{
+.btns_funcionario #desativaFunc button{
     display: block;
     margin: 25px;
     width: 400px;
@@ -47,7 +47,7 @@
 }
 
 
-.btns_clientes #ExcCliente button{
+.btns_funcinario #ExcFunc button{
     display: block;
     margin: 25px;
     width: 400px;
@@ -61,18 +61,34 @@
     color: var(--preto);
 }
 
-#graph_clientes{
+#graph_funcionarios{
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    width: 340px;
 }
 
-#quadro_clientes{
+#graph_funcionarios .dropdown_graph select{
+    width: 340px;
+    height: 50px;
+    background-color: var(--cinza2);
+    border-radius: 8px;
+    box-shadow: 0 2px 23px var(--cinza3);
+    
+    color: var(--branco);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12pt;
+}
+
+
+
+#quadro_funcionarios{
     float: right;
 }
 
-#quadro_clientes .quadro_clientes{
+#quadro_funcionarios .quadro_funcionarios{
     width: 360px;
     height: 535px;
     margin-right: 25px;
@@ -81,7 +97,7 @@
     box-shadow: 0 2px 23px var(--cinza3)
 }
 
-#quadro_clientes .quadro_clientes h2{
+#quadro_funcionarios .quadro_funcionarios h2{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16pt;
@@ -89,7 +105,7 @@
     text-align: center;
 }
 
-#quadro_clientes .quadro_clientes input{
+#quadro_funcionarios .quadro_funcionarios input{
     width: 299px;
     height: 57px;
     border-radius: 8px;
