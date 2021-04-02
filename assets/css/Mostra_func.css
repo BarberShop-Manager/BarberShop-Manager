@@ -84,6 +84,23 @@
     font-size: 12pt;
 }
 
+#graph_funcionarios .graph{
+    margin: 25px 0px;
+}
+
+#graph_funcionarios .numero_cortes{
+    display: flex;
+    flex-direction: row;
+}
+
+#graph_funcionarios .numero_cortes input{
+    background-color: var(--cinza2);
+    width: 92px;
+    height: 36px;
+    border-radius: 8px;
+    box-shadow: 0 2px 19px var(--cinza3);
+    margin-left: 15px;
+}
 
 
 #quadro_funcionarios{

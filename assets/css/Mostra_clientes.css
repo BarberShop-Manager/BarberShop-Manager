@@ -1,8 +1,15 @@
 
+.container-graphcliente{
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-around;
+}
+
 #dados_cliente{
     display: inline-block;
     clear: both;
 }
+
 
 #dados_cliente .dados_cliente{
     width: 400px;
@@ -46,7 +53,6 @@
     color: var(--preto);
 }
 
-
 .btns_clientes #ExcCliente button{
     display: block;
     margin: 25px;
@@ -61,12 +67,8 @@
     color: var(--preto);
 }
 
-#graph_clientes{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
+
 
 #quadro_clientes{
     float: right;
@@ -78,7 +80,9 @@
     margin-right: 25px;
     background-color: var(--cinza2);
     border-radius: 8px;
-    box-shadow: 0 2px 23px var(--cinza3)
+    box-shadow: 0 2px 23px var(--cinza3);
+    display: inline-block;
+    margin-top: 25px;
 }
 
 #quadro_clientes .quadro_clientes h2{
