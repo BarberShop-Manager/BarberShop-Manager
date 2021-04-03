@@ -68,7 +68,9 @@
 
                 <div >
                     <label>Dias de trabalho:</label><br>
-                    <input type="button" class="trabalho">
+                    <button type="button" style="width: 100%; " id = 'botao-select'>
+                        + 
+                    </button>
 
                 </div>
                  
@@ -90,14 +92,14 @@
                 <div class="grupo-botao">
 
                     <div id="botao-agend-confirm">
-                        <a href="cadastro_funcionario_sucesso.html">
-                            <button>Cadastro Sucesso</button>
-                        </a>
+                        
+                        <button type="button">Cadastro Sucesso</button>
+                        
                     </div>
                     <div id="botao-agend-cancel">
-                        <a href="cadastro_funcionario_Fail.html">
-                        <button>Cadastro Fail</button>
-                        </a>
+                       
+                        <button type="button">Cadastro Fail</button>
+                       
                     </div>
 
                 </div>
@@ -106,146 +108,7 @@
     </main>
 
     <footer>
-        <div id = "modal_dia_trabalho" class = "modal_container">
-            <form class="container-main">
-
-                <div class="box-container">
         
-                    <div>
-                        <h2>Escolha os dias de trabalho:</h2>
-                    </div>
-        
-                    <div class="dias_de_trabalho">
-        
-                        <label for="segunda"> Segunda-Feira </label>
-                        <input type="checkbox" id="week" nome="subscribe" value="Segunda-Feira" >
-        
-                    </div>
-        
-        
-                    <div class="dias_de_trabalho">
-        
-                        <label for="terca"> Terça-Feira </label>
-                        <input type="checkbox" id="week" nome="subscribe" value="Terça-Feira">
-        
-                    </div>
-        
-                    <div class="dias_de_trabalho">
-        
-                        <label for="terca"> Quarta-Feira </label>
-                        <input type="checkbox" id="week" nome="subscribe" value="Quarta-Feira">
-        
-                    </div>
-        
-                    <div class="dias_de_trabalho">
-        
-                        <label for="terca"> Quinta-Feira </label>
-                        <input type="checkbox" id="week" nome="subscribe" value="Quinta-Feira">
-        
-                    </div>
-        
-                    <div class="dias_de_trabalho">
-        
-                        <label for="segunda"> Sexta-Feira </label>
-                        <input type="checkbox" id="week" nome="subscribe" value="Sexta-Feira">
-        
-                    </div>
-        
-        
-                    <div class="dias_de_trabalho">
-        
-                        <label for="terca"> Sábado </label>
-                        <input type="checkbox" id="week" nome="subscribe" value="Sábado">
-        
-                    </div>
-        
-                    <div class="dias_de_trabalho">
-        
-                        <label for="terca"> Domingo </label>
-                        <input type="checkbox" id="week" nome="subscribe" value="Domingo">
-        
-                    </div>
-        
-                    <div class="confirmar">
-        
-                        <input type="button" value="CONFIRMAR" id="confirm">
-        
-                    </div>
-        
-                </div>
-                
-            </form>
-        </div>
-
-        <div id = 'modal_confirmacao_sucesso' class = 'modal_container'>
-
-
-            <section id="cadastro">
-
-    
-
-                <div class = "box">
-        
-                    <img src="./assets/img/checked1.png" title="Dados invalidos">
-        
-                </div>
-        
-        
-                <div class = "box">
-        
-                    <h3>CADASTRADO  DO FUNCIONÁRIO <br>
-                        FEITO COM SUCESSO
-                    </h3>
-        
-                </div >
-        
-        
-                <div >
-        
-                    <a 
-                        href="login.html">
-                        <button class = "botao-sucess">CONFIRMAR</button>
-                    </a>
-        
-                </div>
-            
-        
-            </section>
-    
-        </div>
-
-        <div id = modal_confirmacao_falha class = modal_container>>
-            <section id="cadastro">
-
-                <div class = "box">
-        
-                    <img src="./assets/img/error1.png" title="Dados invalidos">
-        
-                </div>
-        
-        
-                <div class = "box">
-        
-                    <h3>FALHA NO CADASTRO ! <br>
-                        TENTE NOVAMENTE
-                    </h3>
-        
-                </div >
-        
-        
-                <div >
-        
-                    <a 
-                        href="cadastro_funcionario.html">
-                        <button class = "botao-fail">TENTAR NOVAMENTE</button>
-                    </a>
-        
-                </div>
-        
-            </section>
-
-        </div>
-
         <div class="container-footer">
             <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer" />
             <nav id="rede-social">
@@ -270,6 +133,147 @@
         </div>
         <p>&copy; Copyright - 2021</p>
     </footer>
+    
+    <div id = 'modal_dia_trabalho' class = "modal_container">
+
+        <form class="container-main">
+
+            <div class="box-container">
+    
+                <div>
+                    <h2>Escolha os dias de trabalho:</h2>
+                </div>
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="segunda"> Segunda-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Segunda-Feira" >
+    
+                </div>
+    
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="terca"> Terça-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Terça-Feira">
+    
+                </div>
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="terca"> Quarta-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Quarta-Feira">
+    
+                </div>
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="terca"> Quinta-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Quinta-Feira">
+    
+                </div>
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="segunda"> Sexta-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Sexta-Feira">
+    
+                </div>
+    
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="terca"> Sábado </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Sábado">
+    
+                </div>
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="terca"> Domingo </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Domingo">
+    
+                </div>
+    
+                <div class="confirmar">
+    
+                    <input type="button" value="CONFIRMAR" id="confirm">
+    
+                </div>
+    
+            </div>
+            
+        </form>
+    </div>
+
+    <div id = 'modal_confirmacao_sucesso' class = 'modal_container'>
+
+
+        <section id="cadastro">
+
+
+
+            <div class = "box">
+    
+                <img src="./assets/img/checked1.png" title="Dados invalidos">
+    
+            </div>
+    
+    
+            <div class = "box">
+    
+                <h3>CADASTRADO  DO FUNCIONÁRIO <br>
+                    FEITO COM SUCESSO
+                </h3>
+    
+            </div >
+    
+    
+            <div >
+    
+                <a 
+                    href="login.html">
+                    <button class = "botao-sucess">CONFIRMAR</button>
+                </a>
+    
+            </div>
+        
+    
+        </section>
+
+    </div>
+
+    <div id = modal_confirmacao_falha class = modal_container>>
+        <section id="cadastro">
+
+            <div class = "box">
+    
+                <img src="./assets/img/error1.png" title="Dados invalidos">
+    
+            </div>
+    
+    
+            <div class = "box">
+    
+                <h3>FALHA NO CADASTRO ! <br>
+                    TENTE NOVAMENTE
+                </h3>
+    
+            </div >
+    
+    
+            <div >
+    
+                <a 
+                    href="cadastro_funcionario.html">
+                    <button class = "botao-fail">TENTAR NOVAMENTE</button>
+                </a>
+    
+            </div>
+    
+        </section>
+
+    </div>
 
     
     <script src="./assets/js/scripts.js"></script>

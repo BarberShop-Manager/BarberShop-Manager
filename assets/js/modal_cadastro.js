@@ -15,22 +15,22 @@ function iniciaGoodModal(good) {
     modal1.classList.add('sucesso'); 
     }
 
-    const botao1 = document .querySelector('#botao-agend-confirm');
+    const botao1 = document.querySelector('#botao-agend-confirm');
     botao1.addEventListener('click', function(){
         iniciaGoodModal('modal_confimacao_sucesso')
     });
 
 
 function iniciaTrabalhoModal(work){
-    const modal2 = document .getElementsById('modal_dia_trabalho');
+    const modal2 = document.getElementsById('modal_dia_trabalho');
     modal2.classList.add('ok');
     
     }
 
-    
-    const botao2 = document .querySelector('.box-container');
+
+    const botao2 = document.querySelector('#botao-select');
     botao2.addEventListener('click', function(){
-        iniciaTrabalhoModal('trabalho')
+        iniciaTrabalhoModal('modal_dia_trabalho')
     });
 
 
