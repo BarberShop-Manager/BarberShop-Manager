@@ -1,0 +1,51 @@
+#name {
+    height: 50px;
+    width: 200px;;
+    border-radius: 10px;
+}
+
+#email {
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#cellphone {
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#img_redonda {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+#excluir_conta {
+    background: crimson;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+#formulario {
+    background: grey;
+    width: 400px;
+    height: 600px;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+#alterar_dados {
+    background-color: crimson;
+    border-radius: 10px;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+}

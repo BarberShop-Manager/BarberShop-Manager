@@ -42,7 +42,6 @@
     border: none;
     list-style-type: none;
 }
-
 body {
     background-color: var(--branco);
     font-family: 'Open Sans', sans-serif;
@@ -57,11 +56,12 @@ header .cabecalho #icone_menu{
     right: 0;
 }
 
+    
 header #menu {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     right: 0;
     background-color: var(--cinza2);
@@ -107,6 +107,7 @@ h2 {
     padding: 15px 0;
     margin: 15px 0;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*Cabeçalho*/
