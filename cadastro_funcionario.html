@@ -7,6 +7,7 @@
     
     <title>BarberShop Manager</title>
     
+    <link rel="stylesheet" href="./assets/css/cadastro_funcionario.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -43,62 +44,89 @@
         </nav>
     </header>
 
-    <section >
-        <p>
-            <img src="assets/img/gabriel1.png" alt="">
-        </p>
-        <div class = "Cadastro_funcionario" >
+    <main>
+        <section class="container-agendamento">
+            <form class="nome-func">
 
-            <h3>Nome:</h3>
-            <input type="text">
-
-            <h3>Email:</h3>
-            <input type="email" name="Login"> 
-
-            <h3>CPF:</h3>
-            <input type="number" name="CPF" max="11" min="11" > 
-
-            <h3>Dias de trabalho</h3>
-            <input type="date">
-
-            <h3>Horário</h3>
-            <input type="time">
-
-            <h3>SENHA</h3>
-            <input type="password">
-
-            <h3>CONFIRMAR SENHA</h3>
-            <input type="password">
-
-            <p>
-                <div>
-                    <a href="cladastro_funcionário_sucesso.html">
-                        <button>
-                            <h3>Cadastro Acerto</h3>
-                        </button>
-                    </a> 
-        
-                    <a href="cadastro_funcionario_Fail.html">
-                        <button>
-                            <h3>Cadastro Erro</h3>
-                        </button>
-                    </a> 
-                    
+    
+                <div >
+                    <label>Nome:</label><br>
+                    <input type="text">
                 </div>
-            </p>
-        </div>
-        
-    </section>
+
+                <div >
+                    <label>Email:</label><br>
+                    <input type="text">
+                </div>
+
+                <div >
+                    <label>CPF:</label><br>
+                    <input type="text">
+                </div>
+
+                <div >
+                    <label>Dias de trabalho:</label><br>
+                    <a href="cadastro_funcionario_dia_de_trabalho.html"><input type="button"></a>
+
+                </div>
+                 
+                <div >
+                    <label>Horário</label><br>
+                    <input type="time">
+                </div>
+
+                <div>
+                    <label>Senha</label><br>
+                    <input type="password">
+                </div>
+
+                <div>
+                    <label>Confirmar Senha</label><br>
+                    <input type="password">
+                </div>
+                
+                <div class="grupo-botao">
+
+                    <div id="botao-agend-confirm">
+                        <a href="cadastro_funcionario_sucesso.html">
+                            <button>Cadastro Sucesso</button>
+                        </a>
+                    </div>
+                    <div id="botao-agend-cancel">
+                        <a href="cadastro_funcionario_Fail.html">
+                        <button>Cadastro Fail</button>
+                        </a>
+                    </div>
+
+                </div>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        
-        <div>
-            <img src="assets/img/bsmlogo.png" alt="">
-            <img src="assets/img/Whatsapp.png" alt="">
-            <img src="assets/img/Instagram.png" alt="">
-            <img src="assets/img/Facebook.png" alt="">
-            
+        <div class="container-footer">
+            <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer" />
+            <nav id="rede-social">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager" />
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger" />
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger" />
+                        </li>
+                    </a>
+                </ul>
+            </nav>
         </div>
+        <p>&copy; Copyright - 2021</p>
     </footer>
 
     <script src="./assets/js/scripts.js"></script>

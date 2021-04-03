@@ -1,0 +1,61 @@
+
+.container-caixa{
+    text-align: right;
+}
+.bloco-1{
+    float:left;
+    width:20%;
+    padding:10px;
+    margin-right: 10%;
+    margin-left: 9%;
+}
+.bloco-2 {
+    float:left;
+    width:20%;
+    padding:10px;
+    margin-right: 10%;
+}
+.bloco-3 {
+    float:left;
+   
+    width:20%;
+    padding:10px;
+}
+
+
+
+#dropdow_periodo{
+    width: 100%;
+    height: 45px;
+    background-color: rgb(88, 87, 87);
+    border-radius: 8px;
+    margin: 10%;
+    color: white;
+    font-size: large;
+    padding-left: 5%;
+    
+}
+
+.drop{
+    padding-right: 8%;
+    margin-right: 10px;
+   
+    
+}
+
+.dowload{
+    margin-top: 20%;
+    margin-bottom: 25%;
+}
+#rodape {
+    clear:both;
+    margin-top: 50px;
+}
+.corte{
+    font-size: 150%;
+    margin-top: 10%;
+}
+
+.out{
+    width: 30%;
+}

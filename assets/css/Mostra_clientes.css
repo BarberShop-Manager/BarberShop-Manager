@@ -1,0 +1,102 @@
+
+#dados_cliente{
+    display: inline-block;
+    clear: both;
+}
+
+#dados_cliente .dados_cliente{
+    width: 400px;
+    height: 400px;
+    background-color: violet;
+    margin: 25px;
+}
+.dados_cliente h2{
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12pt;
+}
+
+
+.btns_clientes #ativaCliente button{
+    display: block;
+    margin: 25px;
+    width: 400px;
+    height: 50px;
+    background-color: var(--verde3);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    color: var(--preto);
+}
+
+.btns_clientes #desativaCliente button{
+    display: block;
+    margin: 25px;
+    width: 400px;
+    height: 50px;
+    background-color: var(--amarelo4);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    color: var(--preto);
+}
+
+
+.btns_clientes #ExcCliente button{
+    display: block;
+    margin: 25px;
+    width: 400px;
+    height: 50px;
+    background-color: var(--vermelho3);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    color: var(--preto);
+}
+
+#graph_clientes{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#quadro_clientes{
+    float: right;
+}
+
+#quadro_clientes .quadro_clientes{
+    width: 360px;
+    height: 535px;
+    margin-right: 25px;
+    background-color: var(--cinza2);
+    border-radius: 8px;
+    box-shadow: 0 2px 23px var(--cinza3)
+}
+
+#quadro_clientes .quadro_clientes h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    color: var(--branco);
+    text-align: center;
+}
+
+#quadro_clientes .quadro_clientes input{
+    width: 299px;
+    height: 57px;
+    border-radius: 8px;
+
+    margin: 0px 27px 0px 34px;
+}
+
+footer{
+    clear: both;
+}

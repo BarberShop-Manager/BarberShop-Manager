@@ -1,0 +1,19 @@
+.status{
+    background-color: black;
+    height: 30vh;
+    width: 300px;
+    display: block;
+    margin: auto;
+    background: #c3c3c3;
+    
+
+}
+
+.container_cadastro{
+    text-align: center;
+    margin-top: 100%;
+    padding-top: 6%;
+    border: 8px;
+    
+}
+

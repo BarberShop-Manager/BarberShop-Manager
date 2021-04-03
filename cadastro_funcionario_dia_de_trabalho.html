@@ -1,80 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>BarberShop Manager</title>
-<!--
 
+    <title>BarberShop Manager</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/cadastro_funcionario_dia_de_trabalho.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
-    -->
+
 </head>
+
 <body>
-    <div
-        class = "dias_de_trabalho">
-        <h2>Escolha os dias de trabalho:</h2>
-    </div>
+    <form class="container-main">
 
-    <div> 
+        <div class="box-container">
 
-        <hr>
-        <label>Segunda</label>
-        <input type="checkbox" name="Segunda " id="" >
+            <div>
+                <h2>Escolha os dias de trabalho:</h2>
+            </div>
 
-        <hr>
+            <div class="dias_de_trabalho">
 
-        <label>Terça</label>
-        <input type="checkbox" name="Segunda " id="" >
+                <label for="segunda"> Segunda-Feira </label>
+                <input type="checkbox" id="segunda" nome="subscribe" value="Segunda-Feira" >
 
-        <hr>
-
-        <label>Quarta</label>
-        <input type="checkbox" name="Segunda " id="" >
-
-        <hr>
-
-        <label>Quinta</label>
-        <input type="checkbox" name="Segunda " id="" >
-
-        <hr>
-
-        <label>Sexta</label>
-        <input type="checkbox" name="Segunda " id="" >
-
-        <hr>
-
-        <label>Sábado</label>
-        <input type="checkbox" name="Segunda " id="" >
-
-        <hr>
-
-        <label>Domingo</label>
-        <input type="checkbox" name="Segunda " id="" >
-
-        <hr>
-    </div>
-
-    <div class="confirmar">
-        <input type="button" value="CONFIRMAR">
-    </div>
+            </div>
 
 
+            <div class="dias_de_trabalho">
+
+                <label for="terca"> Terça-Feira </label>
+                <input type="checkbox" id="terca" nome="subscribe" value="Terça-Feira">
+
+            </div>
+
+            <div class="dias_de_trabalho">
+
+                <label for="terca"> Quarta-Feira </label>
+                <input type="checkbox" id="terca" nome="subscribe" value="Quarta-Feira">
+
+            </div>
+
+            <div class="dias_de_trabalho">
+
+                <label for="terca"> Quinta-Feira </label>
+                <input type="checkbox" id="terca" nome="subscribe" value="Quinta-Feira">
+
+            </div>
+
+            <div class="dias_de_trabalho">
+
+                <label for="segunda"> Sexta-Feira </label>
+                <input type="checkbox" id="segunda" nome="subscribe" value="Sexta-Feira">
+
+            </div>
 
 
+            <div class="dias_de_trabalho">
+
+                <label for="terca"> Sábado </label>
+                <input type="checkbox" id="terca" nome="subscribe" value="Sábado">
+
+            </div>
+
+            <div class="dias_de_trabalho">
+
+                <label for="terca"> Domingo </label>
+                <input type="checkbox" id="terca" nome="subscribe" value="Domingo">
+
+            </div>
+
+            <div class="confirmar">
+
+                <input type="button" value="CONFIRMAR" id="confirm">
+
+            </div>
+
+        </div>
         
+    </form>
 
-      
-    
-        
+    <footer>
+        <div class="container-footer">
+            <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">
+            <nav id="rede-social">
+                <ul>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <p>&copy; Copyright - 2021</p>
+
+
+
+        <script src="./assets/js/scripts.js"></script>
+    </footer>
+
+
+
+
+
+
+
+
+
+
     <script src="./assets/js/scripts.js"></script>
 
 </body>
+
 </html>

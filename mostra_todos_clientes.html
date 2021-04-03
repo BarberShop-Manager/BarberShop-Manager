@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarberShop Manager</title>
+    <link rel="stylesheet" href="assets/css/Mostra_clientes.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -46,27 +47,43 @@
     </header>
     <main>
         <section id="dados_cliente">
-            <div class="dados_cliente">
-                <h2>Nome Completo:</h2><br>
-                <h2>CPF:</h2><br>
-                <h2>EMAIL</h2><br>
-                <h2>Dias de trabalho</h2>
-            </div>
-        </section>
-        <section id="btns_clientes">
+            <div class="content">
+                <div class="dados_cliente">
+                    <h2>Nome Completo:</h2><br>
+                    <h2>CPF:</h2><br>
+                    <h2>EMAIL:</h2><br>
+                    <h2>Dias de trabalho:</h2>
+                </div>
+
+                <div class="btns_clientes">
+                    <div id="ativaCliente">
+                        <a href="">
+                        <button>Ativar Cliente</button>
+                        </a>
+                    </div>
+
+                    <div id="desativaCliente">
+                        <a href="">
+                        <button>Desativar Cliente</button>
+                        </a>
+                    </div>
+
+                    <div id="ExcCliente">
+                        <a href="">
+                        <button>Excluir Cliente</button>
+                        </a>
+                    </div>
+                </div>
             <div>
-                <button class="ativar">Ativar Cliente</button>
-                <button class="desativar">Desativar Cliente</button>
-                <button class="Excluir">Excluir Cliente</button>
-            </div>
         </section>
         <section id="graph_clientes">
             <div class="dropdown_graph">
-                <slect name="intervalo" id="intervalo">
-                    <option value="anual">Anual</option>
-                    <option value="mensal">Mensal</option>
-                    <option value="semanal">Semanal</option>
-                </slect>
+                <select name="Periodo" id="dropdow_periodo">
+                    <option>Anual</option>
+                    <option>Mensal</option>
+                    <option>Semanal</option>
+                    <option>Diário</option>
+                </select>
             </div>
             <div class="graph">
             </div>
@@ -83,7 +100,7 @@
                 <h2>Quadro de Cliente</h2>
                 <div class="pesquisar_cliente">
                     <input type="text">
-                    <img src="assets/img/Buscar.png">
+                    <img src="">
                 </div>
                 <div class="cliente_list">
                     <!--Aqui ficará a lista com o nome de cada cliente-->
