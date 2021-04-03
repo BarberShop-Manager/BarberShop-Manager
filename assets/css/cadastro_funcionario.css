@@ -1,3 +1,19 @@
+/* Css Modal*/
+
+.modal-container.ok{
+    display: flex;
+}
+
+.modal-container.sucesso{
+    display: flex;
+}
+
+.modal-container.falha{
+    display: flex;
+}
+
+
+/*Formulário*/
 body main .container-agendamento {
     border-radius: 8px;
     display: block;

@@ -27,13 +27,10 @@ function iniciaTrabalhoModal(work){
     
     }
 
-    iniciaTrabalhoModal('trabalho');
-
-
-    /*
+    
     const botao2 = document .querySelector('.box-container');
     botao2.addEventListener('click', function(){
         iniciaTrabalhoModal('trabalho')
     });
-    */
+
 
