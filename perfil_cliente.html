@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BarberShop Manager</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/perfil_cliente.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <img src="assets/img/bsmlogo.png" alt="logo barbershop">
+            <img id="icone_menu" onclick="abrir_menu()" src="assets/img/menu.png" alt="menu">
+        </div>
+        <nav id="menu">
+            <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
+            <ul>
+                <a href="menu_principal_cliente.html">
+                    <li>Menu</li>
+                </a>
+                <a href="lista_de_funcionarios.html">
+                    <li> Lista de Funcionários</li>
+                </a>
+                <a href="agendamento.html">
+                    <li>Realizar Agendamento</li>
+                </a>
+                <a href="perfil_cliente.html">
+                    <li>Perfil</li>
+                </a>
+                <a href="">
+                    <li>Sair</li>
+                </a>
+            </ul>
+        </nav>
+        <div id="esconder" onclick="fechar_menu()">
+
+        </div>
+    </header>
+    <main>
+        <section class="perfil-cliente">
+            <img src="assets/img/gabriel1.png" alt="">
+            <div class="grupo-forms">
+                <form id="dados-atuais">
+                    <fieldset>
+                        <legend>Perfil:</legend>
+                        <div>
+                            <label for="fname">Primeiro Nome:</label>
+                            <input type="text" id="fname" name="fname" value="Gabriel" disabled>
+                        </div>
+                        <div>
+                            <label for="lname">Último nome:</label>
+                            <input type="text" id="lname" name="lname" value="Ferreira" disabled>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" value="ferreira@email.com" disabled>
+                        </div>
+                        <div>
+                            <label for="birthday">Aniversário:</label>
+                            <input type="date" id="aniversaio" name="aniversario" value="2001-08-04" disabled>
+                        </div>
+                    </fieldset>
+                    <div id="botao-alterar">
+                        <button type="button">Alterar</button>
+                    </div>
+                </form>
+                <form id="alterar-dados" action="/action_page.php">
+                    <div>
+                        <label for="fname">Primeiro Nome:</label>
+                        <input type="text" id="fname" name="fname" value="Gabriel">
+                    </div>
+                    <div>
+                        <label for="lname">Último nome:</label>
+                        <input type="text" id="lname" name="lname" value="Ferreira">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="ferreira@email.com">
+                    </div>
+                    <div>
+                        <label for="birthday">Aniversário:</label>
+                        <input type="date" id="aniversaio" name="aniversario" value="2001-08-04">
+                    </div>
+                    <div id="alterar-desktop">
+                        <input type="submit" value="Alterar dados">
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">
+            <nav id="rede-social">
+                <ul>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <p>&copy; Copyright - 2021</p>
+    </footer>
+
+    <div id="modal-notific" class="modal-container">
+
+        <div class="modal">
+            <button class="fechar">X</button>
+            <form id="alterar-dados">
+                <div>
+                    <label for="fname">Primeiro Nome:</label>
+                    <input type="text" id="fname" name="fname" value="Gabriel">
+                </div>
+                <div>
+                    <label for="lname">Último nome:</label>
+                    <input type="text" id="lname" name="lname" value="Ferreira">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="ferreira@email.com">
+                </div>
+                <div>
+                    <label for="birthday">Aniversário:</label>
+                    <input type="date" id="aniversaio" name="aniversario" value="2001-08-04">
+                </div>
+                <div id="alterar">
+                    <input type="submit" value="Alterar dados">
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/modal.js"></script>
+</body>
+
+</html>

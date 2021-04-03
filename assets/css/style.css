@@ -57,7 +57,6 @@ header .cabecalho #icone_menu{
     cursor: pointer;
 }
 
-    
 header #menu {
     height: 100%;
     width: 0;
@@ -182,6 +181,7 @@ header .cabecalho img {
 
 /*Galeria*/
 
+
 #galeria .colagem {
     background-image: url("/assets/img/colagem_desktop.png");
     background-position: center;
@@ -202,6 +202,8 @@ header .cabecalho img {
 footer {
     bottom: 0;
     width: 100%;
+    width: 100%;
+    height: auto;
     background-color: var(--laranja3);
 }
 
@@ -245,4 +247,4 @@ footer .container-footer #rede-social ul li {
         background-color: var(--preto);
     }
     
-  }
+}

@@ -1,0 +1,187 @@
+body main .perfil-cliente {
+    border-radius: 8px;
+    width: 90%;
+    height: auto;
+    padding: 50px 0;
+    margin: auto auto 25px auto;
+    text-align: left;
+}
+
+body main .perfil-cliente img {
+    display: block;
+    margin: auto;
+}
+
+body main .perfil-cliente .grupo-forms {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+body main .perfil-cliente form {
+    width: 80%;
+    height: auto;
+    font-size: 14pt;
+    border-radius: 8px;
+    margin: 25px;
+}
+
+body main .perfil-cliente #alterar-dados {
+    display: none;
+    background-color: var(--cinza2);
+    padding: 25px;
+
+}
+
+
+
+body main .perfil-cliente #alterar-dados label {
+    color: var(--branco);
+}
+
+form fieldset {
+    background-color: #eeeeee;
+    border: 1px solid var(--preto);
+}
+  
+form fieldset legend {
+    margin: 25px;
+    padding: 25px;
+}
+
+form div {
+    padding: 10px 15px ;
+}
+
+form div input {
+    width: 100%;
+    height: 50px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14pt;
+}
+  
+form input:disabled {
+    background: #dddddd;
+}
+
+.modal-container form label {
+    color: var(--branco);
+}
+
+/* Botao alterar */
+
+#botao-alterar button {
+    display: block;
+    margin: 25px auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--cor-principal);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
+    color: var(--branco);
+    text-transform: uppercase;
+}
+
+#alterar {
+    margin: auto;
+}
+
+#alterar-desktop input {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--cor-principal);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
+    color: var(--branco);
+    text-transform: uppercase;
+}
+
+/*Estilo do modal*/
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+.modal {
+    background: var(--cinza2);
+    width: 60%;
+    max-width: 300px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 5px 5px rgba(0, 0, 0, .5);
+    text-align: left;
+    position: relative;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+.mostrar .modal {
+    animation: modal .3s;
+}
+
+.fechar {
+    position: absolute;
+    color: var(--branco);
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--cinza2);
+    cursor: pointer;
+}
+
+/*Alterações do css para versão Tablet*/
+
+@media only screen and (min-width: 992px) {
+    body main .perfil-cliente #alterar-dados {
+        display: block;
+    }
+
+    #botao-alterar button {
+        display: none;
+    }
+
+    #alterar button {
+        display: block;
+    }
+}
+
+/*Alterações do css para versão Desktop*/
+
+@media only screen and (min-width: 1366px) {
+
+}

@@ -1,89 +1,26 @@
-/* forma do login */
-a{
-    color: black;
-}
-
-.login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-}
-
-.login-container{
-    min-height: 300px;
-    width: 320px;
-    box-sizing: border-box;
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-}
-
-.login-form{
-    width: 100%;
-    background: var(--cinza1);
-    display: flex;
-    flex-direction: column;
-    color: var(--branco);
-    padding: 32px;
-    border-radius: 8px;
-    align-items: center;
-}
-
-.login-form label{
-    margin-top: 20px;
-}
-
-.login_input {
-    height: 40px;
-    width: 100%;
-    border-radius: 8px;
-    font-size: 14pt;
-}
-
-
-/* botao do login */
-
-.botao_login{
-    display: block;
-    margin: 20% auto auto;
-    width: 200px;
-    height: 40px;
-
-}
-
-body .formlogin {
+body .cadastro_cliente {
     border-radius: 8px;
     display: block;
-    width: 60%;
+    width: 80%;
     height: auto;
-    padding: 150px 0;
+    padding: 50px 0;
     margin: auto auto 25px auto;
     text-align: left;
-
 }
 
-body .formlogin p{
-    text-align: center;
-}
-
-body .formlogin p a{
-    color: var(--preto);
-    text-decoration: underline;
-}
-
-body .formlogin form {
+body .cadastro_cliente form {
+    height: auto;
     font-size: 14pt;
     background-color: var(--cinza1);
     border-radius: 8px;
     margin: 5px;
 }
 
-body .formlogin form div {
+body .cadastro_cliente form div {
     padding: 10px 15px ;
 }
 
-body .formlogin form div input {
+body .cadastro_cliente form div input {
     width: 100%;
     height: 50px;
     padding: 0.5rem;
@@ -98,7 +35,7 @@ body form label {
 
 /* botao do login */
 
-#botao_login button {
+#botao_cadastro button {
     display: block;
     margin: 25px auto;
     width: 200px;
@@ -113,30 +50,29 @@ body form label {
     text-transform: uppercase;
 }
 
+
 /*Alterações do css para versão Tablet*/
 
 @media only screen and (min-width: 992px) {
-    body .formlogin {
+    body .cadastro_cliente {
         border-radius: 8px;
         display: block;
         width: 40%;
         height: auto;
-        padding: 150px 0;
         margin: auto auto 25px auto;
         text-align: left;
     
     }
-  }
+}
 
 /*Alterações do css para versão Desktop*/
 
 @media only screen and (min-width: 1366px) {
-    body .formlogin {
+    body .cadastro_cliente {
         border-radius: 8px;
         display: block;
         width: 30%;
         height: auto;
-        padding: 150px 0;
         margin: auto auto 25px auto;
         text-align: left;
 
