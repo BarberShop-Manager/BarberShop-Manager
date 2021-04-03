@@ -49,9 +49,9 @@
     </header>
     <main>
         <section class="perfil-cliente">
+            <img src="assets/img/gabriel1.png" alt="">
             <div class="grupo-forms">
                 <form id="dados-atuais">
-                    <img src="assets/img/gabriel1.png" alt="">
                     <fieldset>
                         <legend>Perfil:</legend>
                         <div>
@@ -75,28 +75,29 @@
                         <button type="button">Alterar</button>
                     </div>
                 </form>
+                <form id="alterar-dados" action="/action_page.php">
+                    <div>
+                        <label for="fname">Primeiro Nome:</label>
+                        <input type="text" id="fname" name="fname" value="Gabriel">
+                    </div>
+                    <div>
+                        <label for="lname">Último nome:</label>
+                        <input type="text" id="lname" name="lname" value="Ferreira">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="ferreira@email.com">
+                    </div>
+                    <div>
+                        <label for="birthday">Aniversário:</label>
+                        <input type="date" id="aniversaio" name="aniversario" value="2001-08-04">
+                    </div>
+                    <div id="alterar-desktop">
+                        <input type="submit" value="Alterar dados">
+                    </div>
+                </form>
             </div>
-            <form id="alterar-dados" action="/action_page.php">
-                <div>
-                    <label for="fname">Primeiro Nome:</label>
-                    <input type="text" id="fname" name="fname" value="Gabriel">
-                </div>
-                <div>
-                    <label for="lname">Último nome:</label>
-                    <input type="text" id="lname" name="lname" value="Ferreira">
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" value="ferreira@email.com">
-                </div>
-                <div>
-                    <label for="birthday">Aniversário:</label>
-                    <input type="date" id="aniversaio" name="aniversario" value="2001-08-04">
-                </div>
-                <div id="alterar">
-                    <input type="submit" value="Alterar dados">
-                </div>
-            </form>
+
         </section>
     </main>
     <footer>

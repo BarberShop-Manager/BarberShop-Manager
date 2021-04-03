@@ -15,6 +15,7 @@ body main .perfil-cliente img {
 body main .perfil-cliente .grupo-forms {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 body main .perfil-cliente form {
@@ -29,27 +30,30 @@ body main .perfil-cliente #alterar-dados {
     display: none;
     background-color: var(--cinza2);
     padding: 25px;
+
 }
+
+
 
 body main .perfil-cliente #alterar-dados label {
     color: var(--branco);
 }
 
-body main .perfil-cliente form fieldset {
+form fieldset {
     background-color: #eeeeee;
     border: 1px solid var(--preto);
 }
   
-body main .perfil-cliente form fieldset legend {
+form fieldset legend {
     margin: 25px;
     padding: 25px;
 }
 
-body main .perfil-cliente form div {
+form div {
     padding: 10px 15px ;
 }
 
-body main .perfil-cliente form div input {
+form div input {
     width: 100%;
     height: 50px;
     padding: 0.5rem;
@@ -58,8 +62,12 @@ body main .perfil-cliente form div input {
     font-size: 14pt;
 }
   
-body main .perfil-cliente form input:disabled {
+form input:disabled {
     background: #dddddd;
+}
+
+.modal-container form label {
+    color: var(--branco);
 }
 
 /* Botao alterar */
@@ -79,9 +87,13 @@ body main .perfil-cliente form input:disabled {
     text-transform: uppercase;
 }
 
-#alterar input {
+#alterar {
+    margin: auto;
+}
 
-    margin: 25px auto;
+#alterar-desktop input {
+    display: block;
+    margin: 0 auto;
     width: 200px;
     height: 50px;
     background-color: var(--cor-principal);
@@ -114,13 +126,13 @@ body main .perfil-cliente form input:disabled {
 }
 
 .modal {
-    background: var(--branco);
+    background: var(--cinza2);
     width: 60%;
     max-width: 300px;
-    padding: 40px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 5px 5px rgba(0, 0, 0, .5);
-    text-align: center;
+    text-align: left;
     position: relative;
 }
 
@@ -142,25 +154,19 @@ body main .perfil-cliente form input:disabled {
 
 .fechar {
     position: absolute;
-    color: var(--preto);
+    color: var(--branco);
     top: 0;
     right: 0;
     width: 50px;
     height: 50px;
     border-radius: 8px;
-    background-color: var(--branco);
+    background-color: var(--cinza2);
     cursor: pointer;
 }
 
 /*Alterações do css para versão Tablet*/
 
 @media only screen and (min-width: 992px) {
-
-}
-
-/*Alterações do css para versão Desktop*/
-
-@media only screen and (min-width: 1367px) {
     body main .perfil-cliente #alterar-dados {
         display: block;
     }
@@ -172,4 +178,10 @@ body main .perfil-cliente form input:disabled {
     #alterar button {
         display: block;
     }
+}
+
+/*Alterações do css para versão Desktop*/
+
+@media only screen and (min-width: 1366px) {
+
 }
