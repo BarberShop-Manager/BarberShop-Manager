@@ -1,0 +1,71 @@
+.modal_container{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0,0,0,.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    
+}
+
+.modal_container.sucesso{
+    display: flex;
+}
+
+.modal_container.falha{
+    display: flex;
+}
+
+.modal_container.ok{
+    display: flex;
+}
+
+
+
+
+#cadastro{
+    
+    text-align: center;
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    align-items: center;
+    
+    justify-content: center;
+    
+}
+
+
+.botao-fail{
+    margin: 4%;
+    padding: 10px;
+    background-color:#E25656ed;
+    font-size: 110%;
+    border-radius: 8px;
+    width: 70%;
+
+}
+
+.botao-sucess{
+    margin: 4%;
+    padding: 10px;
+    background-color:#B7E89E;
+    font-size: 110%;
+    border-radius: 8px;
+    width: 130px;
+}
+
+
+.box{
+    padding: 10px;
+    margin: 25px;
+    border-radius: 8px;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberShop Manager</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/Mostra_func.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <img src="assets/img/bsmlogo.png" alt="logo barbershop">
+            <img onclick="abrir_menu()" ondblclick="fechar_menu()" src="assets/img/menu.png" alt="menu">
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#" class="fechando_menu" onclick="fechar_menu()">&times;</a></li>
+                <li> <a href="index.html"><h3>Pagina Principal</h3></a> </li>
+                
+                <li> <a href="cadastro_funcionario.html"><h3>Cadastrar Funcionário</h3></a> </li>
+
+                <li> <a href="mostra_todos_funcionarios.html"><h3>Mostrar Funcionários</h3></a> </li>
+
+                <li> <a href="mostra_todos_clientes.html"><h3>Mostrar Clientes</h3></a> </li>
+
+                <li> <a href="controle_de_caixa.html"><h3>Controle Caixa</h3></a> </li>
+
+                <li> <a href="perfil_adminstrador.html"><h3>Perfil</h3></a> </li>
+
+                <li> <a href="login.html"><h3>Sair</h3></a> </li>
+
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="container-graphfunc">
+        <section id="dados_funcionario">
+                <div class="dados_funcionario">
+                    <h2>Nome Completo:</h2><br>
+                    <h2>CPF:</h2><br>
+                    <h2>EMAIL:</h2><br>
+                    <h2>Dias de trabalho:</h2>
+                </div>
+
+                <div class="btns_funcionario">
+                    <div id="ativaFunc">
+                        <a href="">
+                        <button>Ativar Funcionário</button>
+                        </a>
+                    </div>
+
+                    <div id="desativaFunc">
+                        <a href="">
+                        <button>Desativar Funcionário</button>
+                        </a>
+                    </div>
+
+                    <div id="ExcluirFunc">
+                        <a href="">
+                        <button>Excluir Funcionário</button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="graph_funcionarios">
+                <div class="dropdown_graph">
+                    <select name="Periodo" id="dropdow_periodo">
+                        <option>Anual</option>
+                        <option>Mensal</option>
+                        <option>Semanal</option>
+                        <option>Diário</option>
+                    </select>
+                </div>
+                <div class="graph">
+                    <img src="assets/img/grafic.png">
+                </div>
+                <div class="numero_cortes">
+                    <h3>Número de Cortes:</h3>
+                    <input type="text">
+                </div>
+                <div class="download_graph">
+                    <img src="assets/img/dowload.png">
+                </div>
+            </section>
+            <section id="quadro_funcionarios">
+                <div class="quadro_funcionarios">
+                    <h2>Quadro de Funcionários</h2>
+                    <div class="pesquisar_funcionario">
+                        <input type="text">
+                        <img src="">
+                    </div>
+                    <div class="funcionario_list">
+                        <!--Aqui ficará a lista com o nome de cada funcionário-->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">
+            <nav id="rede-social">
+                <ul>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <p>&copy; Copyright - 2021</p>
+    </footer>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>

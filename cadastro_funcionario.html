@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>BarberShop Manager</title>
+    
+    <link rel="stylesheet" href="./assets/css/cadastro_funcionario.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/feedback.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+
+        <div class="cabecalho">
+            <img src="assets/img/bsmlogo.png" alt="Logo-em-Branco">
+            <img onclick="abrir_menu()" ondblclick="fechar_menu()" src="assets/img/menu.png" alt="menu">
+        </div>
+        
+        <nav id = "menu" >
+            <ul>
+                <li><a href="#" class="fechando_menu" onclick="fechar_menu()">&times;</a></li>
+                <li> <a href="index.html"><h3>Pagina Principal</h3></a> </li>
+                
+                <li> <a href="cadastro_funcionario.html"><h3>Cadastrar Funcionário</h3></a> </li>
+
+                <li> <a href="mostra_todos_funcionarios.html"><h3>Mostrar Funcionários</h3></a> </li>
+
+                <li> <a href="mostra_todos_clientes.html"><h3>Mostrar Clientes</h3></a> </li>
+
+                <li> <a href="controle_de_caixa.html"><h3>Controle Caixa</h3></a> </li>
+
+                <li> <a href="perfil_adminstrador.html"><h3>Perfil</h3></a> </li>
+
+                <li> <a href="login.html"><h3>Sair</h3></a> </li>
+
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container-agendamento">
+            <form class="nome-func">
+
+    
+                <div >
+                    <label>Nome:</label><br>
+                    <input type="text">
+                </div>
+
+                <div >
+                    <label>Email:</label><br>
+                    <input type="text">
+                </div>
+
+                <div >
+                    <label>CPF:</label><br>
+                    <input type="text">
+                </div>
+
+                <div >
+                    <label>Dias de trabalho:</label><br>
+                    <button type="button" id = 'botao-select'>
+                        
+                    </button>
+
+                </div>
+                 
+                <div >
+                    <label>Horário</label><br>
+                    <input type="time">
+                </div>
+
+                <div>
+                    <label>Senha</label><br>
+                    <input type="password">
+                </div>
+
+                <div>
+                    <label>Confirmar Senha</label><br>
+                    <input type="password">
+                </div>
+                
+                <div class="grupo-botao">
+
+                    <div id="botao-agend-confirm">
+                        
+                        <button type="button">Cadastro Sucesso</button>
+                        
+                    </div>
+                    <div id="botao-agend-cancel">
+                       
+                        <button type="button">Cadastro Fail</button>
+                       
+                    </div>
+
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        
+        <div class="container-footer">
+            <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer" />
+            <nav id="rede-social">
+                <ul>
+                    <a href="#">
+                        <li>
+                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager" />
+                        </li>
+                    </a>
+                    <a href="https://instagram.com/barbeariaclubedobolinhadf?igshid=l2k4pqy24mwp">
+                        <li>
+                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger" />
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger" />
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <p>&copy; Copyright - 2021</p>
+    </footer>
+    
+    <div id = 'modal_dia_trabalho' class = "modal_container">
+
+        <form class="container-main">
+
+            <div class="box-container">
+    
+                <div>
+                    <h2>Escolha os dias de trabalho:</h2>
+                </div>
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="segunda"> Segunda-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Segunda-Feira" >
+    
+                </div>
+    
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="terca"> Terça-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Terça-Feira">
+    
+                </div>
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="terca"> Quarta-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Quarta-Feira">
+    
+                </div>
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="terca"> Quinta-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Quinta-Feira">
+    
+                </div>
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="segunda"> Sexta-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Sexta-Feira">
+    
+                </div>
+    
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="terca"> Sábado </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Sábado">
+    
+                </div>
+    
+                <div class="dias_de_trabalho">
+    
+                    <label for="terca"> Domingo </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Domingo">
+    
+                </div>
+    
+                <div class="confirmar">
+                    <a href="cadastro_funcionario.html">
+                        <input type="button" value="CONFIRMAR" id="confirm">
+                    </a>
+                </div>
+    
+            </div>
+            
+        </form>
+    </div>
+
+    <div id = 'modal_confirmacao_sucesso' class = 'modal_container'>
+
+
+        <section id="cadastro">
+
+
+
+            <div class = "box">
+    
+                <img src="./assets/img/checked1.png" title="Dados invalidos">
+    
+            </div>
+    
+    
+            <div class = "box">
+    
+                <h3>CADASTRADO  DO FUNCIONÁRIO <br>
+                    FEITO COM SUCESSO
+                </h3>
+    
+            </div >
+    
+    
+            <div >
+    
+                <a 
+                    href="login.html">
+                    <button class = "botao-sucess">CONFIRMAR</button>
+                </a>
+    
+            </div>
+        
+    
+        </section>
+
+    </div>
+
+    <div id = modal_confirmacao_falha class = modal_container>>
+        <section id="cadastro">
+
+            <div class = "box">
+    
+                <img src="./assets/img/error1.png" title="Dados invalidos">
+    
+            </div>
+    
+    
+            <div class = "box">
+    
+                <h3>FALHA NO CADASTRO ! <br>
+                    TENTE NOVAMENTE
+                </h3>
+    
+            </div >
+    
+    
+            <div >
+    
+                <a 
+                    href="cadastro_funcionario.html">
+                    <button class = "botao-fail">TENTAR NOVAMENTE</button>
+                </a>
+    
+            </div>
+    
+        </section>
+
+    </div>
+
+    
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/modal_cadastro.js"></script>
+    
+</body>
+</html>

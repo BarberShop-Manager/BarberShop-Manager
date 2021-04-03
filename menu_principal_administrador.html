@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberShop Manager</title>
+    <link rel="stylesheet" href="./assets/css/menu_principal.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <img src="assets/img/bsmlogo.png" alt="logo barbershop">
+            <img onclick="abrir_menu()" ondblclick="fechar_menu()" src="assets/img/menu.png" alt="menu">
+        </div>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#" class="fechando_menu" onclick="fechar_menu()">&times;</a></li>
+                <li> <a href="index.html"><h3>Pagina Principal</h3></a> </li>
+                
+                <li> <a href="cadastro_funcionario.html"><h3>Cadastrar Funcionário</h3></a> </li>
+
+                <li> <a href="mostra_todos_funcionarios.html"><h3>Mostrar Funcionários</h3></a> </li>
+
+                <li> <a href="mostra_todos_clientes.html"><h3>Mostrar Clientes</h3></a> </li>
+
+                <li> <a href="controle_de_caixa.html"><h3>Controle Caixa</h3></a> </li>
+
+                <li> <a href="perfil_adminstrador.html"><h3>Perfil</h3></a> </li>
+
+                <li> <a href="login.html"><h3>Sair</h3></a> </li>
+
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div class="card">
+                <div class="meio-Card"></div>
+                <div class="baixoCard" >
+                    <h2><a href="cadastro_funcionario.html">Cadastrar Funcionário</a></h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="meio-Card" id="most_funcionario"></div>
+                <div class="baixoCard" >
+                    <h2><a href="mostra_todos_funcionarios.html">Funcionários</a></h2>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="meio-Card" id="most_cliente"></div>
+                <div class="baixoCard" >
+                    <h2><a href="mostra_todos_clientes.html">Clientes</a></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="card">
+                <div class="meio-Card" id="cont_caixa"></div>
+                <div class="baixoCard">
+                    <h2><a href="controle_de_caixa.html">Controle de Caixa</a></h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="meio-Card" id="#"></div>
+                <div class="baixoCard">
+                    <h2><a href="#">#</a></h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="meio-Card" id="#"></div>
+                <div class="baixoCard">
+                    <h2><a href="#">#</a></h2>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">
+            <nav id="rede-social">
+                <ul>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
+                        </li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <p>&copy; Copyright - 2021</p>
+    </footer>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>

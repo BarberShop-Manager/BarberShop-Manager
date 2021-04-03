@@ -1,0 +1,247 @@
+/* Css Modal*/
+
+.modal-container.ok{
+    display: flex;
+}
+
+.modal-container.sucesso{
+    display: flex;
+}
+
+.modal-container.falha{
+    display: flex;
+}
+
+
+/*Formulário*/
+body main .container-agendamento {
+    border-radius: 8px;
+    display: block;
+    width: 80%;
+    height: auto;
+    padding: 50px 0;
+    margin: auto auto 25px auto;
+    text-align: left;
+}
+
+body main .container-agendamento form {
+    height: auto;
+    font-size: 14pt;
+    background-color: var(--cinza1);
+    border-radius: 8px;
+    margin: 5px;
+    padding:15px;
+}
+
+
+body main .container-agendamento form  div input {
+    width: 100%;
+    height: 50px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14pt;
+}
+
+body main .container-agendamento form  div select {
+    width: 100%;
+    height: 50px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14pt;
+}
+
+body main .container-agendamento form  div textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14pt;
+    resize: vertical;
+}
+
+body main .container-agendamento form  label {
+    color: var(--branco);
+}
+
+body main .container-agendamento form .grupo-botao {
+    display: block;
+    padding: 15px;
+}
+
+body main .container-agendamento form .data-hora {
+    display: block;
+}
+
+#botao-agend-confirm button {
+    display: block;
+    margin: 15px auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--verde3);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    color: var(--branco);
+    text-transform: uppercase;
+}
+
+#botao-agend-cancel button {
+    display: block;
+    margin: 15px auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--vermelho3);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    color: var(--branco);
+    text-transform: uppercase;
+}
+
+#botao-select{
+    width: 100%;
+    height: 50px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14pt;
+}
+/*Css Cadastro dias de trabalho */
+
+.container-main {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-container{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    background: var(--branco);
+    padding: 0px 20px;
+    min-height: 400px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: left;
+
+}
+
+.dias_de_trabalho{
+    font-size: 28px;
+    text-align: center;
+    background-color:#454545;
+    width: 90%;
+    height: 100%; 
+    color: white;
+    display: flex;
+    border: 2px solid #E26456;
+    margin: 0 auto;
+
+}
+
+
+label{
+    width: 80%;
+    padding: 7px;
+    text-align: left;
+
+}
+
+
+.dia{
+    margin: 5px;
+}
+
+.box-container div h2{
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+#week{
+    height: 25px;
+    width: 100px;
+    margin: auto;
+    background: none;
+    border: 0;
+}
+
+input:checked{ 
+    height: 25px;
+    width: 100px;
+    margin: auto;
+    background-color: #454545;
+    border: 0;
+}
+
+
+
+
+#confirm{
+    display: block;
+    margin: auto auto 100px auto;
+    width: 211px;
+    height: 80px;
+    background-color: #E26456;
+    margin: 24px auto;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 17pt;
+    text-transform: uppercase;
+
+}
+
+
+
+/*Alterações do css para versão Tablet*/
+
+@media only screen and (min-width: 992px) {
+    body main .container-agendamento {
+        width: 60%;
+    }
+}
+
+/*Alterações do css para versão Desktop*/
+
+@media only screen and (min-width: 1366px) {
+    body main .container-agendamento {
+        width: 40%;
+
+    }
+    body main .container-agendamento form .grupo-botao {
+        display: flex;
+        justify-content: center;
+    }
+    
+    body main .container-agendamento form .data-hora {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    body main .container-agendamento form .data-hora .hora-servico{
+        margin-left: 15px;
+    }
+
+    #botao-agend-confirm {
+        padding: 15px;
+    }
+
+    #botao-agend-cancel {
+        padding: 15px;
+    }
+
+}

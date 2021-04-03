@@ -28,9 +28,8 @@
             <ul>
                 <li><a href="#" class="fechando_menu" onclick="fechar_menu()">&times;</a></li>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="index.html#galeria">Galeria</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
@@ -49,6 +48,23 @@
         </div>
     </main>
     
+    <div class="form-login">
+        <form action="menu_principal.html" method="get">
+            <div>
+                <label for="user">Usuário</label><br>
+                <input type="text" name="user" id="user">
+            </div>
+            <div>
+                <label for="passw">Senha</label><br>
+                <input type="password" name="passw" id="passw">
+            </div>
+            <div id="botao_login">
+                <button>Logar</button>
+            </div>
+        </form>
+        Não possui cadastro ? <a href="cadastro_funcionario.html">Clique aqui</a>
+    </div>
+
     <footer>
         <div class="container-footer">
             <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer" />

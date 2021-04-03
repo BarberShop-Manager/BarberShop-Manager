@@ -5,6 +5,7 @@
     --branco: #f2f2f2;
     --cinza3: #7A7A7A;
     --cinza1: #454545;
+    --cinza2: #545454;
 }
 
 body main section {
@@ -35,18 +36,18 @@ body main section {
 }
 
 .meio-Card {
-    background: url("/assets/img/agendamento_imagem.jpg") center/cover;
+    background: url("/assets/img/funcionario.png") center/cover;
     height: 150px;
     width: 100%;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
 }
 
-#pag_card{
-    background: url("/assets/img/pagamento_cliente.jpg") center/cover;
+#most_funcionario{
+    background: url("/assets/img/cliente.png") center/cover;
 }
 
-#hist_corte{
+#most_cliente{
     background: url("/assets/img/historico_de_cortes.jpg") center/cover;
 }
 
@@ -112,3 +113,6 @@ body footer {
     }
 
   }
+#cont_caixa{
+    background: url("/assets/img/controle_caixa.png") center/cover;
+}

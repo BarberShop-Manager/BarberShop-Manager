@@ -1,0 +1,89 @@
+.container-caixa{
+    text-align: center;
+    display: block;
+}
+
+[class ^= "bloco"] {
+    width:80%;
+    padding:10px;
+    margin: 15px auto ;
+}
+
+
+
+
+#dropdow_periodo{
+    width: 100%;
+    height: 45px;
+    background-color: rgb(88, 87, 87);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: large;
+    padding-left: 5%; 
+}
+
+.drop{
+    width: 100%;   
+}
+
+.drop select{
+    margin: 0;
+}
+
+.dowload{
+    height: auto;
+    width: 100%;
+}
+
+#rodape {
+    clear:both;
+    margin-top: 50px;
+}
+
+
+.corte{
+    width: 100%;
+    text-align: left;
+    font-size: 14pt;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.out{
+    width: 92px;
+    height: 36px;
+    background: var(--cinza2);
+    border-radius: 8px;
+        
+}
+
+[class ^= "bloco"] img {
+    width : 100%;
+    height: auto;
+}
+
+
+.dowload img{
+    float: right;
+    width: 100px;
+    height: auto;
+    
+}
+
+.dowload::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+@media only screen and (min-width: 992px) {
+    .container-caixa{
+        display: flex;
+    }
+
+    
+
+}   
