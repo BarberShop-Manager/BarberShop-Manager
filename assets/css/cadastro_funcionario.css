@@ -103,6 +103,15 @@ body main .container-agendamento form .data-hora {
     color: var(--branco);
     text-transform: uppercase;
 }
+
+#botao-select{
+    width: 100%;
+    height: 50px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14pt;
+}
 /*Css Cadastro dias de trabalho */
 
 .container-main {
@@ -174,7 +183,6 @@ input:checked{
     width: 100px;
     margin: auto;
     background-color: #454545;
-    
     border: 0;
 }
 

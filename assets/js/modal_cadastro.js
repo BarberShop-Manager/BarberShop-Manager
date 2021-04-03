@@ -21,8 +21,8 @@ function iniciaGoodModal(good) {
     });
 
 
-function iniciaTrabalhoModal(work){
-    const modal2 = document.getElementsById('modal_dia_trabalho');
+function iniciaTrabalhoModal(work) {
+    const modal2 = document.getElementById('modal_dia_trabalho');
     modal2.classList.add('ok');
     
     }
