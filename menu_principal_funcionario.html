@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,37 +9,50 @@
     <link rel="stylesheet" href="assets/css/menu_principal.css">
     <title>BarberShop Manger</title>
 </head>
+
 <body>
     <header>
         <div class="cabecalho">
-            <a href="menu_principal.html"><img src="assets/img/bsmlogo.png" alt="Logo"></a>
-            <img onclick="abrir_menu()" src="assets/img/menu.png" alt="menu" />
+            <img src="assets/img/bsmlogo.png" alt="logo barbershop">
+            <img id="icone_menu" onclick="abrir_menu()" src="assets/img/menu.png" alt="menu">
         </div>
-
         <nav id="menu">
+            <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
             <ul>
-                <li><a href="#" class="fechando_menu" onclick="fechar_menu()">&times;</a></li>
-                <li><a href="menu_principal.html">Página Inicial</a></li>
-                <li><a href="mostra_agendamentos.html">Atendimentos do Dia</a></li>
-                <li><a href="#">Histórico de Cortes</a></li>
-                <li><a href="perfil_funcionario.html">Perfil</a></li>
-                <li><a href="login.html">Sair</a></li>
+                <a href="menu_principal_funcionario.html">
+                    <li>Página Inicial</li>
+                </a>
+                <a href="mostra_agendamentos.html">
+                    <li>Atendimentos do Dia</li>
+                </a>
+                <a href="#">
+                    <li>Histórico de Cortes</li>
+                </a>
+                <a href="perfil_funcionario.html">
+                    <li>Perfil</li>
+                </a>
+                <a href="login.html">
+                    <li>Sair</li>
+                </a>
             </ul>
         </nav>
+        <div id="esconder" onclick="fechar_menu()">
+
+        </div>
     </header>
 
     <main>
         <div class="content">
             <div class="card">
                 <div class="meio-Card"></div>
-                <div class="baixoCard" >
+                <div class="baixoCard">
                     <h2><a href="mostra_agendamentos.html">Atendimentos do Dia</a></h2>
                 </div>
             </div>
 
             <div class="card">
                 <div class="meio-Card" id="pag_card"></div>
-                <div class="baixoCard" >
+                <div class="baixoCard">
                     <h2><a href="pagamento_cliente.html">Pagamento do Cliente</a></h2>
                 </div>
             </div>
@@ -89,4 +103,5 @@
     </footer>
     <script src="./assets/js/scripts.js"></script>
 </body>
+
 </html>

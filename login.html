@@ -20,51 +20,51 @@
 <body>
     <header>
         <div class="cabecalho">
-            <a href="index.html"><img src="assets/img/bsmlogo.png" alt="Logo"></a>
-            <img onclick="abrir_menu()" src="assets/img/menu.png" alt="menu" />
+            <img src="assets/img/bsmlogo.png" alt="logo barbershop">
+            <img id="icone_menu" onclick="abrir_menu()" src="assets/img/menu.png" alt="menu">
         </div>
-
         <nav id="menu">
+            <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
             <ul>
-                <li><a href="#" class="fechando_menu" onclick="fechar_menu()">&times;</a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#galeria">Galeria</a></li>
-                <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="login.html">Login</a></li>
+                <a href="index.html#home">
+                    <li>Home</li>
+                </a>
+                <a href="index.html#servicos">
+                    <li>Serviços</li>
+                </a>
+                <a href="index.html#galeria">
+                    <li>Galeria</li>
+                </a>
+                <a href="index.html#sobre">
+                    <li>Sobre</li>
+                </a>
+                <a href="login.html">
+                    <li class="link-login">Login</li>
+                </a>
             </ul>
         </nav>
-    </header>
+        <div id="esconder" onclick="fechar_menu()">
 
-    <main class="login">
-        <div class="login-container">
-            <form action="menu_principal.html" class="login-form">
-                <label for="login-user">Usuário/Email:</label>
-                <input type="text" name="login-user" class="login_input" id="login-user">
-                <label for="login-pass">Senha:</label>
-                <input type="password" name="login-pass" class="login_input" id="login-pass">
-                <button class="botao_login">Logar</button>
-            </form>
-            <p class="login-reset">Esqueceu a senha? <a href="#">Clique Aqui</a></p>
         </div>
+    </header>
+    <main>
+        <section class="formlogin">
+            <form action="login_cliente.html" method="get">
+                <div>
+                    <label for="user">Usuário</label><br>
+                    <input type="text" name="user" id="user">
+                </div>
+                <div>
+                    <label for="passw">Senha</label><br>
+                    <input type="password" name="passw" id="passw">
+                </div>
+                <div id="botao_login">
+                    <button>Logar</button>
+                </div>
+            </form>
+            <p>Não possui cadastro? <a href="#">Clique aqui</a></p>
+        </section>
     </main>
-    
-    <div class="form-login">
-        <form action="menu_principal.html" method="get">
-            <div>
-                <label for="user">Usuário</label><br>
-                <input type="text" name="user" id="user">
-            </div>
-            <div>
-                <label for="passw">Senha</label><br>
-                <input type="password" name="passw" id="passw">
-            </div>
-            <div id="botao_login">
-                <button>Logar</button>
-            </div>
-        </form>
-        Não possui cadastro ? <a href="cadastro_funcionario.html">Clique aqui</a>
-    </div>
-
     <footer>
         <div class="container-footer">
             <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer" />
