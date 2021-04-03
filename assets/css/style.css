@@ -54,6 +54,7 @@ a {
 header .cabecalho #icone_menu{
     position: fixed;
     right: 0;
+    cursor: pointer;
 }
 
     
@@ -120,6 +121,7 @@ header .cabecalho {
 header .cabecalho img {
     padding: 0;
     margin: 25px;
+    cursor: pointer;
 }
 
 /*Home*/
