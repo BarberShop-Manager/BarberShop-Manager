@@ -3,7 +3,7 @@ function iniciaBadModal(bad) {
     const modal0 = document.getElementById('modal_confirmacao_falha');
     modal0.classList.add('falha'); 
     }
-    const botao0 =document .querySelector('#botao-agend-cancel');
+    const botao0 = document .querySelector('#botao-agend-cancel');
     botao0.addEventListener('click',function(){
         iniciaBadModal('modal_confirmacao_falha')
     });
@@ -22,7 +22,7 @@ function iniciaGoodModal(good) {
 
 
 function iniciaTrabalhoModal(work){
-    const modal2 = document.getElementsById('modal_dia_trabalho');
+    const modal2 = document.getElementById('modal_dia_trabalho');
     modal2.classList.add('ok');
     
     }
