@@ -1,26 +1,14 @@
-
 .container-caixa{
-    text-align: right;
+    text-align: center;
+    display: block;
 }
-.bloco-1{
-    float:left;
-    width:20%;
+
+[class ^= "bloco"] {
+    width:80%;
     padding:10px;
-    margin-right: 10%;
-    margin-left: 9%;
+    margin: 15px auto ;
 }
-.bloco-2 {
-    float:left;
-    width:20%;
-    padding:10px;
-    margin-right: 10%;
-}
-.bloco-3 {
-    float:left;
-   
-    width:20%;
-    padding:10px;
-}
+
 
 
 
@@ -29,33 +17,73 @@
     height: 45px;
     background-color: rgb(88, 87, 87);
     border-radius: 8px;
-    margin: 10%;
+    margin-bottom: 15px;
     color: white;
     font-size: large;
-    padding-left: 5%;
-    
+    padding-left: 5%; 
 }
 
 .drop{
-    padding-right: 8%;
-    margin-right: 10px;
-   
-    
+    width: 100%;   
+}
+
+.drop select{
+    margin: 0;
 }
 
 .dowload{
-    margin-top: 20%;
-    margin-bottom: 25%;
+    height: auto;
+    width: 100%;
 }
+
 #rodape {
     clear:both;
     margin-top: 50px;
 }
+
+
 .corte{
-    font-size: 150%;
-    margin-top: 10%;
+    width: 100%;
+    text-align: left;
+    font-size: 14pt;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .out{
-    width: 30%;
+    width: 92px;
+    height: 36px;
+    background: var(--cinza2);
+    border-radius: 8px;
+        
 }
+
+[class ^= "bloco"] img {
+    width : 100%;
+    height: auto;
+}
+
+
+.dowload img{
+    float: right;
+    width: 100px;
+    height: auto;
+    
+}
+
+.dowload::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+@media only screen and (min-width: 992px) {
+    .container-caixa{
+        display: flex;
+    }
+
+    
+
+}   
