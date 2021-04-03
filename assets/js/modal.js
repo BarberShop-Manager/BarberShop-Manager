@@ -10,5 +10,10 @@ function iniciaModal(modalID) {
     }
 }
 
-const botao = document.getElementById('botao-agend-confirm')
-botao.addEventListener('click', () => iniciaModal('modal-notifica'))
+if (document.getElementById('botao-agend-confirm')) {
+    const botao = document.getElementById('botao-agend-confirm')
+    botao.addEventListener('click', () => iniciaModal('modal-notifica'))
+} else {
+    const botaoAlterar = document.getElementById('botao-alterar')
+    botaoAlterar.addEventListener('click', () => iniciaModal('modal-notific'))
+}

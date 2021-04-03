@@ -20,6 +20,6 @@ function fechar_menu() {
     document.getElementById("esconder").style.width = "0"
 }
 
-var x = window.matchMedia("(min-width: 1366px)")
+var x = window.matchMedia("(min-width: 992px)")
 myFunction(x) // Chama a função que observa em tempo de execução
-x.addListener(myFunction) 
+x.addListener(myFunction)
