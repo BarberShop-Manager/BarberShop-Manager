@@ -23,7 +23,7 @@
     background: var(--branco);
     border-radius: 8px;
     width: 400px;
-    margin-bottom: 260px;
+    margin-bottom: 150px;
 }
 
 .card3 {
@@ -105,61 +105,97 @@
     color: var(--preto);
 }
 
-[class ^= "bloco"] img {
-    width : 100%;
-    height: auto;
+
+
+#graph_funcionarios {
+    margin-top: 160px;
 }
 
-[class ^= "bloco"] {
-    width:100%;
-    display: block;
-    padding:10px;
+#graph_funcionarios .dropdown_graph {
+    margin:auto;
 }
 
-#dropdow_periodo{
+#graph_funcionarios .dropdown_graph select{
+    padding: 15px;
+    margin: 10px 0;
     width: 100%;
-    height: 45px;
-    background-color: rgb(88, 87, 87);
-    border-radius: 8px;
-    margin-bottom: 15px;
-    color: white;
-    font-size: large;
-    padding-left: 5%; 
-}
-
-.drop{
-    width: 100%;   
-}
-
-.drop select{
-    margin: 0;
-}
-
-.dowload img{
-    float: right;
-    width: 100px;
-    height: auto;
+    height: 50px;
+    background-color: var(--cinza2);
     
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    color: var(--branco);
 }
 
-.dowload::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  .corte{
-    width: 100%;
-    text-align: left;
-    font-size: 14pt;
-    margin-top: 15px;
-    margin-bottom: 15px;
+#graph_funcionarios .dados-cortes {
     display: flex;
     justify-content: space-between;
 }
 
+#graph_funcionarios .dados-cortes input,label {
+    width: 100%;
+    font-size: 14pt;
+    margin: 15px;
+    padding: 15px 0;
+}
+
+#graph_funcionarios .dados-cortes input {
+    background-color: var(--cinza2);
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    color: var(--branco);
+    text-align: center;
+}
+
+#graph_funcionarios .download_graph::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+#graph_funcionarios .download_graph .img2 {
+    float: right;
+}
+
+#quadro_funcionarios{
+    float: right;
+}
+
+#quadro_funcionarios .quadro_funcionarios{
+    width: 360px;
+    height: 535px;
+    margin-right: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 23px var(--cinza3);
+    display: inline-block;
+    
+}
+
+#quadro_funcionarios .quadro_funcionarios h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    color: var(--branco);
+    text-align: center;
+}
+
+#quadro_funcionarios .quadro_funcionarios input{
+    width: 299px;
+    height: 57px;
+    border-radius: 8px;
+    margin: 0px 27px 0px 34px;
+}
+
 
 @media only screen and (max-width: 600px) {
+    .card2 {
+        margin-bottom: 0px;
+    }
+    
     .card1 h2 {
         font-size: 18pt;
         text-align: left;
@@ -176,5 +212,9 @@
     
     #ExcluirFunc button{
         width: 250px;
+    }
+
+    #graph_funcionarios {
+        margin-top: 0;
     }
 }

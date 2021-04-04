@@ -65,9 +65,8 @@
             </div>
 
             <div class="card2">
-                <div class="bloco-3">
-                    <h2>Rendimento</h2>
-                    <div class="drop">
+                <section id="graph_funcionarios">
+                    <div class="dropdown_graph">
                         <select name="Periodo" id="dropdow_periodo">
                             <option>Anual</option>
                             <option>Mensal</option>
@@ -75,25 +74,33 @@
                             <option>Diário</option>
                         </select>
                     </div>
-    
-                    <div id="Cliente"></div>
-    
-                    <div class = "corte">
-                        <strong>Número de cortes:</strong>
-                        <input type="text" class="out"> <br>
+                    <div id="Cliente" style="height: 300px; width: 100%;"></div>
+                    <div class="dados-cortes">
+                        <label for="fname">Numero de Agen. Totais:</label>
+                        <input type="text" name="fname" value="145" disabled>
                     </div>
-    
-                    <div class="dowload">
-                        <img src="./assets/img/dowload.png" alt="dowload" title="Realizar dowload">
+                    <div class="download_graph">
+                        <img class="img2" src="assets/img/dowload.png">
                     </div>
-    
-                </div>
+                </section>
             </div>
 
             <div class="card3">
-                <div class="meio-Card" id="pag_card"></div>
+                <div class="meio-Card" id="pag_card">
+                    <section id="quadro_funcionarios">
+                        <div class="quadro_funcionarios">
+                            <h2>Quadro de Funcionários</h2>
+                            <div class="pesquisar_funcionario">
+                                <input type="text">
+                                <img src="">
+                            </div>
+                            <div class="funcionario_list">
+                                <!--Aqui ficará a lista com o nome de cada funcionário-->
+                            </div>
+                        </div>
+                    </section>
+                </div>
                 <div class="baixoCard">
-                    <h2><a href="pagamento_cliente.html">P</a></h2>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ window.onload = function () {
     var chart3 = new CanvasJS.Chart("Cliente", {
         animationEnabled: true,
         title:{
-            text: "Vendas por Funcionários"
+            text: "Agendamentos Realizados"
         },
         axisX: {
             valueFormatString: "DD MMM,YY"
@@ -21,7 +21,7 @@ window.onload = function () {
             shared: true
         },
         data: [{
-            name: "Ferreira",
+            name: "Agendamentos",
             type: "spline",
             yValueFormatString: "#0.## Vezes",
             showInLegend: true,
