@@ -13,62 +13,215 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
+    <script>
+
+        window.onload = function () {
+
+            var chart0 = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                title: {
+                    text: "Vendas por Funcionários"
+                },
+                axisX: {
+                    valueFormatString: "DD MMM,YY"
+                },
+                axisY: {
+                    title: "Número de cortes ",
+
+                },
+                legend: {
+                    cursor: "pointer",
+                    fontSize: 16,
+                    itemclick: toggleDataSeries
+                },
+                toolTip: {
+                    shared: true
+                },
+                data: [{
+                    name: "Ferreira",
+                    type: "spline",
+                    yValueFormatString: "#0.## °C",
+                    showInLegend: true,
+                    dataPoints: [
+                        { x: new Date(2017, 6, 24), y: 31 },
+                        { x: new Date(2017, 6, 25), y: 31 },
+                        { x: new Date(2017, 6, 26), y: 29 },
+                        { x: new Date(2017, 6, 27), y: 29 },
+                        { x: new Date(2017, 6, 28), y: 31 },
+                        { x: new Date(2017, 6, 29), y: 30 },
+                        { x: new Date(2017, 6, 30), y: 29 }
+                    ]
+                },
+                ]
+            });
+            var chart1 = new CanvasJS.Chart("Ferreira", {
+                animationEnabled: true,
+                title: {
+                    text: "Vendas por Funcionários"
+                },
+                axisX: {
+                    valueFormatString: "DD MMM,YY"
+                },
+                axisY: {
+                    title: "Número de cortes ",
+
+                },
+                legend: {
+                    cursor: "pointer",
+                    fontSize: 16,
+                    itemclick: toggleDataSeries
+                },
+                toolTip: {
+                    shared: true
+                },
+                data: [{
+                    name: "Ferreira",
+                    type: "spline",
+                    yValueFormatString: "#0.## °C",
+                    showInLegend: true,
+                    dataPoints: [
+                        { x: new Date(2017, 6, 24), y: 31 },
+                        { x: new Date(2017, 6, 25), y: 31 },
+                        { x: new Date(2017, 6, 26), y: 29 },
+                        { x: new Date(2017, 6, 27), y: 29 },
+                        { x: new Date(2017, 6, 28), y: 31 },
+                        { x: new Date(2017, 6, 29), y: 30 },
+                        { x: new Date(2017, 6, 30), y: 29 }
+                    ]
+                },
+                ]
+            });
+
+            var chart2 = new CanvasJS.Chart("Siqueira", {
+                animationEnabled: true,
+                title: {
+                    text: "Vendas por Funcionários"
+                },
+                axisX: {
+                    valueFormatString: "DD MMM,YY"
+                },
+                axisY: {
+                    title: "Número de cortes ",
+
+                },
+                legend: {
+                    cursor: "pointer",
+                    fontSize: 16,
+                    itemclick: toggleDataSeries
+                },
+                toolTip: {
+                    shared: true
+                },
+                data: [{
+                    name: "Siqueira",
+                    type: "spline",
+                    yValueFormatString: "#0.## °C",
+                    showInLegend: true,
+                    dataPoints: [
+                        { x: new Date(2017, 6, 24), y: 31 },
+                        { x: new Date(2017, 6, 25), y: 31 },
+                        { x: new Date(2017, 6, 26), y: 29 },
+                        { x: new Date(2017, 6, 27), y: 29 },
+                        { x: new Date(2017, 6, 28), y: 31 },
+                        { x: new Date(2017, 6, 29), y: 30 },
+                        { x: new Date(2017, 6, 30), y: 29 }
+                    ]
+                },
+                ]
+            });
+
+            chart2.render();
+
+            function toggleDataSeries(e) {
+                if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                    e.dataSeries.visible = false;
+                }
+                else {
+                    e.dataSeries.visible = true;
+                }
+
+                chart2.render();
+            }
+
+        }
+
+    </script>
 </head>
 
 <body>
     <header>
         <div class="cabecalho">
             <img src="assets/img/bsmlogo.png" alt="logo barbershop">
-            <img onclick="abrir_menu()" ondblclick="fechar_menu()" src="assets/img/menu.png" alt="menu">
+            <img id="icone_menu" onclick="abrir_menu()" src="assets/img/menu.png" alt="menu">
         </div>
-
         <nav id="menu">
+            <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
             <ul>
-                <li><a href="#" class="fechando_menu" onclick="fechar_menu()">&times;</a></li>
-                <li> <a href="index.html"><h3>Pagina Principal</h3></a> </li>
-                
-                <li> <a href="cadastro_funcionario.html"><h3>Cadastrar Funcionário</h3></a> </li>
-
-                <li> <a href="mostra_todos_funcionarios.html"><h3>Mostrar Funcionários</h3></a> </li>
-
-                <li> <a href="mostra_todos_clientes.html"><h3>Mostrar Clientes</h3></a> </li>
-
-                <li> <a href="controle_de_caixa.html"><h3>Controle Caixa</h3></a> </li>
-
-                <li> <a href="perfil_adminstrador.html"><h3>Perfil</h3></a> </li>
-
-                <li> <a href="login.html"><h3>Sair</h3></a> </li>
-
-                
+                <a href="index.html">
+                    <li>Pagina Principal</li>
+                </a>
+                <a href="cadastro_funcionario.html">
+                    <li>Cadastrar Funcionário</li>
+                </a>
+                <a href="mostra_todos_funcionarios.html">
+                    <li>Mostrar Funcionários</li>
+                </a>
+                <a href="mostra_todos_clientes.html">
+                    <li>Mostrar Clientes</li>
+                </a>
+                <a href="controle_de_caixa.html">
+                    <li>Controle Caixa</li>
+                </a>
+                <a href="perfil_adminstrador.html">
+                    <li>Perfil</li>
+                </a>
+                <a href="login.html">
+                    <li>Sair</li>
+                </a>
             </ul>
         </nav>
+        <div id="esconder" onclick="fechar_menu()">
+
+        </div>
     </header>
     <main>
-    <div class="container-graphfunc">
-        <section id="dados_funcionario">
+        <div class="container-graphfunc">
+            <section id="dados_funcionario">
                 <div class="dados_funcionario">
-                    <h2>Nome Completo:</h2><br>
-                    <h2>CPF:</h2><br>
-                    <h2>EMAIL:</h2><br>
-                    <h2>Dias de trabalho:</h2>
+                    <div>
+                        <label for="fname">Primeiro Nome:</label>
+                        <input type="text" id="fname" name="fname" value="Gabriel" disabled>
+                    </div>
+                    <div>
+                        <label for="lname">Último nome:</label>
+                        <input type="text" id="lname" name="lname" value="Ferreira" disabled>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="ferreira@email.com" disabled>
+                    </div>
+                    <div>
+                        <label for="birthday">Aniversário:</label>
+                        <input type="date" id="aniversaio" name="aniversario" value="2001-08-04" disabled>
+                    </div>
                 </div>
 
                 <div class="btns_funcionario">
                     <div id="ativaFunc">
                         <a href="">
-                        <button>Ativar Funcionário</button>
+                            <button>Ativar Funcionário</button>
                         </a>
                     </div>
 
                     <div id="desativaFunc">
                         <a href="">
-                        <button>Desativar Funcionário</button>
+                            <button>Desativar Funcionário</button>
                         </a>
                     </div>
 
                     <div id="ExcluirFunc">
                         <a href="">
-                        <button>Excluir Funcionário</button>
+                            <button>Excluir Funcionário</button>
                         </a>
                     </div>
                 </div>
@@ -82,26 +235,60 @@
                         <option>Diário</option>
                     </select>
                 </div>
-                <div class="graph">
-                    <img src="assets/img/grafic.png">
-                </div>
-                <div class="numero_cortes">
-                    <h3>Número de Cortes:</h3>
-                    <input type="text">
+                <div id="Siqueira" style="height: 300px; width: 100%;"></div>
+                <div class="dados-cortes">
+                    <label for="fname">Numero de cortes:</label>
+                    <input type="text" name="fname" value="Gabriel" disabled>
                 </div>
                 <div class="download_graph">
-                    <img src="assets/img/dowload.png">
+                    <img class="img2" src="assets/img/dowload.png">
                 </div>
             </section>
-            <section id="quadro_funcionarios">
-                <div class="quadro_funcionarios">
-                    <h2>Quadro de Funcionários</h2>
-                    <div class="pesquisar_funcionario">
-                        <input type="text">
-                        <img src="">
+            <section class="lista-de-funcionarios">
+                <div class="busca">
+                    <input type="text" id="texbusca" placeholder="Funcionário..." />
+                    <img src="/assets/img/Buscar.png" id="btnBusca" alt="Buscar" />
+                </div>
+                <div class="container-funcionarios">
+                    <div class="card-funcionario1">
+                        <img src="assets/img/gustavo2.png" alt="">
+                        <div class="body-card">
+                            <h4>Gustavo Martins Ribeiro</h4>
+                            <div class="estrelas">
+
+                            </div>
+                            <a href="">Ver perfil</a>
+                        </div>
                     </div>
-                    <div class="funcionario_list">
-                        <!--Aqui ficará a lista com o nome de cada funcionário-->
+                    <div class="card-funcionario1">
+                        <img src="assets/img/pablo1.png" alt="">
+                        <div class="body-card">
+                            <h4>Pablo Christiano Lobo</h4>
+                            <div class="estrelas">
+
+                            </div>
+                            <a href="">Ver perfil</a>
+                        </div>
+                    </div>
+                    <div class="card-funcionario1">
+                        <img src="assets/img/pedro1.png" alt="">
+                        <div class="body-card">
+                            <h4>Pedro Vitor de Jesus</h4>
+                            <div class="estrelas">
+
+                            </div>
+                            <a href="">Ver perfil</a>
+                        </div>
+                    </div>
+                    <div class="card-funcionario1">
+                        <img src="assets/img/colemar1.png" alt="">
+                        <div class="body-card">
+                            <h4>Colemar Aguiar</h4>
+                            <div class="estrelas">
+
+                            </div>
+                            <a href="">Ver perfil</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -133,6 +320,7 @@
         <p>&copy; Copyright - 2021</p>
     </footer>
     <script src="./assets/js/scripts.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 
 </html>
