@@ -45,50 +45,68 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <div class="container_graphcliente">
-            <section id="dados_cliente">
-                <div class="dados_cliente">
-                    <h2>Nome Completo:</h2><br>
-                    <h2>CPF:</h2><br>
-                    <h2>EMAIL:</h2><br>
-                    <h2>Dias de trabalho:</h2>
+        
+        <div class="content">
+            <div class="card1">
+                <div class="meio-Card">
+                    <h2>Nome: Gabriel Ferreira</h2>
+                    <h2>CPF: 716916165521</h2>
+                    <h2>Email: erty@gmail.com</h2>
+                    <h2>Dias de Trabalho:</h2>
+                    <h2>Segunda-Feira - Terça-Feira - Sexta-Feira</h2>
                 </div>
-
-                <div class="btns_clientes">
-                    <div id="ativaCliente">
-                        <a href="">
-                        <button>Ativar Cliente</button>
-                        </a>
-                    </div>
-
-                    <div id="desativaCliente">
-                        <a href="">
-                        <button>Desativar Cliente</button>
-                        </a>
-                    </div>
-
-                    <div id="ExcCliente">
-                        <a href="">
-                        <button>Excluir Cliente</button>
-                        </a>
-                    </div>
+                <div class="baixoCard">
+                    <div id="ativaFunc" class="buttonFunc"><a href=""><button>Ativar Funcionário</button></a></div>
+                    <div id="desativaFunc" class="buttonFunc"><a href=""><button>Desativar Funcionário</button></a></div>
+                    <div id="ExcluirFunc" class="buttonFunc"><a href=""><button>Excluir Funcionário</button></a></div>
                 </div>
-            </section>
-            <section id="quadro_clientes">
-                <div class="quadro_clientes">
-                    <h2>Quadro de Cliente</h2>
-                    <div class="pesquisar_cliente">
-                        <input type="text">
-                        <img src="">
+            </div>
+
+            <div class="card2">
+                <section id="graph_funcionarios">
+                    <div class="dropdown_graph">
+                        <select name="Periodo" id="dropdow_periodo">
+                            <option>Anual</option>
+                            <option>Mensal</option>
+                            <option>Semanal</option>
+                            <option>Diário</option>
+                        </select>
                     </div>
-                    <div class="cliente_list">
-                        <!--Aqui ficará a lista com o nome de cada cliente-->
+                    <div id="Cliente" style="height: 300px; width: 100%;"></div>
+                    <div class="dados-cortes">
+                        <label for="fname">Numero de Agen. Totais:</label>
+                        <input type="text" name="fname" value="145" disabled>
                     </div>
+                    <div class="download_graph">
+                        <img class="img2" src="assets/img/dowload.png">
+                    </div>
+                </section>
+            </div>
+
+            <div class="card3">
+                <div class="meio-Card" id="pag_card">
+                    <section id="quadro_funcionarios">
+                        <div class="quadro_funcionarios">
+                            <h2>Quadro de Funcionários</h2>
+                            <div class="pesquisar_funcionario">
+                                <input type="text">
+                                <img src="">
+                            </div>
+                            <div class="funcionario_list">
+                                <!--Aqui ficará a lista com o nome de cada funcionário-->
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
+                <div class="baixoCard">
+                </div>
+            </div>
         </div>
+
     </main>
+
     <footer>
         <div class="container-footer">
             <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">
@@ -115,6 +133,9 @@
         <p>&copy; Copyright - 2021</p>
     </footer>
     <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/grafico1.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
 </body>
 
 </html>

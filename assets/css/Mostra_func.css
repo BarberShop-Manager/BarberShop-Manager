@@ -1,33 +1,39 @@
-
 .container-graphfunc{
-    display: flex;
-    justify-content: flex-start;
-    justify-content: space-around;
+    display: block;
 }
-
-#dados_funcionario{
-    display: inline-block;
-    clear: both;
-}
-
 
 #dados_funcionario .dados_funcionario{
-    width: 400px;
-    height: 400px;
-    margin: 25px;
-}
-.dados_funcionario h2{
-    text-align: left;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 12pt;
+    width: 100%;
+    height: auto;
+    padding: 15px;
 }
 
+#dados_funcionario .dados_funcionario label, input {
+    width: 100%;
+    font-size: 14pt;
+    margin: 15px;
+}
+
+#dados_funcionario .dados_funcionario label{
+    color: var(--preto);
+}
+
+
+#dados_funcionario .dados_funcionario input {
+    color: var(--cinza3);
+}
+
+.btns_funcionario {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+}
 
 .btns_funcionario #ativaFunc button{
     display: block;
-    margin: 25px;
-    width: 400px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
     height: 50px;
     background-color: var(--verde3);
     
@@ -40,8 +46,9 @@
 
 .btns_funcionario #desativaFunc button{
     display: block;
-    margin: 25px;
-    width: 400px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
     height: 50px;
     background-color: var(--amarelo4);
     
@@ -55,8 +62,9 @@
 
 .btns_funcionario #ExcluirFunc button{
     display: block;
-    margin: 25px;
-    width: 400px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
     height: 50px;
     background-color: var(--vermelho3);
     
@@ -67,72 +75,137 @@
     color: var(--preto);
 }
 
-#graph_funcionarios{
-    margin: 25px 25px 25px 0px;
+#graph_funcionarios {
+    padding: 15px;
+}
+
+#graph_funcionarios .dropdown_graph {
+    margin:auto;
 }
 
 #graph_funcionarios .dropdown_graph select{
-    width: 340px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
     height: 50px;
     background-color: var(--cinza2);
-    border-radius: 8px;
-    box-shadow: 0 2px 23px var(--cinza3);
     
-    color: var(--branco);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12pt;
-}
-
-#graph_funcionarios .graph{
-    margin: 25px 0px;
-}
-
-#graph_funcionarios .numero_cortes{
-    display: flex;
-    flex-direction: row;
-}
-
-#graph_funcionarios .numero_cortes input{
-    background-color: var(--cinza2);
-    width: 92px;
-    height: 36px;
     border-radius: 8px;
-    box-shadow: 0 2px 19px var(--cinza3);
-    margin-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12pt;
+    color: var(--branco);
 }
 
+#graph_funcionarios .dados-cortes {
+    display: flex;
+    justify-content: space-between;
+}
 
-#quadro_funcionarios{
+#graph_funcionarios .dados-cortes input,label {
+    width: 100%;
+    font-size: 14pt;
+    margin: 15px;
+    padding: 15px 0;
+}
+
+#graph_funcionarios .dados-cortes input {
+    background-color: var(--cinza2);
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+}
+
+#graph_funcionarios .download_graph::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+#graph_funcionarios .download_graph .img2 {
     float: right;
 }
 
-#quadro_funcionarios .quadro_funcionarios{
-    width: 360px;
-    height: 535px;
-    margin-right: 25px;
+#quadro_funcionarios {
+    padding: 15px;
+}
+
+h4 {
+    color: var(--branco);
+}
+
+.lista-de-funcionarios {
+    padding: 15px;
+}
+
+.lista-de-funcionarios .busca {
+    display: flex;
+    align-items: center;
+}
+
+.lista-de-funcionarios .busca img{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.lista-de-funcionarios .busca input {
+    width: 100%;
+    height: 50px;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 14pt;
+    background-color: var(--branco);
+    border: 1px solid var(--preto);
+}
+
+.lista-de-funcionarios .container-funcionarios [class^="card-funcionario"] {
     background-color: var(--cinza2);
     border-radius: 8px;
-    box-shadow: 0 2px 23px var(--cinza3);
-    display: inline-block;
+    display: flex;
+    margin: 50px auto;
     
 }
 
-#quadro_funcionarios .quadro_funcionarios h2{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 16pt;
+.lista-de-funcionarios .container-funcionarios .body-card {
+    padding: 15px;
+}
+
+.lista-de-funcionarios .container-funcionarios .body-card img {
+    border-radius: 8px;
+}
+
+.lista-de-funcionarios .container-funcionarios .body-card a {
     color: var(--branco);
+    text-decoration: underline;
+}
+
+.lista-de-funcionarios .container-funcionarios p {
     text-align: center;
 }
 
-#quadro_funcionarios .quadro_funcionarios input{
-    width: 299px;
-    height: 57px;
-    border-radius: 8px;
-
-    margin: 0px 27px 0px 34px;
+.lista-de-funcionarios .container-funcionarios p a {
+    text-decoration: underline;
+    color: var(--preto);
 }
 
 footer{
     clear: both;
+}
+
+/*Alterações do css para versão Tablet*/
+
+@media only screen and (min-width: 992px) {
+    .container-graphfunc{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*Alterações do css para versão Desktop*/
+
+@media only screen and (min-width: 1366px) {
+
 }
