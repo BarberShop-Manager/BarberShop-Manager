@@ -20,11 +20,15 @@ ___
 
 | Desktop  |      Mobile      |
 |----------|:-------------:|
-| ![Index]<img alt="" title="" src="./assets/docs/pagina-index-desk.png" width="300" height="600"> |  <img alt="" title="" src="./assets/docs/perfil_mobile.png" width="200" height="600"> |
-| <img alt="" title="" src="./assets/docs/lista_funcionarios.png" width="300" height="250"> |   <img alt="" title="" src="./assets/docs/mostra_agen_mobile.png" width="200" height="400">   |
-| <img alt="" title="" src="./assets/docs/pagina_agendamento.png" width="300" height="350"> | <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/alterar_agend_mobile.PNG" width="200" height="500"> |
+| <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/pagina-index-desk.PNG" width="300" height="600"> |  <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/perfil_mobile.PNG" width="200" height="600"> |
+| <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/lista_funcionarios.PNG" width="300" height="250"> |   <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/mostra_agen_mobile.PNGg" width="200" height="400">   |
+| <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/pagina_agendamento.PNG" width="300" height="350"> | <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/alterar_agend_mobile.PNG" width="200" height="500"> |
 </p>
 
+Para ver design em alta-resolução clique na partes a seguir:
+- [Layout Mobile](https://www.figma.com/proto/5IyS37XpzEOqiJp1BIP4GG/BarberShop-Manager?node-id=48%3A371&scaling=scale-down&page-id=48%3A87) 
+- [Layout Desktop](https://www.figma.com/proto/5IyS37XpzEOqiJp1BIP4GG/BarberShop-Manager?node-id=167%3A119&scaling=min-zoom&page-id=167%3A119)
+> Observação: Um video simples será postado, posteriormente, após o desenvolvimento total do site, demostrando o seu funcionamento.
 ___
 
 ## Contribuidores
