@@ -2,7 +2,7 @@
 
 <h2 align="center"> BEM-VINDO AO PROJETO BARBERSHOP MANAGER</h2>
 
-O projeto é um site tanto para desktop quanto celulares feito em grupo para realizar agendamento e controle de caixa de uma barbearia. A seguir segue o link para Github Pages do site: [BarberShop Manager](https://barbershop-manager.github.io/BarberShop-Manager/).
+O projeto é um site tanto para desktop quanto smartphones, feito em grupo para realizar agendamento e controle de caixa de uma barbearia. A seguir segue o link para Github Pages do site: [BarberShop Manager](https://barbershop-manager.github.io/BarberShop-Manager/).
 
 Nesta primeira parte do projeto, será utilizado apenas HTML, CSS e javascript, com editor [VSCode](https://code.visualstudio.com) e LiveServer para rodar o site, sem a utilização de mais nenhuma outra ferramenta. 
 ___
@@ -12,7 +12,7 @@ Para o desenvolvimento do mesmo fora necessário realizar antes uma prototipaç�
 ___
 ## Para Rodar a Aplicação
 
-Para rodar a aplicação não é necessário nenum browser específico, apenas recomendamos que se instale o VScode e após entre no mesmo aperte ```Ctrl + Shift + X``` e procure pela extensão LiveServer na barra de pesquisa que apareça após digitar o comando citado.
+Para rodar a aplicação não é necessário nenhum browser específico, apenas recomendamos a instalalação do VScode e após entre no mesmo aperte ```Ctrl + Shift + X``` e procure pela extensão LiveServer na barra de pesquisa que apareça após digitar o comando citado.
 ___
 
 ## Amostras das Telas
