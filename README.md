@@ -21,7 +21,7 @@ ___
 | Desktop  |      Mobile      |
 |----------|:-------------:|
 | <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/pagina-index-desk.PNG" width="300" height="600"> |  <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/perfil_mobile.PNG" width="200" height="600"> |
-| <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/lista_funcionarios.PNG" width="300" height="250"> |   <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/mostra_agen_mobile.PNGg" width="200" height="400">   |
+| <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/lista_funcionarios.PNG" width="300" height="250"> |   <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/mostra_agen_mobile.PNG" width="200" height="400">   |
 | <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/pagina_agendamento.PNG" width="300" height="350"> | <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/alterar_agend_mobile.PNG" width="200" height="500"> |
 </p>
 
