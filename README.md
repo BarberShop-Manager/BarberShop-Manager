@@ -20,9 +20,9 @@ ___
 
 | Desktop  |      Mobile      |
 |----------|:-------------:|
-| <img alt="" title="" src="./assets/docs/pagina-index-desk.png" width="300" height="600"> |  <img alt="" title="" src="./assets/docs/perfil_mobile.png" width="200" height="600"> |
+| ![Index]<img alt="" title="" src="./assets/docs/pagina-index-desk.png" width="300" height="600"> |  <img alt="" title="" src="./assets/docs/perfil_mobile.png" width="200" height="600"> |
 | <img alt="" title="" src="./assets/docs/lista_funcionarios.png" width="300" height="250"> |   <img alt="" title="" src="./assets/docs/mostra_agen_mobile.png" width="200" height="400">   |
-| <img alt="" title="" src="./assets/docs/pagina_agendamento.png" width="300" height="350"> | <img alt="" title="" src="./assets/docs/alterar_agend_mobile.png" width="200" height="500"> |
+| <img alt="" title="" src="./assets/docs/pagina_agendamento.png" width="300" height="350"> | <img alt="" title="" src="https://github.com/BarberShop-Manager/BarberShop-Manager/blob/barber-doc/assets/docs/alterar_agend_mobile.PNG" width="200" height="500"> |
 </p>
 
 ___
