@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>BarberShop Manager</title>
-    
+
     <link rel="stylesheet" href="./assets/css/cadastro_funcionario.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/feedback.css">
@@ -16,6 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <header>
 
@@ -23,261 +25,186 @@
             <img src="assets/img/bsmlogo.png" alt="Logo-em-Branco">
             <img onclick="abrir_menu()" ondblclick="fechar_menu()" src="assets/img/menu.png" alt="menu">
         </div>
-        
+
         <nav id="menu">
             <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
             <ul>
-                <a href="menu_principal_administrador.html">
-                    <li>Página principal</li>
-                </a>
-                <a href="mostra_todos_clientes.html">
-                    <li>Mostrar Clientes</li>
-                </a>
-                <a href="controle_de_caixa.html">
-                    <li>Controle de caixa</li>
-                </a>
-                <a href="perfil_adminstrador.html">
-                    <li>Perfil</li>
-                </a>
-                <a href="login.html">
-                    <li>Sair</li>
-                </a>
+                <li><a href="menu_principal_administrador.html">Página principal</a></li>
+                <li><a href="mostra_todos_clientes.html">Mostrar Clientes</a></li>
+                <li><a href="controle_de_caixa.html">Controle de caixa</a></li>
+                <li><a href="perfil_adminstrador.html">Perfil</a></li>
+                <li><a href="login.html">Sair</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="container-agendamento">
-            <form class="nome-func">
+        <div class="container-agendamento">
+            <form action="cadastro_funcionario.html" class="nome-func">
 
-    
-                <div >
-                    <label>Nome:</label><br>
-                    <input type="text">
+                <div>
+                    <label>Nome:</label>
+                    <input type="text" id="nome">
                 </div>
 
-                <div >
-                    <label>Email:</label><br>
-                    <input type="text">
+                <div>
+                    <label>Email:</label>
+                    <input type="text" id="email">
                 </div>
 
-                <div >
-                    <label>CPF:</label><br>
-                    <input type="text">
+                <div>
+                    <label>CPF:</label>
+                    <input type="text" id="cpf">
                 </div>
 
-                <div >
-                    <label>Dias de trabalho:</label><br>
-                    <button type="button" id = 'botao-select'>
-                        
-                    </button>
-
+                <div>
+                    <label for="botao-select">Dias de trabalho:</label>
+                    <input id="botao-select">
                 </div>
-                 
-                <div >
-                    <label>Horário</label><br>
+
+                <div>
+                    <label>Horário</label>
                     <input type="time">
                 </div>
 
                 <div>
-                    <label>Senha</label><br>
+                    <label>Senha</label>
                     <input type="password">
                 </div>
 
                 <div>
-                    <label>Confirmar Senha</label><br>
+                    <label>Confirmar Senha</label>
                     <input type="password">
                 </div>
-                
+
                 <div class="grupo-botao">
 
                     <div id="botao-agend-confirm">
-                        
+
                         <button type="button">Cadastro Sucesso</button>
-                        
+
                     </div>
                     <div id="botao-agend-cancel">
-                       
-                        <button type="button">Cadastro Fail</button>
-                       
-                    </div>
 
+                        <button type="button">Cadastro Fail</button>
+
+                    </div>
                 </div>
             </form>
-        </section>
+        </div>
     </main>
 
     <footer>
-        
+
         <div class="container-footer">
             <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer" />
             <nav id="rede-social">
                 <ul>
-                    <a href="#">
-                        <li>
-                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager" />
-                        </li>
-                    </a>
-                    <a href="https://instagram.com/barbeariaclubedobolinhadf?igshid=l2k4pqy24mwp">
-                        <li>
-                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger" />
-                        </li>
-                    </a>
-                    <a href="#">
-                        <li>
-                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger" />
-                        </li>
-                    </a>
+                    <li><a href="#"><img src="assets/img/Facebook.png" alt="facebook-barbarmanager" /></a></li>
+                    <li><a href="https://instagram.com/barbeariaclubedobolinhadf?igshid=l2k4pqy24mwp"><img
+                                src="assets/img/Instagram.png" alt="instagram-barbermanger" /></a></li>
+                    <li><a href="#"><img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger" /></a></li>
                 </ul>
             </nav>
         </div>
         <p>&copy; Copyright - 2021</p>
     </footer>
-    
-    <div id = 'modal_dia_trabalho' class = "modal_container">
+
+    <div id='modal_dia_trabalho' class="modal_container">
 
         <form class="container-main">
 
             <div class="box-container">
-    
+
                 <div>
                     <h2>Escolha os dias de trabalho:</h2>
                 </div>
-    
+
                 <div class="dias_de_trabalho">
-    
                     <label for="segunda"> Segunda-Feira </label>
-                    <input type="checkbox" id="week" nome="subscribe" value="Segunda-Feira" >
-    
+                    <input type="checkbox" id="segunda" name="segunda_data" value="Segunda-Feira">
                 </div>
-    
-    
+
                 <div class="dias_de_trabalho">
-    
                     <label for="terca"> Terça-Feira </label>
-                    <input type="checkbox" id="week" nome="subscribe" value="Terça-Feira">
-    
+                    <input type="checkbox" id="terca" name="terca_data" value="Terça-Feira">
                 </div>
-    
+
                 <div class="dias_de_trabalho">
-    
-                    <label for="terca"> Quarta-Feira </label>
-                    <input type="checkbox" id="week" nome="subscribe" value="Quarta-Feira">
-    
+                    <label for="quarta"> Quarta-Feira </label>
+                    <input type="checkbox" id="quarta" name="quarta_data" value="Quarta-Feira">
                 </div>
-    
+
                 <div class="dias_de_trabalho">
-    
-                    <label for="terca"> Quinta-Feira </label>
-                    <input type="checkbox" id="week" nome="subscribe" value="Quinta-Feira">
-    
+                    <label for="quinta"> Quinta-Feira </label>
+                    <input type="checkbox" id="quinta" name="quinta_data" value="Quinta-Feira">
                 </div>
-    
+
                 <div class="dias_de_trabalho">
-    
-                    <label for="segunda"> Sexta-Feira </label>
-                    <input type="checkbox" id="week" nome="subscribe" value="Sexta-Feira">
-    
+                    <label for="sexta"> Sexta-Feira </label>
+                    <input type="checkbox" id="sexta" name="sexta_data" value="Sexta-Feira">
                 </div>
-    
-    
+
+
                 <div class="dias_de_trabalho">
-    
-                    <label for="terca"> Sábado </label>
-                    <input type="checkbox" id="week" nome="subscribe" value="Sábado">
-    
+                    <label for="sabado"> Sábado </label>
+                    <input type="checkbox" id="sabado" name="sabado_data" value="Sábado">
                 </div>
-    
+
                 <div class="dias_de_trabalho">
-    
-                    <label for="terca"> Domingo </label>
-                    <input type="checkbox" id="week" nome="subscribe" value="Domingo">
-    
+                    <label for="domingo"> Domingo </label>
+                    <input type="checkbox" id="domingo" name="domingo_data" value="Domingo">
                 </div>
-    
+
                 <div class="confirmar">
-                    <a href="cadastro_funcionario.html">
-                        <input type="button" value="CONFIRMAR" id="confirm">
-                    </a>
+                        <input type="submit" value="CONFIRMAR" id="confirm">
                 </div>
-    
+
             </div>
-            
+
         </form>
     </div>
 
-    <div id = 'modal_confirmacao_sucesso' class = 'modal_container'>
+    <div id='modal_confirmacao_sucesso' class='modal_container'>
 
+        <div id="cadastro">
+            <div class="box">
 
-        <section id="cadastro">
-
-
-
-            <div class = "box">
-    
                 <img src="./assets/img/checked1.png" title="Dados invalidos">
-    
             </div>
-    
-    
-            <div class = "box">
-    
-                <h3>CADASTRADO  DO FUNCIONÁRIO <br>
+
+
+            <div class="box">
+
+                <h3>CADASTRADO DO FUNCIONÁRIO <br>
                     FEITO COM SUCESSO
                 </h3>
-    
-            </div >
-    
-    
-            <div >
-    
-                <a 
-                    href="login.html">
-                    <button class = "botao-sucess">CONFIRMAR</button>
-                </a>
-    
+
             </div>
-        
-    
-        </section>
+
+
+            <div> <a href="login.html" class="botao-sucess">CONFIRMAR</a></div>
+
+
+        </div>
 
     </div>
 
-    <div id = modal_confirmacao_falha class = modal_container>>
-        <section id="cadastro">
-
-            <div class = "box">
-    
-                <img src="./assets/img/error 1.png" title="Dados invalidos">
-    
+    <div id=modal_confirmacao_falha class=modal_container>>
+        <div id="cadastro_modal">
+            <div class="box"><img src="./assets/img/error1.png" title="Dados invalidos"></div>
+            <div class="box">
+                <h3>FALHA NO CADASTRO !</h3>
+                <h3> TENTE NOVAMENTE </h3> 
             </div>
-    
-    
-            <div class = "box">
-    
-                <h3>FALHA NO CADASTRO ! <br>
-                    TENTE NOVAMENTE
-                </h3>
-    
-            </div >
-    
-    
-            <div >
-    
-                <a 
-                    href="cadastro_funcionario.html">
-                    <button class = "botao-fail">TENTAR NOVAMENTE</button>
-                </a>
-    
-            </div>
-    
-        </section>
-
+            <div> <a href="cadastro_funcionario.html" class="botao-fail"> TENTAR NOVAMENTE </a> </div>
+        </div>
     </div>
 
-    
+
     <script src="./assets/js/scripts.js"></script>
     <script src="./assets/js/modal_cadastro.js"></script>
-    
+
 </body>
+
 </html>

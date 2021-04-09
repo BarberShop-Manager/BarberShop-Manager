@@ -27,25 +27,12 @@
             <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
             <ul>
         
-                 <a href="menu_principal_administrador.html">
-                    <li>Página principal</li>
-                </a>
-                <a href="cadastro_funcionario.html">
-                    <li>Cadastro Funcionário</li>
-                </a>
-                <a href="mostra_todos_clientes.html">
-                    <li>Mostrar Clientes</li>
-                </a>
-                <a href="controle_de_caixa.html">
-                    <li>Controle de caixa</li>
-                </a>
-                <a href="perfil_adminstrador.html">
-                    <li>Perfil</li>
-                </a>
-                <a href="login.html">
-                    <li>Sair</li>
-                </a>
-                </a>
+                <li><a href="menu_principal_administrador.html">Página principal</a></li>
+                <li><a href="cadastro_funcionario.html">Cadastro Funcionário</a></li>                
+                <li><a href="mostra_todos_clientes.html">Mostrar Clientes</a></li>
+                <li><a href="controle_de_caixa.html">Controle de caixa</a></li>
+                <li><a href="perfil_adminstrador.html">Perfil</a></li>
+                <li><a href="login.html">Sair</a></li>
             </ul>
         </nav>
     </header>
@@ -53,9 +40,9 @@
     
 
     <main>
-        <section id="formulario">
+        <div id="formulario">
             
-            <form action="">
+            <form action="#">
 
                 <label for="name">NOME</label><br/>
                 <input type="text" name="email" id="name"
@@ -69,43 +56,28 @@
                 <input type="text" name="email" id="password"
                     placeholder="Digite sua senha"><br/><br/><br/>
                         
-                <label for="password">CONFIRMAR SENHA</label><br/>
-                <input type="text" name="email" id="password"
+                <label for="confirm_password">CONFIRMAR SENHA</label><br/>
+                <input type="text" name="email" id="confirm_password"
                     placeholder="Digite sua senha novamente"><br/><br/><br/>
 
                 <label for="cellphone">NÚMERO</label><br/>
                 <input type="text" name="email" id="cellphone"
                     placeholder="Digite seu número">
             </form>
-        </section>
-        <br/><br/>
-        <section id="atualizar">
+        </div>
+        <div>
                 <button id="atualizar">ATUALIZAR</button>
-        </section>
-        <br/><br/>
+        </div>
     </main>
-    
     
     <footer>
         <div class="container-footer">
             <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer" />
             <nav id="rede-social">
                 <ul>
-                    <a href="">
-                        <li>
-                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager" />
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger" />
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger" />
-                        </li>
-                    </a>
+                    <li><a href=""><img src="assets/img/Facebook.png" alt="facebook-barbarmanager" /></a></li>
+                    <li><a href=""><img src="assets/img/Instagram.png" alt="instagram-barbermanger" /></a></li>
+                    <li><a href=""><img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger" /></a></li>
                 </ul>
             </nav>
         </div>
