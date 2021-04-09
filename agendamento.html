@@ -24,21 +24,12 @@
         <nav id="menu">
             <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
             <ul>
-                <a href="menu_principal_cliente.html">
-                    <li>Menu</li>
-                </a>
-                <a href="lista_de_funcionarios.html">
-                    <li> Lista de Funcionários</li>
-                </a>
-                <a href="agendamento.html">
-                    <li>Realizar Agendamento</li>
-                </a>
-                <a href="perfil_cliente.html">
-                    <li>Perfil</li>
-                </a>
-                <a href="login.html">
-                    <li>Sair</li>
-                </a>
+                
+                    <li> <a href="menu_principal_cliente.html">Menu</a></li>
+                    <li><a href="lista_de_funcionarios.html">Lista de Funcionários</a></li>
+                    <li><a href="agendamento.html">Realizar Agendamento</a></li>
+                    <li><a href="perfil_cliente.html">Perfil</a></li>
+                    <li><a href="login.html">Sair</a></li>
             </ul>
         </nav>
         <div id="esconder" onclick="fechar_menu()">
@@ -46,7 +37,7 @@
         </div>
     </header>
     <main>
-        <section class="container-agendamento">
+        <div class="container-agendamento">
             <form>
                 <div class=nome-func>
                     <label>Nome do funcionário</label><br>
@@ -71,8 +62,8 @@
                     </div>
                 </div>
                 <div class="slctFormPagamento">
-                    <label for="pagmanento">Esscolha um serviço</label>
-                    <select name="pagmanento" id="pagamento">
+                    <label for="pagamento">Escolha um serviço</label>
+                    <select name="pagamento" id="pagamento">
                         <option value="serviço1">Dinheiro</option>
                         <option value="serviço2">Cartão</option>
                         <option value="serviço3">Boleto</option>
@@ -80,11 +71,11 @@
                 </div>
                 <div class="numero">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" placeholder="(DDD)999999999">
+                    <input type="tel" id="telefone" placeholder="(DDD)999999999">
                 </div>
                 <div class="OBS">
                     <label>Observações:</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea cols="30" rows="10"></textarea>
                 </div>
                 <div class="grupo-botao">
 
@@ -96,28 +87,16 @@
             <div id="botao-agend-cancel">
                 <button>Cancelar Pagamento</button>
             </div>
-        </section>
+        </div>
     </main>
     <footer>
         <div class="container-footer">
             <img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer">
             <nav id="rede-social">
                 <ul>
-                    <a href="">
-                        <li>
-                            <img src="assets/img/Facebook.png" alt="facebook-barbarmanager">
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <img src="assets/img/Instagram.png" alt="instagram-barbermanger">
-                        </li>
-                    </a>
-                    <a href="">
-                        <li>
-                            <img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger">
-                        </li>
-                    </a>
+                    <li><a href="#"><img src="assets/img/Facebook.png" alt="facebook-barbarmanager"></a></li>
+                    <li><a href="#"><img src="assets/img/Instagram.png" alt="instagram-barbermanger"></a></li>
+                    <li><a href="#"><img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger"></a></li>
                 </ul>
             </nav>
         </div>
