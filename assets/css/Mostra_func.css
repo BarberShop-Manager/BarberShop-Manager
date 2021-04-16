@@ -29,8 +29,8 @@
     padding: 15px;
 }
 
-.btns_funcionario #ativaFunc button{
-    display: block;
+.btns_funcionario #ativaFunc a{
+    display: flex;
     padding: 15px;
     margin: 10px 0;
     width: 100%;
@@ -42,10 +42,13 @@
     font-weight: 500;
     font-size: 12pt;
     color: var(--preto);
+
+    justify-content: center;
+    align-items: center;
 }
 
-.btns_funcionario #desativaFunc button{
-    display: block;
+.btns_funcionario #desativaFunc a{
+    display: flex;
     padding: 15px;
     margin: 10px 0;
     width: 100%;
@@ -57,11 +60,14 @@
     font-weight: 500;
     font-size: 12pt;
     color: var(--preto);
+
+    justify-content: center;
+    align-items: center;
 }
 
 
-.btns_funcionario #ExcluirFunc button{
-    display: block;
+.btns_funcionario #ExcluirFunc a{
+    display: flex;
     padding: 15px;
     margin: 10px 0;
     width: 100%;
@@ -73,6 +79,8 @@
     font-weight: 500;
     font-size: 12pt;
     color: var(--preto);
+
+    justify-content: center;
 }
 
 #graph_funcionarios {
@@ -189,6 +197,10 @@ h4 {
 .lista-de-funcionarios .container-funcionarios p a {
     text-decoration: underline;
     color: var(--preto);
+}
+
+#fname {
+    color: var(--branco);
 }
 
 footer{
