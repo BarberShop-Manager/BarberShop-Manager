@@ -47,45 +47,45 @@ body main section {
 /* IMAGENS DO MENU ADMINISTRADOR */
 
 #cadastro_func_card{
-    background: url("/assets/img/cadastro.png") center/cover;
+    background: url('../img/cadastro.png') center/cover;
 }
 
 #most_cliente{
-    background: url("/assets/img/mostrando_clientes.png") center/cover;
+    background: url('../img/mostrando_clientes.png') center/cover;
 }
 
 #most_funcionario{
-    background: url("/assets/img/mostrar_funcionario.png") center/cover;
+    background: url('../img/mostrar_funcionario.png') center/cover;
 }
 
 #cont_caixa{
-    background: url("/assets/img/control_box.jpg") center/cover;
+    background: url("../img/control_box.jpg") center/cover;
 }
 
 #futuramente{
-    background: url("/assets/img/controle_caixa.png") center/cover;
+    background: url('../img/controle_caixa.png') center/cover;
 }
 
 #futuro{
-    background: url("/assets/img/controle_caixa.png") center/cover;
+    background: url("../img/controle_caixa.png") center/cover;
 }
 
 /* IMAGENS DO MENU FUNCIONÁRIO */
 
 #atend_dia{
-    background: url("/assets/img/mostrar_clientes.png") center/cover;
+    background: url('../img/mostrar_clientes.png') center/cover;
 }
 
 #pag_card{
-    background: url("/assets/img/pagamento_cliente.jpg") center/cover;
+    background: url('../img/pagamento_cliente.jpg') center/cover;
 }
 
 #hist_corte{
-    background: url("/assets/img/historico_de_cortes.jpg") center/cover;
+    background: url('../img/historico_de_cortes.jpg') center/cover;
 }
 
 #perfil_func{
-    background: url("/assets/img/perfil_geral.png") center/cover;
+    background: url('../img/perfil_geral.png') center/cover;
 }
 
 
