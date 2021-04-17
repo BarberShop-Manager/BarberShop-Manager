@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BarberShop Manager</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/atualizaçao_dados.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+</head>
+
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <a href="menu_principal_funcionario.html"><img src="assets/img/bsmlogo.png" alt="Logo"></a>
+            <img onclick="abrir_menu()" src="assets/img/menu.png" alt="menu" />
+        </div>
+
+        <nav id="menu">
+            <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
+            <ul>
+        
+                <li><a href="menu_principal_admin.html">Página principal</a></li>
+                <li><a href="cadastro_funcionario.html">Cadastro Funcionário</a></li>                
+                <li><a href="mostra_todos_clientes.html">Mostrar Clientes</a></li>
+                <li><a href="controle_de_caixa.html">Controle de caixa</a></li>
+                <li><a href="perfil_admin.html">Perfil</a></li>
+                <li><a href="login.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <main>
+        <div id="formulario">
+            
+            <form action="#">
+                <label for="name">NOME</label><br/>
+                <input type="text" name="name" id="name"
+                    placeholder="Digite seu nome"><br/><br/><br/>
+
+                <label for="email">EMAIL</label><br/>
+                <input type="text" name="email" id="email"
+                    placeholder="Digite seu email"><br/><br/><br/>
+
+                <label for="password">SENHA</label><br/>
+                <input type="text" name="email" id="password"
+                    placeholder="Digite sua senha"><br/><br/><br/>
+                        
+                <label for="confirm_password">CONFIRMAR SENHA</label><br/>
+                <input type="text" name="confirm_password" id="confirm_password"
+                    placeholder="Digite sua senha novamente"><br/><br/><br/>
+
+                <label for="cellphone">NÚMERO</label><br/>
+                <input type="text" name="cellphone" id="cellphone"
+                    placeholder="Digite seu número">
+            </form>
+        </div>
+        <div>
+                <button id="atualizar">ATUALIZAR</button>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container-footer">
+            <a href="menu_principal_funcionario.html"><img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer" /></a>
+            <nav id="rede-social">
+                <ul>
+                    <li><a href=""><img src="assets/img/Facebook.png" alt="facebook-barbarmanager" /></a></li>
+                    <li><a href=""><img src="assets/img/Instagram.png" alt="instagram-barbermanger" /></a></li>
+                    <li><a href=""><img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger" /></a></li>
+                </ul>
+            </nav>
+        </div>
+        <p>&copy; Copyright - 2021</p>
+    </footer>
+    <script src="./assets/js/scripts.js"></script>
+
+
+</body>

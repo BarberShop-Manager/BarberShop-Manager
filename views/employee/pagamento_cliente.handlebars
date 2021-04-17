@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BarberShop Manager</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/pagamento_cliente.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet" />
+</head>
+
+
+<body>
+    <header>
+        <div class="cabecalho">
+            <a href="menu_principal_funcionario.html"><img src="assets/img/bsmlogo.png" alt="logo barbershop"></a>
+            <img id="icone_menu" onclick="abrir_menu()" src="assets/img/menu.png" alt="menu">
+        </div>
+        <nav id="menu">
+            <img id="fechar" onclick="fechar_menu()" src="assets/img/fechar_min.png" alt="fechar">
+            <ul>
+                <li><a href="menu_principal_funcionario.html">Página Inicial</a></li>
+                <li><a href="mostra_agendamentos.html">Atendimentos do Dia</a></li>
+                <li><a href="#">Histórico de Cortes</a></li>
+                <li><a href="perfil_func.html">Perfil</a></li>
+                <li><a href="login.html">Sair</a></li>
+            </ul>
+        </nav>
+        <!-- Div para esconder o fundo do site quando abrir o menu -->
+        <div id="esconder" onclick="fechar_menu()">
+
+        </div>
+    </header>
+
+    <main>
+        <div id="formulario">
+            <form>
+                <label for="name" class="label_text_color">Nome do cliente</label>
+                <input type="text" name="name" id="name" class="button" placeholder="Digite seu nome"><br />
+
+                <label for="servico" class="label_text_color">Selecionar serviço</label><br />
+                <select id="servico" class="drop_down">
+                    <option value="serviço_1">serviço 1</option>
+                    <option value="serviço_2">serviço 2</option>
+                    <option value="serviço_3">serviço 3</option>
+                    <option value="serviço_4">serviço 4</option>
+                </select>
+
+                <label for="date" class="text_esquerda">Data do serviço</label>
+                <label for="time" class="text_direita">Horário</label><br />
+
+                <div id="div_1">
+                    <input type="date" name="date" id="date" class="button_div_1">
+                    <input type="time" name="time" id="time" class="button_div_1">
+                </div>
+
+                <br />
+                <label for="pagamento" class="label_text_color">Selecionar forma de pagamento</label><br />
+                <select id="pagamento" class="drop_down">
+                    <option value="serviço_1">Cartão de crédito</option>
+                    <option value="serviço_2">Dinheiro</option>
+                    <option value="serviço_3">Boleto bancário</option>
+                    <option value="serviço_4">Cartão presente</option>
+                </select>
+
+                <label for="valor" class="text_esquerda">Valor</label><br />
+                <input type="text" name="valor" id="valor" placeholder="Digite um valor">
+
+                <label for="observ" class="text_esquerda">Observações:</label>
+                <textarea name="observ" id="observ" cols="30" rows="10"></textarea>
+            </form>
+            <div>
+                <button id="button_confirmar_pagamento">CONFIRMAR PAGAMENTO</button>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container-footer">
+            <a href="menu_principal_funcionario.html"><img src="assets/img/Logo-em-Branco.png" alt="barbershop-logo-branca" class="logo-footer" /></a>
+            <nav id="rede-social">
+                <ul>
+                    <li><a href=""><img src="assets/img/Facebook.png" alt="facebook-barbarmanager"></a></li>
+                    <li><a href=""><img src="assets/img/Instagram.png" alt="instagram-barbermanger"></a></li>
+                    <li><a href=""><img src="assets/img/Whatsapp.png" alt="whatsapp-barbermanger"></a></li>
+                </ul>
+            </nav>
+        </div>
+        <p>&copy; Copyright - 2021</p>
+    </footer>
+
+    <div id="modal-notifica-pagamento" class="modal-container">
+        <div class="modal">
+            <button class="fechar">&times;</button>
+            <img src="/assets/img/gustavo.jpg" alt="foto do funcionário" class="img_func">
+
+            <p class="p_notifica">Gustavo Martins</p>
+            <p class="p_notifica">Corte de Cabelo</p>
+            <p class="p_notifica text_1">R$ 25,00</p>
+            <p class="p_notifica text_2">Dinheiro</p>
+            <p class="p_notifica">Josealdo da Silva</p>
+            <form action="pagamento_cliente.html" method="get">
+                <div>
+                    <button type="submit" value="confirma" class="button-confirm">Confimar</button>
+                </div>
+                <p id="hora_notifica">09:00:00</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/modal_pagina_pagamento.js"></script>
+
+</body>

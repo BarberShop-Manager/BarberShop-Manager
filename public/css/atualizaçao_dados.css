@@ -1,0 +1,61 @@
+
+#name {
+    height: 50px;
+    width: 250px;;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#password {
+    height: 50px;
+    width: 250px;;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#confirm_password {
+    height: 50px;
+    width: 250px;;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#email {
+    height: 50px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#cellphone {
+    height: 50px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#img_redonda {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+#atualizar {
+    background: crimson;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#formulario {
+    background: grey;
+    width: 400px;
+    height: 600px;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto;
+
+}
