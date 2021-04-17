@@ -2,31 +2,27 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send("Página menu admin")
+    res.render("admin/menu-admin")
 })
 
-router.get('/cadastrar-funcionario', (req, res) => {
-    res.send("Página de cadastrar Funcionario ")
+router.get('/cadastro-funcionario', (req, res) => {
+    res.render("admin/cadastro-funcionario")
 })
 
-router.get('/mostrar-clientes', (req, res) => {
-    res.send("Página para Mostrar Clientes")
+router.get('/lista-de-clientes', (req, res) => {
+    res.render("admin/lista-de-clientes")
 })
 
-router.get('/mostrar-funcionarios', (req, res) => {
-    res.send("Página para Mostrar Funcionários")
+router.get('/lista-de-funcionarios', (req, res) => {
+    res.render("admin/lista-de-funcionarios")
 })
 
 router.get('/controle-de-caixa', (req, res) => {
-    res.send("Controle de Caixa")
+    res.render("admin/controle-de-caixa")
 })
 
-router.get('/perfil-admin', (req, res) => {
-    res.send("Página Perfil admin")
-})
-
-router.get('/atualiza-dados', (req, res) => {
-    res.send("Página atualiza dados")
+router.get('/perfil-administrador', (req, res) => {
+    res.render("admin/perfil-admin")
 })
 
 module.exports = router;
