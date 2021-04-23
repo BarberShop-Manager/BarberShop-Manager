@@ -1,0 +1,53 @@
+<main>
+    <div class="container-agendamento">
+        <form>
+            <div class=nome-func>
+                <label>Nome do funcionário</label><br>
+                <input type="text">
+            </div>
+            <div class=SlctServiço>
+                <label for="serviços">Esscolha um serviço</label>
+                <select name="serviços" id="serviços">
+                    <option value="serviço1">serviço1</option>
+                    <option value="serviço2">serviço2</option>
+                    <option value="serviço3">serviço3</option>
+                </select>
+            </div>
+            <div class="data-hora">
+                <div class="DataServiço">
+                    <label>Data do serviço</label>
+                    <input type="date">
+                </div>
+                <div class="hora-servico">
+                    <label>Horário</label>
+                    <input type="time">
+                </div>
+            </div>
+            <div class="slctFormPagamento">
+                <label for="pagamento">Escolha um serviço</label>
+                <select name="pagamento" id="pagamento">
+                    <option value="serviço1">Dinheiro</option>
+                    <option value="serviço2">Cartão</option>
+                    <option value="serviço3">Boleto</option>
+                </select>
+            </div>
+            <div class="numero">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="(DDD)999999999">
+            </div>
+            <div class="OBS">
+                <label>Observações:</label>
+                <textarea cols="30" rows="10"></textarea>
+            </div>
+            <div class="grupo-botao">
+
+            </div>
+        </form>
+        <div id="botao-agend-confirm">
+            <button>Confirmar Agendamento</button>
+        </div>
+        <div id="botao-agend-cancel">
+            <button>Cancelar Pagamento</button>
+        </div>
+    </div>
+</main>
