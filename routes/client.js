@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+
 router.get('/', (req, res) => {
     res.render("client/menu-cliente")
 })
@@ -15,6 +16,10 @@ router.get('/lista-de-funcionarios', (req, res) => {
 
 router.get('/perfil-cliente', (req, res) => {
     res.render("client/perfil-cliente")
+})
+
+router.post('/new-user',(req, res)=> {
+    res.render("")
 })
 
 

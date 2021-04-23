@@ -1,0 +1,38 @@
+<div class="cadastro_cliente">
+    <form action="/cliente/novo" method="POST">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Ex.: Fulano de Tal">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Ex.: example@gmail.com">
+        </div>
+        <div>
+            <label for="cpf">CPF:</label>
+            <input type="text" maxlength="11" minlength="" id="cpf" name="cpf" placeholder="Ex.: 12345678901">
+        </div>
+        <div>
+            <label for="birthDay">Data de Nascimento:</label>
+            <input type="date" id="birthDay" name="birthDay" value="2000-01-01">
+        </div>
+        <div>
+            <label for="telephone">Telefone:</label>
+            <input type="text" id="telephone" name="telefone" placeholder="94002-8922">
+        </div>
+        <div>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+        </div>
+        <div>
+            <label for="confirmarSenha">Confimar Senha:</label>
+            <input type="password" id="confirmarSenha" name="confimarSenha"> <br>
+        </div>
+        <div id="botao_cadastro">
+            <button type="submit">Cadastrar</button>
+        </div>
+        <div>
+            <input type="hidden" id="nivel" name="nivel" value="2"> <br>
+        </div>
+    </form>
+</div>
