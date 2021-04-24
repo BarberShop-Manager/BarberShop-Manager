@@ -9,6 +9,8 @@ const employee = require("./routes/employee");
 const cliente = require("./routes/client");
 const path = require("path");
 const Sequelize  = require('sequelize');
+
+require("./models/FuncionarioNovo")
 // CONFIGURAÇÕES
     //Body Parser
         app.use(bodyParser.urlencoded({ extended: true }));
