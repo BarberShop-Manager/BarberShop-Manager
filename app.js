@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const admin = require("./routes/admin");
 const employee = require("./routes/employee");
-const cliente = require("./routes/client");
+const cliente = require("./routes/cliente");
 const path = require("path");
 const Sequelize  = require('sequelize');
 
@@ -56,6 +56,7 @@ require("./models/FuncionarioNovo")
 
     //Rotas do Cliente
         app.use('/cliente', cliente);
+        
 
 //OUTRAS CONFIGURAÇÕES
     const PORT = 3308;

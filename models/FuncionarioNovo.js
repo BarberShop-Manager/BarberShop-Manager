@@ -1,10 +1,6 @@
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize('db_bsm', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
-});
+const db = require('./db')
 
-const userNew = sequelize.define('users', {
+const userNew = db.sequelize.define('users', {
     user_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -60,3 +56,5 @@ const userNew = sequelize.define('users', {
         allowNull: false,
     }
 });
+
+module.export = userNew
