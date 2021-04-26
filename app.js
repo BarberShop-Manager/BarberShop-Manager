@@ -8,12 +8,18 @@ const admin = require("./routes/admin");
 const employee = require("./routes/employee");
 const cliente = require("./routes/client");
 const path = require("path");
+<<<<<<< HEAD
 const userNew = require("./models/ClienteNovo");
 const session = require("express-session");
 const flash = require('connect-flash');
 
 let erros = [];
 
+=======
+const Sequelize  = require('sequelize');
+
+require("./models/FuncionarioNovo")
+>>>>>>> 533a3068418cbb599f767ad291f6d864bb12a41e
 // CONFIGURAÇÕES
     // Sessão
         app.use(session({
