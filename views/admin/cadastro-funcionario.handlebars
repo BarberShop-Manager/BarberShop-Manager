@@ -1,55 +1,48 @@
 <main>
-    <div class="container-agendamento">
-        <form action="cadastro_funcionario.html" class="nome-func">
+    <section class="container-agendamento">
+        <form class="nome-func">
 
             <div>
-                <label>Nome:</label>
-                <input type="text" id="nome">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Nome do funcionário">
             </div>
 
             <div>
-                <label>Email:</label>
-                <input type="text" id="email">
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" placeholder="Email do funcionário">
             </div>
 
             <div>
-                <label>CPF:</label>
-                <input type="text" id="cpf">
+                <label for="cpf">CPF:</label><br>
+                <input type="text" id="cpf" name="cpf" placeholder="CPF do funcionário">
+            </div>
+            <div>
+                <label for="dias-de-trabalho">Dias de trabalho</label><br>
+                <input type="button" id="dias-de-trabalho" name="dias-de-trabalho" value="Dias de trabalho">
+            </div>
+            <div>
+                <label for="hora">Horário</label><br>
+                <input type="time" id="hora" name="hora">
             </div>
 
             <div>
-                <label for="botao-select">Dias de trabalho:</label>
-                <input id="botao-select">
+                <label for="senha">Senha</label><br>
+                <input type="password" id="senha" name="senha" placeholder="Senha para o funcionário">
             </div>
 
             <div>
-                <label>Horário</label>
-                <input type="time">
-            </div>
-
-            <div>
-                <label>Senha</label>
-                <input type="password">
-            </div>
-
-            <div>
-                <label>Confirmar Senha</label>
-                <input type="password">
+                <label for="confirma-senha">Confirmar Senha</label><br>
+                <input type="password" id="confirma-senha" name="confirma-senha" placeholder="Confirmar senha">
             </div>
 
             <div class="grupo-botao">
-
                 <div id="botao-agend-confirm">
-
-                    <button type="button">Cadastro Sucesso</button>
-
+                    <button type="button">Cadastrar</button>
                 </div>
                 <div id="botao-agend-cancel">
-
-                    <button type="button">Cadastro Fail</button>
-
+                    <button type="button">Cancelar</button>
                 </div>
             </div>
         </form>
-    </div>
+    </section>
 </main>

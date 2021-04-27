@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarberShop Manager</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/cadastro_cliente.css">
+    <link rel="stylesheet" href="/css/cadastro_funcionario.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -20,7 +19,79 @@
     {{>header}}
     {{{body}}}
     {{>footer}}
+    <div id='modal_dia_trabalho' class="modal_container">
 
+        <form class="container-main">
+
+            <div class="box-container">
+
+                <div>
+                    <h2>Escolha os dias de trabalho:</h2>
+                </div>
+
+                <div class="dias_de_trabalho">
+
+                    <label for="segunda"> Segunda-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Segunda-Feira">
+
+                </div>
+
+
+                <div class="dias_de_trabalho">
+
+                    <label for="terca"> Terça-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Terça-Feira">
+
+                </div>
+
+                <div class="dias_de_trabalho">
+
+                    <label for="terca"> Quarta-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Quarta-Feira">
+
+                </div>
+
+                <div class="dias_de_trabalho">
+
+                    <label for="terca"> Quinta-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Quinta-Feira">
+
+                </div>
+
+                <div class="dias_de_trabalho">
+
+                    <label for="segunda"> Sexta-Feira </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Sexta-Feira">
+
+                </div>
+
+
+                <div class="dias_de_trabalho">
+
+                    <label for="terca"> Sábado </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Sábado">
+
+                </div>
+
+                <div class="dias_de_trabalho">
+
+                    <label for="terca"> Domingo </label>
+                    <input type="checkbox" id="week" nome="subscribe" value="Domingo">
+
+                </div>
+
+                <div class="confirmar">
+                    <a href="cadastro_funcionario.html">
+                        <input type="button" value="CONFIRMAR" id="confirm">
+                    </a>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/modal_cadastro.js"></script>
 </body>
 
 </html>
