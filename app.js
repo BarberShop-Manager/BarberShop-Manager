@@ -8,34 +8,19 @@ const admin = require("./routes/admin");
 const employee = require("./routes/employee");
 const cliente = require("./routes/client");
 const path = require("path");
-const userNew = require("./models/ClienteNovo");
-const session = require("express-session");
-const flash = require('connect-flash');
-
-let erros = [];
-
+const Sequelize  = require('sequelize');
 // CONFIGURAÇÕES
-    // Sessão
-        app.use(session({
-            secret: "qualquer coisa",
-            resave: true,
-            saveUninitialized: true
-        }))
-
-        app.use(flash())
-    
-    //Middleware
-        app.use((res, req, next) => {
-               //res.locals.error = req.flash("error");
-               //res.locals.success = req.flash("success");
-            next()
-        })
     //Body Parser
         app.use(bodyParser.urlencoded({ extended: true }));
         app.use(bodyParser.json());
     //Handlebars
         app.engine('handlebars', handlebars({ defaultLayout: 'main' }));
         app.set('view engine', 'handlebars');
+    //Sequelize
+        const sequelize = new Sequelize('db_bsm', 'root', '', {
+            host: 'localhost',
+            dialect: 'mysql'
+        });
 
 
     //Public
@@ -52,23 +37,8 @@ let erros = [];
             res.render("cadastro-cliente")
         });
 
-        app.post('/cadastro/users/new-user',(req,res)=>{
-            userNew.create({
-                user_id: req.body.user_id,
-                _name: req.body._name,
-                _username: req.body._username,
-                _email: req.body._email,
-                _cpf: req.body._cpf,
-                _date: req.body._date,
-                _password: req.body._password,
-                _telephone: req.body._telephone,
-                _nivel: req.body._nivel
-            }).then(function(){
-                console.log("usuário cadastrado com sucesso");
-                res.redirect('/')
-            }).catch(function(erro){
-                res.send("Ocorreu um erro " + erro)
-            })
+        app.post('/cadastro/novo',(req,res)=>{
+            res.render("novo")
         })
 
     //Login dos Usuários
@@ -85,7 +55,7 @@ let erros = [];
     //Rotas do Cliente
         app.use('/cliente', cliente);
 
-//OUTRAS CONFIGURAÇÕESs
+//OUTRAS CONFIGURAÇÕES
     const PORT = 3308;
     app.listen(PORT, () => {
         console.log("Barbearia Aberta !")
