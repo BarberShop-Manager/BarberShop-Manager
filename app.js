@@ -8,18 +8,22 @@
     const employee = require("./routes/employee");
     const cliente = require("./routes/client");
     const path = require("path");
-    require("./models/ClienteNovo");
     const flash = require("connect-flash");
     const session = require("express-session");
-    const Client = mongoose.model("clientes");
+    const passport = require("passport")
+    require("./config/auth")(passport);   
     
 // CONFIGURAÇÕES
     // Sessão
         app.use(session({
-            secret: "qualquer coisa",
+            secret: "Uma barberada",
             resave: true,
             saveUninitialized: true
         }))
+
+        app.use(passport.initialize())
+        app.use(passport.session())
+        
         app.use(flash())
 
     
@@ -27,6 +31,8 @@
         app.use((req,res,next) => {
             res.locals.success_msg = req.flash("success_msg")
             res.locals.error_msg = req.flash("error_msg")
+            res.locals.error = req.flash("error")
+            res.locals.user = req.user || null;
             next()
         })
         
@@ -61,51 +67,24 @@
         res.render("cadastro-cliente")
     });
     
-    app.post('/cadastro/users/new-user',(req,res)=>{
-        
-        let erros = [];
-
-        if(!req.body._nome || typeof req.body._nome == undefined || req.body._nome == null){
-
-        }
-
-        if(!req.body._username || typeof req.body._username == undefined || req.body._username == null){
-
-        }
-        if(!req.body._email || typeof req.body._email == undefined || req.body._email == null){
-
-        }
-
-        if(!req.body._cpf || typeof req.body._cpf == undefined || req.body._cpf == null){
-
-        }
-
-        if(!req.body._password || typeof req.body._password == undefined || req.body._password == null){
-
-        }
-        
-        const novoCliente = {
-                _name:req.body._name,
-                _username:req.body._username,
-                _email:req.body._email,
-                _cpf:req.body._cpf,
-                _date:req.body._date,
-                _password:req.body._password,
-                _telephone:req.body._telephone,
-                _nivel:req.body._nivel
-            }
-        
-        new Cliente(novoCliente).save().then(()=>{
-                console.log("Usuário cadastrado com sucesso");
-            }).catch((err)=>{
-                console.log("Erro ao cadastrar o usuario "+ err);
-        });
-    })
-
     //Login dos Usuários
         app.get('/login', (req, res) => {
             res.render("login")
         });
+
+        app.post("/login", (req, res, next) =>{
+            passport.authenticate("local", {
+                successRedirect: "/",
+                failureRedirect: "/login",
+                failureFlash: true
+            })(req, res, next)
+        })
+
+        app.get("/logout", (req,res) => {
+            req.session.destroy((err) => {
+                res.redirect('/') // will always fire after session is destroyed
+            })
+        })
 
     //Rotas do Adminstrador
         app.use('/administrador', admin);

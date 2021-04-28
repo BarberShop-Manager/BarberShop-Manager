@@ -1,5 +1,10 @@
+{{#each erros}}
+    <div>{{mensagem}}</div>
+{{else}}
+
+{{/each}}
 <div class="cadastro_cliente">
-    <form action="/cadastro/users/new-user" method="POST">
+    <form action="/cliente/new-user" method="POST">
         <div>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="_name">
@@ -30,7 +35,7 @@
         </div>
         <div>
             <label for="confirmarSenha">Confimar Senha:</label>
-            <input type="password" id="confirmarSenha" name="confimarSenha"> <br>
+            <input type="password" id="_password2" name="_password2"> <br>
         </div>
         <div id="botao_cadastro">
             <button type="submit">Cadastrar</button>
