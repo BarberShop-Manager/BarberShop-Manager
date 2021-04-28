@@ -8,7 +8,7 @@ const Pagamento = new schema({
         require: true
     },
     Service:{
-        type: ,
+        type: String,
         require: true
     },
     Data_service:{
@@ -20,7 +20,7 @@ const Pagamento = new schema({
         require: true
     },
     Payment_form:{
-        type: ,
+        type: String,
         require: true
     },
     Value:{
