@@ -24,7 +24,7 @@ const mongoose = require("mongoose")
             require: true,
         },
         data_do_servico:{
-            type: Number,
+            type:Date,
             require: true,
             
         },
@@ -52,7 +52,6 @@ mongoose.model('cadhorario',servicoSchema)
 
 const servico = mongoose.model('cadhorario')
 
-/*
 new servico({
     nome_do_funcionario:'Pedro Vitor',
     Selecionar_servico:'Degrade',
@@ -66,4 +65,3 @@ new servico({
 }).catch((err)=>{
     console.log("Erro ao registra corte" +err)
 })
-*/

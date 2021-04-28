@@ -14,7 +14,7 @@ const mongoose = require("mongoose")
     })
 
 // Model - cadastro
-    const servicoSchema = mongoose.Schema({
+    const servicocad = mongoose.Schema({
         nome_do_funcionario:{
             type:String,
             require: true,
@@ -24,7 +24,7 @@ const mongoose = require("mongoose")
             require: true,
         },
         data_do_servico:{
-            type: Number,
+            type:Date,
             require: true,
             
         },
@@ -45,15 +45,13 @@ const mongoose = require("mongoose")
         }
     })
 
-
+/*
 // Collection
-
-mongoose.model('cadhorario',servicoSchema)
+    mongoose.model('cadhorario',servicocad)
 
 const servico = mongoose.model('cadhorario')
 
-/*
-new servico({
+new cadhorario({
     nome_do_funcionario:'Pedro Vitor',
     Selecionar_servico:'Degrade',
     data_do_servico:'28',
