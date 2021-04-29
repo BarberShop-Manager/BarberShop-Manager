@@ -1,3 +1,7 @@
+{{#each erros}}
+    <div class="alert">{{texto}}</div>
+{{else}}
+{{/each}}
 <main>
     <div id="formulario">
         <form>
@@ -36,7 +40,7 @@
             <textarea name="observ" id="observ" cols="30" rows="10"></textarea>
         </form>
         <div>
-            <button id="button_confirmar_pagamento">CONFIRMAR PAGAMENTO</button>
+            <button type="submit" id="button_confirmar_pagamento">CONFIRMAR PAGAMENTO</button>
         </div>
     </div>
 </main>

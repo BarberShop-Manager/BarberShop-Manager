@@ -17,21 +17,57 @@ router.get('/confirmar-pagamento', (req, res) => {
 })
 
 router.post('/confirmar-pagamento/novo', (req,res)=>{
-    const NovoPagamento = {
-        Name_client: req.body.name,
-        Service: req.body.service,
-        Data_service: req.body.date,
-        Hour_service: req.body.time,
-        Payment_form: req.body.payform,
-        Value: req.body.valor,
-        Observ: req.body.observ
+
+    var erros = []
+
+    if(!req.body.name || typeof req.body.name == undefined || req.body.name == null){
+        erros.push({texto: "Nome invalido"})
     }
 
-    new PagamentoNovo(NovoPagamento).save().then(()=>{
-        console.log("Dados de pagamento salvos com sucesso!")
-    }).catch((err)=>{
-        console.log("Erro ao salvar dados de pagamento "+err)
-    })
+    if(req.body.name.length <= 2){
+        erros.push({texto: "Nome muito curto"})
+    }
+
+    if(!req.body.service || typeof req.body.service == undefined || req.body.service == null){
+        erros.push({texto: "Serviço invalido"})
+    }
+
+    if(!req.body.date || typeof req.body.date == undefined || req.body.date == null){
+        erros.push({texto: "Data invalida"})
+    }
+
+    if(!req.body.time || typeof req.body.time == undefined || req.body.time == null){
+        erros.push({texto: "Hora invalida"})
+    }
+
+    if(!req.body.payform || typeof req.body.payform == undefined || req.body.payform == null){
+        erros.push({texto: "Forma de pagamento invalida"})
+    }
+
+    if(!req.body.valor || typeof req.body.valor == undefined || req.body.valor == null){
+        erros.push({texto: "Valor invalido"})
+    }
+
+    if(erros.length > 0){
+        res.render("employee/confirmar-pagamento", {erros: erros})
+    }else{
+        const NovoPagamento = {
+            Name_client: req.body.name,
+            Service: req.body.service,
+            Data_service: req.body.date,
+            Hour_service: req.body.time,
+            Payment_form: req.body.payform,
+            Value: req.body.valor,
+            Observ: req.body.observ
+        }
+        new PagamentoNovo(NovoPagamento).save().then(()=>{
+            req.flash("success_msg", "Dados de pagamento salvo!")
+            res.redirect("/employee/notificação-do-pagamento")
+        }).catch((err)=>{
+            req.flash("error_msg", "Houve um erro ao tentar salvar os dados de pagamento")
+            res.redirect("/confirmar-pagamento")
+        })
+    }
 })
 
 router.get('/perfil-funcionario', (req, res) => {
