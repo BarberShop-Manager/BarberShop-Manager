@@ -6,23 +6,23 @@ const Client = mongoose.model("clientes");
 const bcrypt = require("bcryptjs")
 const {_nivel} = require("../helpers/_nivel")
 
-router.get('/', _nivel, (req, res) => {
+router.get('/', (req, res) => {
     res.render("client/menu-cliente")
 })
 
-router.get('/agendamentos', _nivel, (req, res) => {
+router.get('/agendamentos', (req, res) => {
     res.render("client/agendamentos")
 })
 
-router.get('/lista-de-funcionarios',_nivel, (req, res) => {
+router.get('/lista-de-funcionarios', (req, res) => {
     res.render("client/lista-de-funcionarios")
 })
 
-router.get('/perfil-cliente',_nivel, (req, res) => {
+router.get('/perfil-cliente', (req, res) => {
     res.render("client/perfil-cliente")
 })
 
-router.post('/new-user',_nivel,(req,res)=>{
+router.post('/new-user',(req,res)=>{
         
     let erros = [];
 
