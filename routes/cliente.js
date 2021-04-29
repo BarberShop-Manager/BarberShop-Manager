@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-
+const mongoose = require("mongoose")
+require("../models/ServicoNovo")
+const ServicoNovo = mongoose.model("cadhorario")
 
 router.get('/', (req, res) => {
     res.render("client/menu-cliente")
@@ -21,6 +23,7 @@ router.get('/perfil-cliente', (req, res) => {
 router.post('/new-user',(req, res)=> {
     res.render("")
 })
+
 
 
 module.exports = router;

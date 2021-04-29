@@ -1,20 +1,8 @@
 const mongoose = require("mongoose")
-
-
-// Configurando o mongoose
-    mongoose.Promisse = global.Promise;
-    
-    mongoose.connect("mongodb://localhost/banco",{
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }).then(function(){
-        console.log("MongoDb Conectado")
-    }).catch(function(err){
-        console.log("Erro ao se conectar a base de dados: "+err)
-    })
+const Schema = mongoose.Schema;
 
 // Model - cadastro
-    const servicoSchema = mongoose.Schema({
+    const Cadhorario = new Schema({
         nome_do_funcionario:{
             type:String,
             require: true,
@@ -24,7 +12,7 @@ const mongoose = require("mongoose")
             require: true,
         },
         data_do_servico:{
-            type: Number,
+            type: Date,
             require: true,
             
         },
@@ -35,6 +23,10 @@ const mongoose = require("mongoose")
         pagamento:{
             type:String,
             require: true,
+            default:"Dinheiro"
+        },
+        ddd:{
+            type:Number
         },
         numero:{
             type:Number,
@@ -44,13 +36,15 @@ const mongoose = require("mongoose")
             type: String
         }
     })
-
-
+    
+    
+mongoose.model('cadhorario',Cadhorario)
+    
 // Collection
 
-mongoose.model('cadhorario',servicoSchema)
-
+/*
 const servico = mongoose.model('cadhorario')
+*/
 
 /*
 new servico({
@@ -66,4 +60,12 @@ new servico({
 }).catch((err)=>{
     console.log("Erro ao registra corte" +err)
 })
+*/
+
+// Rota de consulta para a base de dados 
+/* 
+mongo
+use banco
+show collections 
+db.cadhorarios.find()
 */

@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema;
 
 //Model pagamento cliente
-const Pagamento = new schema({
+const Pagamento = new Schema({           //de schema para Schema
     Name_client:{
         type: String,
         require: true
@@ -28,9 +28,9 @@ const Pagamento = new schema({
         require: true
     },
     Observ:{
-        type: Text,
+        type: String,               //Passei de text para string
         require: false
     }
 })
 
-mongoose.model("pagamento_cliente", Pagamento)
+mongoose.model("pagamento-cliente", Pagamento) //pagamento_cliente --> pagamento - cliente
