@@ -25,9 +25,7 @@ const Schema = mongoose.Schema;
             require: true,
             default:"Dinheiro"
         },
-        ddd:{
-            type:Number
-        },
+        
         numero:{
             type:Number,
             require: true,
