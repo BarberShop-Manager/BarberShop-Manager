@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require("mongoose")
+require('../models/PagamentoNovo')
+const PagamentoNovo = mongoose.model("pagamento-cliente")
 const {_nivel1} = require("../helpers/_nivel")
 
 router.get('/', _nivel1,(req, res) => {
@@ -12,6 +15,81 @@ router.get('/lista-de-agendamentos',_nivel1, (req, res) => {
 
 router.get('/confirmar-pagamento',_nivel1, (req, res) => {
     res.render("employee/confirmar-pagamento")
+})
+
+router.post('/confirmar-pagamento/novo', (req,res)=>{
+
+    var erros = []
+
+    if(!req.body.name || typeof req.body.name == undefined || req.body.name == null){
+        erros.push({texto: "Nome invalido"})
+    }
+
+    if(req.body.name.length <= 2){
+        erros.push({texto: "Nome muito curto"})
+    }
+
+    if(!req.body.service || typeof req.body.service == undefined || req.body.service == null){
+        erros.push({texto: "Serviço invalido"})
+    }
+
+    if(!req.body.date || typeof req.body.date == undefined || req.body.date == null){
+        erros.push({texto: "Data invalida"})
+    }
+
+    if(!req.body.time || typeof req.body.time == undefined || req.body.time == null){
+        erros.push({texto: "Hora invalida"})
+    }
+
+    if(!req.body.payform || typeof req.body.payform == undefined || req.body.payform == null){
+        erros.push({texto: "Forma de pagamento invalida"})
+    }
+
+    if(!req.body.valor || typeof req.body.valor == undefined || req.body.valor == null){
+        erros.push({texto: "Valor invalido"})
+    }
+
+    if(erros.length > 0){
+        res.render("employee/confirmar-pagamento", {erros: erros})
+    }else{
+        const NovoPagamento = new PagamentoNovo({
+            Name_client: req.body.name,
+            Service: req.body.service,
+            Data_service: req.body.date,
+            Hour_service: req.body.time,
+            Payment_form: req.body.payform,
+            Value: req.body.valor,
+            Observ: req.body.observ
+
+        })
+
+        NovoPagamento.save().then(()=>{
+            req.flash("success_msg", "Dados de pagamento salvos!!")
+            res.redirect("/")
+        }).catch((err)=>{
+            req.flash("error_msg", "Erro no pagamento"+err)
+            res.redirect("/funcionario/confirmar-pagamento")
+
+           
+            
+        })
+        // const NovoPagamento = {
+        //     Name_client: req.body.name,
+        //     Service: req.body.service,
+        //     Data_service: req.body.date,
+        //     Hour_service: req.body.time,
+        //     Payment_form: req.body.payform,
+        //     Value: req.body.valor,
+        //     Observ: req.body.observ
+        // }
+        // new PagamentoNovo(NovoPagamento).save().then(()=>{
+        //     req.flash("success_msg", "Dados de pagamento salvo!")
+        //     res.redirect("/funcionario/confirmar-pagamento")
+        // }).catch((err)=>{
+        //     req.flash("error_msg", "Houve um erro ao tentar salvar os dados de pagamento")
+        //     res.redirect("/funcionario/confirmar-pagamento")
+        // })
+    }
 })
 
 router.get('/perfil-funcionario',_nivel1, (req, res) => {
