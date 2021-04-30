@@ -50,19 +50,20 @@ router.post('/cadastro-funcionario/novo', (req, res) => {
 
     if ((
         req.body.segunda == undefined &&
-        req.body.segunda == undefined &&
-        req.body.segunda == undefined &&
-        req.body.segunda == undefined &&
-        req.body.segunda == undefined &&
-        req.body.segunda == undefined &&
-        req.body.segunda == undefined
+        req.body.terca == undefined &&
+        req.body.quarta == undefined &&
+        req.body.quinta == undefined &&
+        req.body.sexta == undefined &&
+        req.body.sabado == undefined &&
+        req.body.domingo == undefined
     ) || (
             req.body.segunda == null &&
-            req.body.segunda == null &&
-            req.body.segunda == null &&
-            req.body.segunda == null &&
-            req.body.segunda == null &&
-            req.body.segunda == null
+            req.body.terca == null &&
+            req.body.quarta == null &&
+            req.body.quinta == null &&
+            req.body.sexta == null &&
+            req.body.sabado == null &&
+            req.body.domingo == null
         )
     ) {
         erros.push({ texto: "Nenhum dia de trabalho foi cadastrado" })

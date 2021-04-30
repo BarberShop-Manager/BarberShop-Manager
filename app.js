@@ -11,7 +11,6 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("connect-flash");
 
-//const Sequelize = require('sequelize');
 // CONFIGURAÇÕES
 //Sessão
 app.use(session({
@@ -39,14 +38,6 @@ mongoose.connect('mongodb://localhost/barbershop').then(() => {
 }).catch((err) => {
     console.log("Erro ao se conectar" + err)
 })
-//Sequelize
-/* 
-const sequelize = new Sequelize('db_bsm', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
-});
-*/
-
 
 //Public
 app.use(express.static(path.join(__dirname, "public")))
