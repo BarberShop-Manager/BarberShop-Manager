@@ -1,16 +1,16 @@
     <main>
         <div class="formlogin">
-            <form action="menu_principal_cliente.html" method="get">
+            <form action="/login" method="post">
                 <div>
-                    <label for="user">Usuário</label><br>
-                    <input type="text" name="user" id="user">
+                    <label for="_username">Usuário</label><br>
+                    <input type="text" name="_username" id="_username">
                 </div>
                 <div>
-                    <label for="passw">Senha</label><br>
-                    <input type="password" name="passw" id="passw">
+                    <label for="_password">Senha</label><br>
+                    <input type="password" name="_password" id="_password">
                 </div>
                 <div id="botao_login">
-                    <button>Logar</button>
+                    <button type="submit">Logar</button>
                 </div>
             </form>
             <p>Não possui cadastro? <a href="/cadastro" class="cadas_cliente">Clique aqui</a></p>

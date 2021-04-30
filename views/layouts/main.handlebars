@@ -8,6 +8,7 @@
     <title>BarberShop Manager</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/cadastro_funcionario.css">
     <link rel="stylesheet" href="/css/cadastro_cliente.css">
     <link rel="stylesheet" href="/css/agendamento_cliente.css">
     <link rel="stylesheet" href="/css/pagamento_cliente.css">
@@ -19,7 +20,12 @@
 </head>
 
 <body>
-    
+    {{>header}}
+    {{#if error}}
+        <div>{{error}}</div>
+    {{else}}
+
+    {{/if}}
     {{>_msg}}
     {{{body}}}
     {{>footer}}
