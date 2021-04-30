@@ -4,21 +4,21 @@ const mongoose = require('mongoose')
 require("../models/ClienteNovo");
 const Client = mongoose.model("clientes");
 const bcrypt = require("bcryptjs")
-const {_nivel} = require("../helpers/_nivel")
+const {_nivel2} = require("../helpers/_nivel")
 
-router.get('/', (req, res) => {
+router.get('/',_nivel2, (req, res) => {
     res.render("client/menu-cliente")
 })
 
-router.get('/agendamentos', (req, res) => {
+router.get('/agendamentos',_nivel2, (req, res) => {
     res.render("client/agendamentos")
 })
 
-router.get('/lista-de-funcionarios', (req, res) => {
+router.get('/lista-de-funcionarios',_nivel2, (req, res) => {
     res.render("client/lista-de-funcionarios")
 })
 
-router.get('/perfil-cliente', (req, res) => {
+router.get('/perfil-cliente',_nivel2, (req, res) => {
     res.render("client/perfil-cliente")
 })
 

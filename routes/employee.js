@@ -1,19 +1,20 @@
 const express = require('express');
 const router = express.Router();
+const {_nivel1} = require("../helpers/_nivel")
 
-router.get('/', (req, res) => {
+router.get('/', _nivel1,(req, res) => {
     res.render("employee/menu-funcionario")
 })
 
-router.get('/lista-de-agendamentos', (req, res) => {
+router.get('/lista-de-agendamentos',_nivel1, (req, res) => {
     res.render("employee/lista-de-agendamentos")
 })
 
-router.get('/confirmar-pagamento', (req, res) => {
+router.get('/confirmar-pagamento',_nivel1, (req, res) => {
     res.render("employee/confirmar-pagamento")
 })
 
-router.get('/perfil-funcionario', (req, res) => {
+router.get('/perfil-funcionario',_nivel1, (req, res) => {
     res.render("employee/perfil-funcionario")
 })
 
