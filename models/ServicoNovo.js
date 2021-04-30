@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Model - cadastro
@@ -12,12 +12,12 @@ const Schema = mongoose.Schema;
             require: true,
         },
         data_do_servico:{
-            type: Date,
+            type: String,
             require: true,
             
         },
         horario:{
-            type:Number,
+            type:String,
             require: true,
         },
         pagamento:{
@@ -27,7 +27,7 @@ const Schema = mongoose.Schema;
         },
         
         numero:{
-            type:Number,
+            type:String,
             require: true,
         },
         observações:{
@@ -38,32 +38,3 @@ const Schema = mongoose.Schema;
     
 mongoose.model('cadhorario',Cadhorario)
     
-// Collection
-
-/*
-const servico = mongoose.model('cadhorario')
-*/
-
-/*
-new servico({
-    nome_do_funcionario:'Pedro Vitor',
-    Selecionar_servico:'Degrade',
-    data_do_servico:'28',
-    horario:'15',
-    pagamento:'Cartão',
-    numero:'62995205598',
-    observações:''
-}).save().then(()=>{
-    console.log("Usuário criado com sucesso!")
-}).catch((err)=>{
-    console.log("Erro ao registra corte" +err)
-})
-*/
-
-// Rota de consulta para a base de dados 
-/* 
-mongo
-use banco
-show collections 
-db.cadhorarios.find()
-*/
