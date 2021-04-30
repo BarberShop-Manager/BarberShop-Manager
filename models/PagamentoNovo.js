@@ -13,11 +13,12 @@ const Pagamento = new Schema({
         require: true
     },
     Data_service:{
-        type: Date,
+        type: String,
         require: true
+
     },
     Hour_service:{
-        type: Date,
+        type: String,
         require: true
     },
     Payment_form:{
@@ -31,12 +32,8 @@ const Pagamento = new Schema({
     Observ:{
         type: String,               
         require: false
-    },
-    id_funcionario:{
-        type: Schema.Types.ObjectID,
-        ref: "cadhorario",
-        required: true
     }
+    
 })
 
 mongoose.model("pagamento-cliente", Pagamento) 
