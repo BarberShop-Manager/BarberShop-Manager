@@ -33,7 +33,7 @@ const flash = require ("connect-flash")
         app.set('view engine', 'handlebars');
     //Mongoose
         mongoose.Promise = global.Promise;
-        mongoose.connect("mongodb://localhost/barberdb").then(()=>{
+        mongoose.connect("mongodb://localhost/db_bsm").then(()=>{
             console.log("Conectado ao Mongo")
         }).catch((err)=>{
             console.log("Erro ao se conectar com o Mongo: "+err)
