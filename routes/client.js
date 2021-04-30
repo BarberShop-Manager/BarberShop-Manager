@@ -6,13 +6,13 @@ const Client = mongoose.model("clientes");
 require("../models/ServicoNovo")
 const ServicoNovo = mongoose.model("cadhorario")
 const bcrypt = require("bcryptjs")
-const {_nivel} = require("../helpers/_nivel")
+const {_nivel2} = require("../helpers/_nivel")
 
-router.get('/', (req, res) => {
+router.get('/',_nivel2, (req, res) => {
     res.render("client/menu-cliente")
 })
 
-router.get('/agendamentos', (req, res) => {
+router.get('/agendamentos',_nivel2, (req, res) => {
     res.render("client/agendamentos")
 })
 router.post('/agendamentos/novo',(req, res) => {
@@ -65,8 +65,12 @@ router.post('/agendamentos/novo',(req, res) => {
     }
 })
 
-router.get('/lista-de-funcionarios', (req, res) => {
+router.get('/lista-de-funcionarios',_nivel2, (req, res) => {
     res.render("client/lista-de-funcionarios")
+})
+
+router.get('/perfil-cliente',_nivel2, (req, res) => {
+    res.render("client/perfil-cliente")
 })
 
 router.post('/new-user',(req,res)=>{

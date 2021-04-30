@@ -6,19 +6,28 @@
     <nav id="menu">
         <img id="fechar" onclick="fechar_menu()" src="/img/fechar_min.png" alt="fechar">
         <ul>
-            
+            {{#ifCond 1 '==' 0 }}
+                <li><a href="/administrador">Home</a></li>
+                <li><a href="/logout">Sair</a></li>
+            {{else}}
+            {{#ifCond 3 '==' 1}}
+                <li><a href="/funcionario">Home</a></li>
+                <li><a href="/logout">Sair</a></li>
+            {{else}}
+            {{#ifCond 4 '==' 2}}
+                <li><a href="/cliente">Home</a></li>
+                <li><a href="/logout">Sair</a></li>
+            {{else}}
             <li><a href="/">Home</a></li>
             <li><a href="/#servicos">Serviços</a></li>
             <li><a href="/#galeria">Galeria</a></li>
             <li><a href="/#sobre">Sobre</a></li>
-            {{#if user}}
-                <li><a href="/logout">Sair</a></li>
-            {{else}}
             <li class="link-login"><a href="/login">Login</a></li>
-            {{/if}}
+            {{/ifCond}}
+            {{/ifCond}}
+            {{/ifCond}}
         </ul>
     </nav>
     <div id="esconder" onclick="fechar_menu()">
-
     </div>
 </header>
