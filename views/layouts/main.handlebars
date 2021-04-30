@@ -20,6 +20,10 @@
 
 <body>
     {{>header}}
+        {{#each erros}}
+            <div class="alert">{{texto}}</div>
+        {{else}}
+        {{/each}}
     {{>_msg}}
     {{{body}}}
     {{>footer}}

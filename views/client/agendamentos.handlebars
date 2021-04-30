@@ -1,10 +1,15 @@
+{{#each erros}}
+    <div class="alert">{{texto}}</div>
+{{else}}
+{{/each}}
+
 <main>
     <div class="container-agendamento">
-        <form action="">
+        <form action="/cliente/agendamentos/novo" method="post">
             <div class=func>
 
                 <label>Nome do funcionário</label><br>
-                <input type="text">
+                <input type="text" name="func">
             </div>
             <div class=SlctServiço>
                 <label for="servicos">Escolha um serviço</label>
@@ -17,11 +22,11 @@
             <div class="data-hora">
                 <div class="DataServico">
                     <label>Data do serviço</label>
-                    <input type="date">
+                    <input type="date" name="DataServico">
                 </div>
                 <div class="horaservico">
                     <label>Horário</label>
-                    <input type="time">
+                    <input type="time" name="horaservico">
                 </div>
             </div>
             <div class="slctFormPagamento">
@@ -33,11 +38,11 @@
             </div>
             <div class="numero">
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" placeholder="(DDD)999999999">
+                <input type="tel" name = "numero" id="telefone" placeholder="(DDD)999999999">
             </div>
             <div class="obs">
                 <label>Observações:</label>
-                <textarea cols="30" rows="10"></textarea>
+                <textarea cols="30" rows="10" name='obs'></textarea>
             </div>
             <div class="grupo-botao">
 
@@ -45,9 +50,7 @@
         <div id="botao-agend-confirm">
             <button type="submit">Confirmar Agendamento</button>
         </div>
-        <div id="botao-agend-cancel">
-            <button type="submit">Cancelar Pagamento</button>
-        </div>
+        
         </form>
     </div>
 </main>
