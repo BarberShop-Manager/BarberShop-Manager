@@ -35,14 +35,12 @@
             res.locals.user = req.user || null;
             next()
         })
-        
     //Body Parser
         app.use(bodyParser.urlencoded({ extended: true }));
         app.use(bodyParser.json());
     //Handlebars
         app.engine('handlebars', handlebars({ defaultLayout: 'main' }));
-        app.set('view engine', 'handlebars');
-    
+        app.set('view engine', 'handlebars');   
     //Mongoose
         mongoose.Promise = global.Promise;
         mongoose.connect("mongodb://localhost/db_bsm", {
