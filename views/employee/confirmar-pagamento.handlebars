@@ -4,7 +4,7 @@
 {{/each}}
 <main>
     <div id="formulario">
-        <form action="/confirmar-pagamento/novo" method="POST">
+        <form action="/funcionario/confirmar-pagamento/novo" method="POST">
             <label for="name" class="label_text_color">Nome do cliente</label>
             <input type="text" name="name" id="name" class="button" placeholder="Digite seu nome"><br />
 
@@ -44,23 +44,4 @@
         </form>
     </div>
 </main>
-<div id="modal-notifica-pagamento" class="modal-container">
-    <div class="modal">
-        <button class="fechar">&times;</button>
-        
-            <p class="p_notifica">Gustavo Martins</p>
-            <p class="p_notifica" >Corte de Cabelo</p>
-            <p class="p_notifica text_1" >R$ 25,00</p>
-            <p  class="p_notifica text_2" >Dinheiro</p>
-            <p  class="p_notifica">Josealdo da Silva</p>
-            <form action="pagamento_cliente.html" method="get">
-            <div>
-                <button type="submit" value="confirma" class="button-confirm">Confimar</button>
-            </div>
-            <p id="hora_notifica">09:00:00</p>
-        </form>
-    </div>
-</div>
 
-<script src="./public/js/scripts.js"></script>
-<script src="./public/js/modal_pagina_pagamento.js"></script>
