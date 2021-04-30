@@ -22,15 +22,21 @@ botao1.addEventListener('click', function () {
 
 
 function iniciaTrabalhoModal(work) {
-    const modal2 = document.getElementById('modal_dia_trabalho');
-    modal2.classList.add('ok');
-
+    const modal2 = document.getElementById('modal-dia-trabalho');
+    if (modal2) {
+        modal2.classList.add('ok')
+        modal2.addEventListener('click', (e) => {
+            if (e.target.id == work || e.target.className == 'fechar') {
+                modal2.classList.remove('ok')
+            }
+        })
+    }
 }
 
 
 const botao2 = document.querySelector('#dias-de-trabalho');
 botao2.addEventListener('click', function () {
-    iniciaTrabalhoModal('modal_dia_trabalho')
+    iniciaTrabalhoModal('modal-dia-trabalho')
 });
 
 
