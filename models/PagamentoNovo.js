@@ -1,8 +1,9 @@
+const { ObjectID } = require("bson");
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema;
 
 //Model pagamento cliente
-const Pagamento = new Schema({           //de schema para Schema
+const Pagamento = new Schema({           
     Name_client:{
         type: String,
         require: true
@@ -28,9 +29,14 @@ const Pagamento = new Schema({           //de schema para Schema
         require: true
     },
     Observ:{
-        type: String,               //Passei de text para string
+        type: String,               
         require: false
+    },
+    id_funcionario:{
+        type: Schema.Types.ObjectID,
+        ref: "cadhorario",
+        required: true
     }
 })
 
-mongoose.model("pagamento-cliente", Pagamento) //pagamento_cliente --> pagamento - cliente
+mongoose.model("pagamento-cliente", Pagamento) 

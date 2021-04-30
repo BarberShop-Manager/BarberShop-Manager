@@ -62,10 +62,17 @@ router.post('/confirmar-pagamento/novo', (req,res)=>{
         }
         new PagamentoNovo(NovoPagamento).save().then(()=>{
             req.flash("success_msg", "Dados de pagamento salvo!")
+<<<<<<< HEAD
             res.redirect("/employee/confirmar-pagamento")
         }).catch((err)=>{
             req.flash("error_msg", "Houve um erro ao tentar salvar os dados de pagamento")
             res.redirect("/employee/confirmar-pagamento")
+=======
+            res.redirect("/funcionario/confirmar-pagamento")
+        }).catch((err)=>{
+            req.flash("error_msg", "Houve um erro ao tentar salvar os dados de pagamento")
+            res.redirect("/funcionario/confirmar-pagamento")
+>>>>>>> e33f4cf66af048641f33f78128eb9d0e4243b103
         })
     }
 })
