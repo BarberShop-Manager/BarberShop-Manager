@@ -19,6 +19,12 @@
 
 <body>
     {{>header}}
+    {{#if error}}
+        <div>{{error}}</div>
+    {{else}}
+
+    {{/if}}
+    {{>_msg}}
     {{{body}}}
     {{>footer}}
 
