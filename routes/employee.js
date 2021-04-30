@@ -59,6 +59,7 @@ router.post('/confirmar-pagamento/novo', (req,res)=>{
             Payment_form: req.body.payform,
             Value: req.body.valor,
             Observ: req.body.observ
+
         })
 
         NovoPagamento.save().then(()=>{
@@ -67,6 +68,12 @@ router.post('/confirmar-pagamento/novo', (req,res)=>{
         }).catch((err)=>{
             req.flash("error_msg", "Erro no pagamento"+err)
             res.redirect("/employee/confirmar-pagamento")
+
+            res.redirect("/employee/confirmar-pagamento")
+        }).catch((err)=>{
+            req.flash("error_msg", "Houve um erro ao tentar salvar os dados de pagamento")
+            res.redirect("/employee/confirmar-pagamento")
+
         })
         // const NovoPagamento = {
         //     Name_client: req.body.name,

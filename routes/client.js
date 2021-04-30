@@ -38,7 +38,7 @@ router.post('/agendamentos/novo',(req, res) => {
     if (!req.body.numero < 8){
         erros.push({texto: "Número Invalido"})
     }else{
-        const Servico = {
+        const Servico = new ServicoNovo ({
             nome_do_funcionario: req.body.func,
             Selecionar_servico: req.body.servicos,
             data_do_servico: req.body.DataServico,
@@ -47,12 +47,12 @@ router.post('/agendamentos/novo',(req, res) => {
             numero: req.body.numero,
             observações: req.body.obs
 
-        }
-        new ServicoNovo(Servico).save().then(()=>{
+        })
+        new Servico().save().then(()=>{
             req.flash("success_msg", "Agendamento Confirmado!")
-            res.redirect("/client/confirmacao-agendamento")
+            res.redirect("/confirmacao-agendamento")
         }).catch((err)=>{
-            req.flash("error_msg", "Agendamento Negado")
+            req.flash("error_msg", "Agendamento Negado"+ err)
             res.redirect("/confirmar-pagamento")
         })
     }
@@ -62,14 +62,5 @@ router.get('/lista-de-funcionarios', (req, res) => {
     res.render("client/lista-de-funcionarios")
 })
 
-router.get('/perfil-cliente', (req, res) => {
-    res.render("client/perfil-cliente")
-})
 
-router.post('/new-user',(req, res)=> {
-    res.render("")
-})
-
-
-
-module.exports = router;
+module.exports = router; 
