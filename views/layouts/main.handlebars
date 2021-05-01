@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarberShop Manager</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/cadastro_funcionario.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="/css/cadastro_cliente.css">
     <link rel="stylesheet" href="/css/agenda.compac.css">
     <link rel="stylesheet" href="/css/agendamento_cliente.css">
@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="/css/Mostra_func.css">
     <link rel="stylesheet" href="/css/pagamento_cliente.css">
     <link rel="stylesheet" href="/css/perfil_adm.css">
+=======
+    <link rel="stylesheet" href="/css/Mostra_func.css">
+>>>>>>> nodejs-cadastro-de-funcionario
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -31,6 +34,7 @@
 </head>
 
 <body>
+    {{>msg}}
     {{>header}}
     {{#if error}}
         <div>{{error}}</div>
@@ -39,7 +43,10 @@
     {{>_msg}}
     {{{body}}}
     {{>footer}}
+<<<<<<< HEAD
     {{>modal}}
+=======
+>>>>>>> nodejs-cadastro-de-funcionario
 </body>
 
 </html>

@@ -43,7 +43,10 @@ app.use(bodyParser.json());
 
 const hbs = handlebars.create({
     defaultLayout: 'main',
-
+    runtimeOptions: {
+        allowProtoPropertiesByDefault: true,
+        allowProtoMethodsByDefault: true,
+    },
     //Criando um helper handlebars customizável
 
     helpers: {
@@ -57,9 +60,9 @@ const hbs = handlebars.create({
                     return options.inverse(this);
             }
         },
-        nivel: function(){
+        nivel: function () {
             //A função não está retornado os valores corretamente
-        }    
+        }
     }
 });
 
@@ -116,7 +119,7 @@ app.get("/logout", (req, res) => {
 })
 
 //Rotas do Adminstrador
-app.use('/administrador', admin);
+app.use('/admin', admin);
 
 //Rotas do Funcionários
 app.use('/funcionario', employee);
@@ -124,8 +127,8 @@ app.use('/funcionario', employee);
 //Rotas do Cliente
 app.use('/cliente', cliente);
 
-//OUTRAS CONFIGURAÇÕESs
+//OUTRAS CONFIGURAÇÕES
 const PORT = 3308;
 app.listen(PORT, () => {
-    console.log("Barbearia Aberta !")
+    console.log(`Barbearia rodando no seguinte servidor: http://localhost:${PORT}`)
 })
