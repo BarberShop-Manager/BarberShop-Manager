@@ -29,6 +29,11 @@ const FuncionarioNovo = new Schema({
         type: String,
         required: true
     },
+
+    dataNasc: {
+        type: String,
+    },
+
     senha: {
         type: String,
         required: true
