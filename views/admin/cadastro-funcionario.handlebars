@@ -1,3 +1,42 @@
+<header>
+    <div class="cabecalho">
+        <img src="/img/bsmlogo.png" alt="logo barbershop">
+        <img onclick="abrir_menu()" ondblclick="fechar_menu()" src="/img/menu.png" alt="menu">
+    </div>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="#" class="fechando_menu" onclick="fechar_menu()">&times;</a></li>
+            <li> <a href="index.html">
+                    <h3>Pagina Principal</h3>
+                </a> </li>
+
+            <li> <a href="cadastro_funcionario.html">
+                    <h3>Cadastrar Funcionário</h3>
+                </a> </li>
+
+            <li> <a href="mostra_todos_funcionarios.html">
+                    <h3>Mostrar Funcionários</h3>
+                </a> </li>
+
+            <li> <a href="mostra_todos_clientes.html">
+                    <h3>Mostrar Clientes</h3>
+                </a> </li>
+
+            <li> <a href="controle_de_caixa.html">
+                    <h3>Controle Caixa</h3>
+                </a> </li>
+
+            <li> <a href="perfil_adminstrador.html">
+                    <h3>Perfil</h3>
+                </a> </li>
+
+            <li> <a href="login.html">
+                    <h3>Sair</h3>
+                </a> </li>
+        </ul>
+    </nav>
+</header>
 {{#each erros}}
 <div>{{texto}}</div>
 {{else}}
@@ -60,10 +99,6 @@
             <div>
                 <label for="ateHora">Até:</label><br>
                 <input type="time" id="ateHora" name="ateHora">
-            </div>
-            <div>
-                <label for="dataNasc">Data de nascimento:</label><br>
-                <input type="date" id="dataNasc" name="dataNasc">
             </div>
             <div>
                 <label for="senha">Senha</label><br>

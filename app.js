@@ -29,14 +29,8 @@ app.use((req, res, next) => {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 //Handlebars
-app.engine('handlebars', handlebars({
-    defaultLayout: 'main',
-    runtimeOptions: {
-        allowProtoPropertiesByDefault: true,
-        allowProtoMethodsByDefault: true,
-    },
-}))
-app.set('view engine', 'handlebars')
+app.engine('handlebars', handlebars({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
 //Mongoose
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/barbershop').then(() => {
