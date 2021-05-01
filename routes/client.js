@@ -15,7 +15,7 @@ router.get('/',_nivel2, (req, res) => {
 router.get('/agendamentos',_nivel2, (req, res) => {
     res.render("client/agendamentos")
 })
-router.post('/agendamentos/novo',(req, res) => {
+router.post('/agendamentos/novo',_nivel2,(req, res) => {
 
     var erros = []
 
@@ -73,7 +73,7 @@ router.get('/perfil-cliente',_nivel2, (req, res) => {
     res.render("client/perfil-cliente")
 })
 
-router.post('/new-user',(req,res)=>{
+router.post('/new-user', _nivel2,(req,res)=>{
         
     let erros = [];
 

@@ -17,7 +17,7 @@ router.get('/confirmar-pagamento',_nivel1, (req, res) => {
     res.render("employee/confirmar-pagamento")
 })
 
-router.post('/confirmar-pagamento/novo', (req,res)=>{
+router.post('/confirmar-pagamento/novo',_nivel1, (req,res)=>{
 
     var erros = []
 
