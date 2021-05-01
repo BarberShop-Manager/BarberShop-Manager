@@ -100,7 +100,7 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/login',
-    passport.authenticate('local', { failureRedirect: '/login' }),
+    passport.authenticate('local', { failureRedirect: '/login', failureFlash:true }),
     function (req, res, next) {
         if (req.user._nivel == 0) {
             res.redirect('/administrador');

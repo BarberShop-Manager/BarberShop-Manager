@@ -3,12 +3,13 @@ const router = express.Router();
 const mongoose = require("mongoose");
 require("../models/FuncionarioNovo");
 const FuncionarioNovo = mongoose.model("FuncionariosNovos");
+const {_nivel0} = require("../helpers/_nivel")
 
 router.get('/', _nivel0, (req, res) => {
     res.render("admin/menu-admin")
 })
 
-router.get('/cadastro-funcionario', _nivel0, (req, res) => {
+router.get('/cadastro-funcionario', (req, res) => {
     res.render("admin/cadastro-funcionario")
 })
 
@@ -97,6 +98,7 @@ router.post('/cadastro-funcionario/novo', (req, res) => {
 
             dataNasc: req.body.dataNasc,
             senha: req.body.senha,
+            _nivel: req.body._nivel
         }
         new FuncionarioNovo(novoFuncionario).save().then(() => {
             req.flash("success_msg", "Funcionario cadastrado com sucesso!")

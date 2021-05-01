@@ -37,6 +37,10 @@ const FuncionarioNovo = new Schema({
     senha: {
         type: String,
         required: true
+    },
+    _nivel: {
+        type: Number,
+        default: 1
     }
 })
 
