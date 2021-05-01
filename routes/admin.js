@@ -94,8 +94,6 @@ router.post('/cadastro-funcionario/novo', (req, res) => {
                 req.body.sabado,
                 req.body.domingo,
             ],
-
-            dataNasc: req.body.dataNasc,
             senha: req.body.senha,
         }
         new FuncionarioNovo(novoFuncionario).save().then(() => {
@@ -110,36 +108,11 @@ router.post('/cadastro-funcionario/novo', (req, res) => {
 })
 
 router.get('/lista-de-clientes', (req, res) => {
-
+    res.render("admin/lista-de-clientes")
 })
 
 router.get('/lista-de-funcionarios', (req, res) => {
-    FuncionarioNovo.find().sort({ data: "desc" }).then((funcionariosnovos) => {
-        res.render("admin/lista-de-funcionarios", { funcionariosnovos: funcionariosnovos })
-    }).catch((err) => {
-        req.flash("error_msg", "Houve ume erro ao listar os funcionários")
-        res.redirect("/admin")
-    })
-})
-
-router.get('/perfil-funcionario/:_id', (req, res) => {
-    FuncionarioNovo.findOne({ _id: req.params._id }).then((funcionario) => {
-        if (funcionario) {
-            res.render("funcionario/perfil-funcionario", { funcionario: funcionario })
-        } else {
-            req.flash("error_msg", "Este funcionário não existe")
-            res.redirect("/admin/lista-de-funcionarios")
-        }
-    }).catch((err) => {
-        req.flash("error_msg", "Houve um erro, este funcionario não exite")
-        res.redirect("/admin/lista-de-funcionarios")
-    })
-})
-
-router.get("/perfil-funcionario/excluir/:_id", (req, res) => {
-    FuncionarioNovo.remove({ _id: req.params._id }).then(() => {
-        res.redirect("/admin/lista-de-funcionarios")
-    })
+    res.render("admin/lista-de-funcionarios")
 })
 
 router.get('/controle-de-caixa', (req, res) => {
