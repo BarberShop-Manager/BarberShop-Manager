@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require("mongoose")
+require ('../models/ServicoNovo')
+const cadhorario = mongoose.model("cadhorario")
 require('../models/PagamentoNovo')
 const PagamentoNovo = mongoose.model("pagamento-cliente")
 const { nivel1 } = require("../helpers/nivel")
@@ -10,7 +12,13 @@ router.get('/',nivel1, (req, res) => {
 })
 
 router.get('/lista-de-agendamentos', nivel1, (req, res) => {
-    res.render("employee/lista-de-agendamentos")
+    cadhorario.find().then((cadhorario)=>{
+        res.render("employee/lista-de-agendamentos",{cadhorario:cadhorario})
+    }).catch((err)=>{
+        req.flash("Erro ao exibir agendamentos" + err)
+        res.redirect("/employeer")
+    })
+    
 })
 
 router.get('/confirmar-pagamento', nivel1, (req, res) => {
