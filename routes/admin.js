@@ -3,9 +3,10 @@ const router = express.Router();
 const mongoose = require("mongoose");
 require("../models/FuncionarioNovo");
 const FuncionarioNovo = mongoose.model("FuncionariosNovos");
-const {_nivel0} = require("../helpers/_nivel")
+const { nivel0 } = require("../helpers/nivel")
+const bcrypt = require("bcryptjs")
 
-router.get('/', _nivel0, (req, res) => {
+router.get('/', (req, res) => {
     res.render("admin/menu-admin")
 })
 
@@ -74,38 +75,67 @@ router.post('/cadastro-funcionario/novo', (req, res) => {
         erros.push({ texto: "A senha não foi informada" })
     }
 
+    if (req.body.senha.length < 4) {
+        erros.push({ texto: "Senha muito curta." })
+    }
+
+    if (req.body.senha != req.body.senha2) {
+        erros.push({ texto: "As senhas não batem!" })
+    }
+
     if (erros.length > 0) {
         res.render('admin/cadastro-funcionario', { erros: erros })
     } else {
-        const novoFuncionario = {
-            nome: req.body.nome,
-            userName: req.body.userName,
-            email: req.body.email,
-            cpf: req.body.cpf,
-            dasHora: req.body.dasHora,
-            ateHora: req.body.ateHora,
+        FuncionarioNovo.findOne({ email: req.body.email }).then((funcionario) => {
+            if (funcionario) {
+                req.flash("error_msg", "Já existe uma conta cadastrada neste email")
+                res.redirect("/admin/cadastro-funcionario")
+            } else {
+                const novoFuncionario = new FuncionarioNovo({
+                    nome: req.body.nome,
+                    userName: req.body.userName,
+                    email: req.body.email,
+                    cpf: req.body.cpf,
+                    dasHora: req.body.dasHora,
+                    ateHora: req.body.ateHora,
 
-            //Array com os dias de trabalho
-            diasDeTrabalho: [
-                req.body.segunda,
-                req.body.terca,
-                req.body.quarta,
-                req.body.quinta,
-                req.body.sexta,
-                req.body.sabado,
-                req.body.domingo,
-            ],
+                    //Array com os dias de trabalho
+                    diasDeTrabalho: [
+                        req.body.segunda,
+                        req.body.terca,
+                        req.body.quarta,
+                        req.body.quinta,
+                        req.body.sexta,
+                        req.body.sabado,
+                        req.body.domingo,
+                    ],
 
-            dataNasc: req.body.dataNasc,
-            senha: req.body.senha,
-            _nivel: req.body._nivel
-        }
-        new FuncionarioNovo(novoFuncionario).save().then(() => {
-            req.flash("success_msg", "Funcionario cadastrado com sucesso!")
-            res.redirect("/admin")
+                    dataNasc: req.body.dataNasc,
+                    senha: req.body.senha,
+                    nivel: req.body.nivel
+                })
+
+                bcrypt.genSalt(10, (erro, salt) => {
+                    bcrypt.hash(novoFuncionario.senha, salt, (erro, hash) => {
+                        if (erro) {
+                            req.flash("erro_msg", "Houve um erro durante o salvamento do funcionário")
+                            res.redirect("/admin")
+                        }
+
+                        novoFuncionario.senha = hash;
+
+                        novoFuncionario.save().then(() => {
+                            req.flash("success_msg", "Funcionário cadastrado com sucesso!")
+                            res.redirect("/admin")
+                        }).catch((err) => {
+                            req.flash("error_msg", "Houve um erro ao cadastrar o funcionário, tente novamente!")
+                            res.redirect("/admin/cadastro-funcionario")
+                        })
+                    })
+                })
+            }
         }).catch((err) => {
-            req.flash("error_msg", "Houve um erro ao cadastrar o novo funcionário tente novamente!")
-            console.log("Erro ao cadastrar o novo funcionario" + err)
+            req.flash("error_msg", "Houve um erro interno")
             res.redirect("/admin")
         })
     }
@@ -144,11 +174,11 @@ router.get("/perfil-funcionario/excluir/:_id", (req, res) => {
     })
 })
 
-router.get('/controle-de-caixa', _nivel0, (req, res) => {
+router.get('/controle-de-caixa', nivel0, (req, res) => {
     res.render("admin/controle-de-caixa")
 })
 
-router.get('/perfil-administrador', _nivel0, (req, res) => {
+router.get('/perfil-administrador', nivel0, (req, res) => {
     res.render("admin/perfil-admin")
 })
 

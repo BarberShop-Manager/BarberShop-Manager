@@ -13,6 +13,9 @@ const session = require("express-session");
 const passport = require("passport")
 require("./config/auth")(passport);
 
+require("./models/ClienteNovo");
+const Client = mongoose.model("clientes");
+
 // CONFIGURAÇÕES
 // Sessão
 app.use(session({
@@ -32,7 +35,7 @@ app.use((req, res, next) => {
     res.locals.success_msg = req.flash("success_msg")
     res.locals.error_msg = req.flash("error_msg")
     res.locals.error = req.flash("error")
-    res.locals.user = req.user || null;
+    res.locals.user = req.user || null
     next()
 })
 
@@ -75,9 +78,9 @@ mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost/db_bsm", {
     useNewUrlParser: true, useUnifiedTopology: true
 }).then(function () {
-    console.log("Barbearia Conectada...")
+    console.log("BaberShop Manager conectado ao banco de dados mongo.")
 }).catch(function (err) {
-    console.log("Houve um erro ao se conectar a Barbearia, erro: " + err);
+    console.log("Houve um erro ao conectar o BarberShop Manager ao bando de dados mongo, erro: " + err);
 });
 
 //Public
@@ -99,18 +102,33 @@ app.get('/login', (req, res) => {
     res.render("login")
 });
 
-app.post('/login',
-    passport.authenticate('local', { failureRedirect: '/login', failureFlash:true }),
-    function (req, res, next) {
-        if (req.user._nivel == 0) {
-            res.redirect('/administrador');
-        } else if (req.user._nivel == 1) {
-            res.redirect('/funcionario');
-        } else if (req.user._nivel == 2) {
-            res.redirect('/cliente');
-        }
-        next();
-    })
+app.post('/login', (req, res, next) => {
+
+    passport.authenticate("local", {
+        successRedirect: "/cliente",
+        failureRedirect: "/login",
+        failureFlash: true
+    })(req, res, next)
+
+})
+
+
+// app.post('/login',
+//     passport.authenticate('local', {
+//         failureRedirect: '/login',
+//         failureFlash: true
+//     }),
+//     function (req, res, next) {
+//         if (req.user.nivel == 0) {
+//             res.redirect('/admin');
+//         } else if (req.user.nivel == 1) {
+//             res.redirect('/funcionario');
+//         } else if (req.user.nivel == 2) {
+//             res.redirect('/cliente');
+//         }
+//         next();
+//     })
+
 
 app.get("/logout", (req, res) => {
     req.session.destroy((err) => {
@@ -130,5 +148,5 @@ app.use('/cliente', cliente);
 //OUTRAS CONFIGURAÇÕES
 const PORT = 3308;
 app.listen(PORT, () => {
-    console.log(`Barbearia rodando no seguinte servidor: http://localhost:${PORT}`)
+    console.log(`BarberShop Manager rodando no seguinte servidor local: http://localhost:${PORT}`)
 })

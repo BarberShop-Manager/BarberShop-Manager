@@ -2,35 +2,35 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const newUser = new Schema({
-    _name: {
+    nome: {
         type: String,
         required: true
     },
-    _username: {
+    userName: {
         type: String,
         required: true
     },
-    _email: {
+    email: {
         type: String,
         required: true
     },
-    _cpf: {
+    cpf: {
         type: Number,
         required: false
     },
-    _date: {
+    dataNasc: {
         type: String,
         required: false
     },
-    _password: {
+    senha: {
         type: String,
         required: true
     },
-    _telephone: {
-        type: Number,
+    tele: {
+        type: String,
         required: false
     },
-    _nivel: {
+    nivel: {
         type: Number,
         default: 2
     }

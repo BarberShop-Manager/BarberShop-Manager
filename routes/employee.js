@@ -3,55 +3,55 @@ const router = express.Router();
 const mongoose = require("mongoose")
 require('../models/PagamentoNovo')
 const PagamentoNovo = mongoose.model("pagamento-cliente")
-const {_nivel1} = require("../helpers/_nivel")
+const { nivel1 } = require("../helpers/nivel")
 
-router.get('/', _nivel1,(req, res) => {
+router.get('/', nivel1, (req, res) => {
     res.render("employee/menu-funcionario")
 })
 
-router.get('/lista-de-agendamentos',_nivel1, (req, res) => {
+router.get('/lista-de-agendamentos', nivel1, (req, res) => {
     res.render("employee/lista-de-agendamentos")
 })
 
-router.get('/confirmar-pagamento',_nivel1, (req, res) => {
+router.get('/confirmar-pagamento', nivel1, (req, res) => {
     res.render("employee/confirmar-pagamento")
 })
 
-router.post('/confirmar-pagamento/novo',_nivel1, (req,res)=>{
+router.post('/confirmar-pagamento/novo', nivel1, (req, res) => {
 
     var erros = []
 
-    if(!req.body.name || typeof req.body.name == undefined || req.body.name == null){
-        erros.push({texto: "Nome invalido"})
+    if (!req.body.name || typeof req.body.name == undefined || req.body.name == null) {
+        erros.push({ texto: "Nome invalido" })
     }
 
-    if(req.body.name.length <= 2){
-        erros.push({texto: "Nome muito curto"})
+    if (req.body.name.length <= 2) {
+        erros.push({ texto: "Nome muito curto" })
     }
 
-    if(!req.body.service || typeof req.body.service == undefined || req.body.service == null){
-        erros.push({texto: "Serviço invalido"})
+    if (!req.body.service || typeof req.body.service == undefined || req.body.service == null) {
+        erros.push({ texto: "Serviço invalido" })
     }
 
-    if(!req.body.date || typeof req.body.date == undefined || req.body.date == null){
-        erros.push({texto: "Data invalida"})
+    if (!req.body.date || typeof req.body.date == undefined || req.body.date == null) {
+        erros.push({ texto: "Data invalida" })
     }
 
-    if(!req.body.time || typeof req.body.time == undefined || req.body.time == null){
-        erros.push({texto: "Hora invalida"})
+    if (!req.body.time || typeof req.body.time == undefined || req.body.time == null) {
+        erros.push({ texto: "Hora invalida" })
     }
 
-    if(!req.body.payform || typeof req.body.payform == undefined || req.body.payform == null){
-        erros.push({texto: "Forma de pagamento invalida"})
+    if (!req.body.payform || typeof req.body.payform == undefined || req.body.payform == null) {
+        erros.push({ texto: "Forma de pagamento invalida" })
     }
 
-    if(!req.body.valor || typeof req.body.valor == undefined || req.body.valor == null){
-        erros.push({texto: "Valor invalido"})
+    if (!req.body.valor || typeof req.body.valor == undefined || req.body.valor == null) {
+        erros.push({ texto: "Valor invalido" })
     }
 
-    if(erros.length > 0){
-        res.render("employee/confirmar-pagamento", {erros: erros})
-    }else{
+    if (erros.length > 0) {
+        res.render("employee/confirmar-pagamento", { erros: erros })
+    } else {
         const NovoPagamento = new PagamentoNovo({
             Name_client: req.body.name,
             Service: req.body.service,
@@ -63,15 +63,15 @@ router.post('/confirmar-pagamento/novo',_nivel1, (req,res)=>{
 
         })
 
-        NovoPagamento.save().then(()=>{
+        NovoPagamento.save().then(() => {
             req.flash("success_msg", "Dados de pagamento salvos!!")
             res.redirect("/")
-        }).catch((err)=>{
-            req.flash("error_msg", "Erro no pagamento"+err)
+        }).catch((err) => {
+            req.flash("error_msg", "Erro no pagamento" + err)
             res.redirect("/funcionario/confirmar-pagamento")
 
-           
-            
+
+
         })
         // const NovoPagamento = {
         //     Name_client: req.body.name,
@@ -92,7 +92,7 @@ router.post('/confirmar-pagamento/novo',_nivel1, (req,res)=>{
     }
 })
 
-router.get('/perfil-funcionario',_nivel1, (req, res) => {
+router.get('/perfil-funcionario', nivel1, (req, res) => {
     res.render("employee/perfil-funcionario")
 })
 
