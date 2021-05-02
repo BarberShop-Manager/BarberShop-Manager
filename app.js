@@ -102,32 +102,32 @@ app.get('/login', (req, res) => {
     res.render("login")
 });
 
-app.post('/login', (req, res, next) => {
+// app.post('/login', (req, res, next) => {
 
-    passport.authenticate("local", {
-        successRedirect: "/cliente",
-        failureRedirect: "/login",
-        failureFlash: true
-    })(req, res, next)
-
-})
-
-
-// app.post('/login',
-//     passport.authenticate('local', {
-//         failureRedirect: '/login',
+//     passport.authenticate(["local-user","local-func"], {
+//         successRedirect: "/cliente",
+//         failureRedirect: "/login",
 //         failureFlash: true
-//     }),
-//     function (req, res, next) {
-//         if (req.user.nivel == 0) {
-//             res.redirect('/admin');
-//         } else if (req.user.nivel == 1) {
-//             res.redirect('/funcionario');
-//         } else if (req.user.nivel == 2) {
-//             res.redirect('/cliente');
-//         }
-//         next();
-//     })
+//     })(req, res, next)
+
+// })
+
+
+app.post('/login',
+    passport.authenticate(['local-func','local-user'], {
+        failureRedirect: '/login',
+        failureFlash: true
+    }),
+    function (req, res, next) {
+        if (req.user.nivel == 0) {
+            res.redirect('/admin');
+        } else if (req.user.nivel == 1) {
+            res.redirect('/funcionario');
+        } else if (req.user.nivel == 2) {
+            res.redirect('/cliente');
+        }
+        next();
+    })
 
 
 app.get("/logout", (req, res) => {

@@ -6,7 +6,7 @@ module.exports = {
         req.flash("error_msg", "Você precisa está cadastrado na barbearia Barbearia!");
         res.redirect("/")
     },
-    nivel1: function (req, res, next) {
+    nivel1: function (req, res,next) {
         if (req.isAuthenticated() && req.user.nivel == 1) {
             return next();
         }

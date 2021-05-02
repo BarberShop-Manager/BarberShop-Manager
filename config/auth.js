@@ -12,15 +12,15 @@ const Func = mongoose.model("FuncionariosNovos")
 
 module.exports = function (passport) {
 
-    passport.use(new localStrategy({ usernameField: 'email', passwordField: "senha" }, (email, senha, done) => {
-        Client.findOne({ email: email }).then((cliente) => {
-            if (!cliente) {
+    passport.use('local-user',new localStrategy({ usernameField: 'email', passwordField: "senha" }, (email, senha, done) => {
+        Client.findOne({ email: email }).then((user) => {
+            if (!user) {
                 return done(null, false, { message: "Esta conta não existe" });
             }
 
-            bcrypt.compare(senha, cliente.senha, (erro, batem) => {
+            bcrypt.compare(senha, user.senha, (erro, batem) => {
                 if (batem) {
-                    return done(null, cliente)
+                    return done(null, user)
                 } else {
                     return done(null, false, { message: "Senha incorreta " })
                 }
@@ -28,14 +28,37 @@ module.exports = function (passport) {
         })
     }))
 
-    passport.serializeUser((cliente, done) => {
-        done(null, cliente.id);
-    });
+    passport.use('local-func',new localStrategy({ usernameField: 'email', passwordField: "senha" }, (email, senha, done) => {
+        Func.findOne({ email: email }).then((user) => {
+            if (!user) {
+                return done(null, false, { message: "Esta conta não existe" });
+            }
 
-    passport.deserializeUser((id, done) => {
-        Client.findById(id, (err, cliente) => {
-            done(err, cliente)
+            bcrypt.compare(senha, user.senha, (erro, batem) => {
+                if (batem) {
+                    return done(null, user)
+                } else {
+                    return done(null, false, { message: "Senha incorreta " })
+                }
+            })
         })
-    });
+    }))
 
-}
+
+    passport.serializeUser(function(user, done) {
+        let nivel = user.nivel;
+        done(null, { _id: user.id, nivel: nivel});
+      });
+      
+      passport.deserializeUser(function(data, done) {
+        if(data.nivel == 2){
+            Client.findById(data._id, function(err, user) {
+            done(err, user);
+          });
+        } else{
+            Func.findById(data._id, function(err, user) {
+            done(err, user);
+          });
+        }
+      });
+ }

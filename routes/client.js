@@ -8,14 +8,14 @@ const ServicoNovo = mongoose.model("cadhorario")
 const bcrypt = require("bcryptjs")
 const { nivel2 } = require("../helpers/nivel")
 
-router.get('/', (req, res) => {
+router.get('/',nivel2, (req, res) => {
     res.render("client/menu-cliente")
 })
 
-router.get('/agendamentos', (req, res) => {
+router.get('/agendamentos',nivel2, (req, res) => {
     res.render("client/agendamentos")
 })
-router.post('/agendamentos/novo', (req, res) => {
+router.post('/agendamentos/novo',nivel2, (req, res) => {
 
     var erros = []
 
@@ -65,11 +65,11 @@ router.post('/agendamentos/novo', (req, res) => {
     }
 })
 
-router.get('/lista-de-funcionarios', (req, res) => {
+router.get('/lista-de-funcionarios', nivel2,(req, res) => {
     res.render("client/lista-de-funcionarios")
 })
 
-router.get('/perfil-cliente', (req, res) => {
+router.get('/perfil-cliente',nivel2, (req, res) => {
     res.render("client/perfil-cliente")
 })
 

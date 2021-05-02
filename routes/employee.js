@@ -5,7 +5,7 @@ require('../models/PagamentoNovo')
 const PagamentoNovo = mongoose.model("pagamento-cliente")
 const { nivel1 } = require("../helpers/nivel")
 
-router.get('/', nivel1, (req, res) => {
+router.get('/',nivel1, (req, res) => {
     res.render("employee/menu-funcionario")
 })
 
