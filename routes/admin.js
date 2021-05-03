@@ -145,7 +145,7 @@ router.get('/lista-de-clientes', (req, res) => {
 
 })
 
-router.get('/lista-de-funcionarios', (req, res) => {
+router.get('/lista-de-funcionarios',nivel0, (req, res) => {
     FuncionarioNovo.find().sort({ data: "desc" }).then((funcionariosnovos) => {
         res.render("admin/lista-de-funcionarios", { funcionariosnovos: funcionariosnovos })
     }).catch((err) => {
@@ -154,7 +154,7 @@ router.get('/lista-de-funcionarios', (req, res) => {
     })
 })
 
-router.get('/perfil-funcionario/:_id', (req, res) => {
+router.get('/perfil-funcionario/:_id',nivel0, (req, res) => {
     FuncionarioNovo.findOne({ _id: req.params._id }).then((funcionario) => {
         if (funcionario) {
             res.render("funcionario/perfil-funcionario", { funcionario: funcionario })
@@ -174,7 +174,7 @@ router.get("/perfil-funcionario/excluir/:_id", (req, res) => {
     })
 })
 
-router.get('/controle-de-caixa', nivel0, (req, res) => {
+router.get('/controle-de-caixa', (req, res) => {
     res.render("admin/controle-de-caixa")
 })
 

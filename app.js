@@ -53,18 +53,14 @@ const hbs = handlebars.create({
     //Criando um helper handlebars customizável
 
     helpers: {
-        ifCond: function (v1, operator, v2, options) {
-            switch (operator) {
-                case '==':
-                    return (v1 == v2) ? options.fn(this) : options.inverse(this);
-                case '!=':
-                    return (v1 != v2) ? options.fn(this) : options.inverse(this);
-                default:
-                    return options.inverse(this);
-            }
+        nivel: function (user) {
+            return user.nivel
         },
-        nivel: function () {
-            //A função não está retornado os valores corretamente
+        ifCond: function ( a,b, opts) {
+            if(a == b)
+            return opts.fn(this);
+        else
+            return opts.inverse(this);
         }
     }
 });
