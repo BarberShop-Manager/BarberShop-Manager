@@ -1,32 +1,3 @@
-.modal_container{
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    background: rgb(0,0,0,.5);
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    
-}
-
-.modal_container.sucesso{
-    display: flex;
-}
-
-.modal_container.falha{
-    display: flex;
-}
-
-.modal_container.ok{
-    display: flex;
-}
-
-
-
-
 #cadastro{
     
     text-align: center;

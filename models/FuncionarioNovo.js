@@ -1,60 +1,47 @@
-const db = require('./db')
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema;
 
-const userNew = db.sequelize.define('users', {
-    user_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        primaryKey: true
+const FuncionarioNovo = new Schema({
+    nome: {
+        type: String,
+        required: true
     },
-    _name: {
-        type: Sequelize.STRING(30),
-        allowNull: false,
-        validate: {
-            notNull: { msg: "Escreva um nome" }
-        }
+    userName: {
+        type: String,
+        required: true
     },
-    _username: {
-        type: Sequelize.STRING(30),
-        allowNull: false,
-        validate: {
-            notNull: { msg: "Escreva um nome de usuário" }
-        }
+    email: {
+        type: String,
+        required: true
     },
-    _email: {
-        type: Sequelize.STRING(60),
-        allowNull: false,
-        validate: {
-            notNull: { msg: "Escreva um email" }
-        },
-        unique: true
+    cpf: {
+        type: Number,
+        required: true
     },
-    _cpf: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
-        unique: true
+    diasDeTrabalho: {
+        type: Array,
     },
-    _date: {
-        type: Sequelize.DATE,
-        allowNull: true
+    dasHora: {
+        type: String,
+        required: true
     },
-    _password: {
-        type: Sequelize.INTEGER(100),
-        allowNull: false,
-        validate: {
-            notNull: { msg: "Escreva uma senha" }
-        }
+    ateHora: {
+        type: String,
+        required: true
     },
-    _telephone: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        validate: {
-            notNull: { msg: "Escreva um telefone" }
-        }
+
+    dataNasc: {
+        type: String,
     },
-    _nivel: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
+
+    senha: {
+        type: String,
+        required: true
+    },
+    nivel: {
+        type: Number,
+        default: 1
     }
-});
+})
 
-module.export = userNew
+mongoose.model("FuncionariosNovos", FuncionarioNovo)

@@ -1,13 +1,23 @@
 <main>
-    <div class="container">
+    <div class="container-calendar">
         <div id="calendar"></div>
     </div>
 
-    <div>
-        <h2>Filtro de Clientes</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos voluptatum ex praesentium
-            perferendis
-            dolorem inventore voluptatibus nihil, temporibus animi suscipit veniam, quam non necessitatibus libero
-            officiis natus harum quae?.</p>
+        <h2>Clientes do Dia : {{now}}</h2>
+{{#each cadhorario}}
+    <div class="card">
+        <h3>{{nome_do_funcionario}}</h3>
+        <hr>
+        <p>{{nome_do_funcionario}}</p>
+        <small>{{data_do_serviço}}</small>
+        <small>{{horario}}</small>
+                <form action="/funcionario/lista-de-agendamentos/deletar" method="POST">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button type="submit" class="btn-deletar">Excluir agendamento</button>
+        </form>
+    </div>
     </div>
 </main>
+{{else}}
+    <h3>Não há agendadamentos!</h3>
+{{/each}}
