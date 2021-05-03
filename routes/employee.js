@@ -21,6 +21,15 @@ router.get('/lista-de-agendamentos', nivel1, (req, res) => {
     
 })
 
+router.post('/lista-de-agendamentos/deletar', nivel1, (req,res)=>{
+    cadhorario.remove({_id: req.body.id}).then(()=>{
+        req.flash("success_msg", "Agendamento excluido com sucesso")
+        req.redirect("/employee/lista-de-agendamentos")
+    }).catch((err)=>{
+        req.flash("error_msg", "Erro ao tentar excluir agendamento "+err)
+    })
+})
+
 router.get('/confirmar-pagamento', nivel1, (req, res) => {
     res.render("employee/confirmar-pagamento")
 })
