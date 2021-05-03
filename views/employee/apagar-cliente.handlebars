@@ -1,0 +1,27 @@
+<main>
+    <div class="container-calendar">
+        <div id="calendar"></div>
+    </div>
+
+        <h2>Lista de clientes cadastrados:</h2>
+{{#each clientes}}
+    <div class="card">
+        <h3>{{nome}}</h3>
+        <hr>
+        <p>
+            {{userName}}<br>
+            {{email}}
+            {{cpf}}
+            {{tele}}
+        </p>
+        
+        <form action="/funcionario/apagar-cliente/apagar" method="POST">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button type="submit" class="btn-deletar">Apagar Cliente</button>
+        </form>
+    </div>
+    </div>
+</main>
+{{else}}
+    <h3>Não há clientes cadastrado!</h3>
+{{/each}}

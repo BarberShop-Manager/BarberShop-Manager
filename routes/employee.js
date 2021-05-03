@@ -5,6 +5,8 @@ require ('../models/ServicoNovo')
 const cadhorario = mongoose.model("cadhorario")
 require('../models/PagamentoNovo')
 const PagamentoNovo = mongoose.model("pagamento-cliente")
+require ('../models/ClienteNovo')
+const Cliente = mongoose.model(clientes)
 const { nivel1 } = require("../helpers/nivel")
 
 router.get('/',nivel1, (req, res) => {
@@ -90,27 +92,31 @@ router.post('/confirmar-pagamento/novo', nivel1, (req, res) => {
 
 
         })
-        // const NovoPagamento = {
-        //     Name_client: req.body.name,
-        //     Service: req.body.service,
-        //     Data_service: req.body.date,
-        //     Hour_service: req.body.time,
-        //     Payment_form: req.body.payform,
-        //     Value: req.body.valor,
-        //     Observ: req.body.observ
-        // }
-        // new PagamentoNovo(NovoPagamento).save().then(()=>{
-        //     req.flash("success_msg", "Dados de pagamento salvo!")
-        //     res.redirect("/funcionario/confirmar-pagamento")
-        // }).catch((err)=>{
-        //     req.flash("error_msg", "Houve um erro ao tentar salvar os dados de pagamento")
-        //     res.redirect("/funcionario/confirmar-pagamento")
-        // })
     }
 })
 
 router.get('/perfil-funcionario', nivel1, (req, res) => {
     res.render("employee/perfil-funcionario")
 })
+
+router.get('/apagar-cliente', nivel1, (req,res)=>{
+    Cliente.find({"clientes.nivel": 2}).then((clientes)=>{
+        res.render("/employee/apagar-cliente", {clientes: clientes})
+    }).catch((err)=>{
+        console.flash("error_msg", "Erro ao listar clintes cadastrados"+err)
+        res.redirect("/funcionario")
+    })
+})
+
+router.post('/apagar-cliente/apagar', (req,res)=>{
+    Cliente.remove({_id: req.body.id}).then(()=>{
+        req.flash("success_msg", "Cliente removido com sucesso!")
+        res.redirect("/funcionario/apagar-cliente")
+    }).catch((err)=>{
+        req.flash("error_msg", "Erro ao tentar remover cliente"+err)
+        res.redirect("/funcionario/apagar-cliente")
+    })
+})
+
 
 module.exports = router;
