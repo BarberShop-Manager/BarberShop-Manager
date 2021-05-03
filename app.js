@@ -61,6 +61,11 @@ const hbs = handlebars.create({
             return opts.fn(this);
         else
             return opts.inverse(this);
+        },
+        now: function() {
+            let data = new Date();
+            let dataFormatada = ((data.getDate() )) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear(); ;
+            return dataFormatada;
         }
     }
 });
