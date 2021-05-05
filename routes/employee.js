@@ -26,7 +26,7 @@ router.get('/lista-de-agendamentos', nivel1, (req, res) => {
 })
 
 router.post('/lista-de-agendamentos/deletar', nivel1, (req,res)=>{
-    cadhorario.remove({_id: req.body.id}).then(()=>{
+    cadhorario.deleteOne({_id: req.body.id}).then(()=>{
         req.flash("success_msg", "Agendamento excluido com sucesso")
         req.redirect("/employee/lista-de-agendamentos")
     }).catch((err)=>{
@@ -97,8 +97,12 @@ router.post('/confirmar-pagamento/novo', nivel1, (req, res) => {
     }
 })
 
+//exportando uma variável local
+exports.route = function(req, res){
+    const id = req.app.locals.id;
+}
 router.get('/perfil-funcionario/', nivel1, (req, res) => {
-    Cliente.findOne({_id: user._id}).then((clientes)=>{
+    Cliente.findOne({_id: id}).then((clientes)=>{
         res.render("employee/perfil-funcionario", {clientes: clientes})
     }).catch((err)=>{
         req.flash("error_msg", "Erro ao ver perfil"+err)
@@ -201,7 +205,7 @@ router.get('/apagar-cliente', nivel1, (req,res)=>{
 })
 
 router.post('/apagar-cliente/apagar', (req,res)=>{
-    Cliente.remove({_id: req.body.id}).then(()=>{
+    Cliente.deleteOne({_id: req.body.id}).then(()=>{
         req.flash("success_msg", "Cliente removido com sucesso!")
         res.redirect("/funcionario/apagar-cliente")
     }).catch((err)=>{
