@@ -22,6 +22,9 @@ router.post('/agendamentos/novo',nivel2, (req, res) => {
     if (!req.body.func || typeof req.body.func == undefined || req.body.func == null) {
         erros.push({ texto: "Funcionário Inválido" })
     }
+    if (!req.body.cli || typeof req.body.cli == undefined || req.body.cli == null) {
+        erros.push({ texto: "Cliente Inválido" })
+    }
 
     if (!req.body.servicos || typeof req.body.servicos == undefined || req.body.servicos == null) {
         erros.push({ texto: "Serviço Invalido" })
@@ -47,12 +50,13 @@ router.post('/agendamentos/novo',nivel2, (req, res) => {
     } else {
         const Servico = new ServicoNovo({
             nome_do_funcionario: req.body.func,
+            nome_do_cliente: req.body.cli,
             Selecionar_servico: req.body.servicos,
             data_do_servico: req.body.DataServico,
             horario: req.body.horaservico,
             pagamento: req.body.pagamento,
             numero: req.body.numero,
-            observações: req.body.obs
+            observacoes: req.body.obs
 
         })
         Servico.save().then(() => {

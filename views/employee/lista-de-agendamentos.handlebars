@@ -2,19 +2,31 @@
     <div class="container-calendar">
         <div id="calendar"></div>
     </div>
-
-        <h2>Clientes do Dia : {{now}}</h2>
+<!--
+    <h2>Clientes do Dia : {{now}}</h2>
+-->
+        <h2>Clientes Confirmados</h2>
 {{#each cadhorario}}
-    <div class="card">
-        <h3>{{nome_do_funcionario}}</h3>
-        <hr>
-        <p>{{nome_do_funcionario}}</p>
-        <small>{{data_do_serviço}}</small>
-        <small>{{horario}}</small>
-                <form action="/funcionario/lista-de-agendamentos/deletar" method="POST">
+    <div class="carde" >
+        <h2>{{nome_do_funcionario}}  </h2>
+        <h3>Cliente:.........................{{nome_do_cliente}}</h3>
+        <h3>Serviço:.........................{{Selecionar_servico}}</h3>
+        <h3>Data:.............................{{data_do_servico}}</h3>
+        <h3>Horario:........................{{horario}}</h3>
+        <h3>Forma de pagamento: {{pagamento}}</h3>
+        <h3>Número:.......................{{numero}}</h3>
+        <h3>{{observacoes}}</h3>
+    <div>
+
+        <form action="/funcionario/lista-de-agendamentos/deletar" method="POST">
             <input type="hidden" name="id" value="{{_id}}">
             <button type="submit" class="btn-deletar">Excluir agendamento</button>
         </form>
+        <form action="/confirmar-pagamento/novo" method="POST">
+            <button type="submit" >Realizar pagamento</button>
+        </form>
+
+    </div>
     </div>
     </div>
 </main>

@@ -7,6 +7,10 @@ const Schema = mongoose.Schema;
             type:String,
             require: true,
         },
+        nome_do_cliente:{
+            type:String,
+            require: true,
+        },
         Selecionar_servico:{
             type: String,
             require: true,

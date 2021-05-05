@@ -29,6 +29,15 @@ body main section {
     width: 320px;
     margin: 10px;
 }
+.carde {
+    
+    background: var(--cinza3);
+    border-radius: 8px;
+    width: 90%;
+    margin: 5%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
 
 .card h2 a {
     color: var(--branco);
