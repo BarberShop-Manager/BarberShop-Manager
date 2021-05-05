@@ -7,7 +7,7 @@ const cadhorario = mongoose.model("cadhorario")
 require('../models/PagamentoNovo')
 const PagamentoNovo = mongoose.model("pagamento-cliente")
 require ('../models/ClienteNovo')
-const Cliente = mongoose.model(clientes)
+const Cliente = mongoose.model('clientes')
 const { nivel1 } = require("../helpers/nivel")
 const bcrypt = require("bcryptjs")
 
