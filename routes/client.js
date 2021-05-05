@@ -150,7 +150,6 @@ router.post('/novo', (req, res) => {
             res.redirect("/")
         });
     }
-
 })
 
 module.exports = router;
