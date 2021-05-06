@@ -61,7 +61,7 @@ router.post('/agendamentos/novo',nivel2, (req, res) => {
         })
         Servico.save().then(() => {
             req.flash("success_msg", "Agendamento Confirmado!")
-            res.redirect("/")
+            res.redirect("/cliente/agendamentos")
         }).catch((err) => {
             req.flash("error_msg", "Agendamento Negado" + err)
             res.redirect("/cliente/agendamentos")
