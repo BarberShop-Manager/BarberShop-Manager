@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const app = express();
 const admin = require("./routes/admin");
 const employee = require("./routes/employee");
-const cliente = require("./routes/cliente");
+const client = require("./routes/client")
 const path = require("path");
 const flash = require("connect-flash");
 const session = require("express-session");
@@ -56,15 +56,15 @@ const hbs = handlebars.create({
         nivel: function (user) {
             return user.nivel
         },
-        ifCond: function ( a,b, opts) {
-            if(a == b)
-            return opts.fn(this);
-        else
-            return opts.inverse(this);
+        ifCond: function (a, b, opts) {
+            if (a == b)
+                return opts.fn(this);
+            else
+                return opts.inverse(this);
         },
-        now: function() {
+        now: function () {
             let data = new Date();
-            let dataFormatada = ((data.getDate() )) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear(); ;
+            let dataFormatada = ((data.getDate())) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();;
             return dataFormatada;
         }
     }
@@ -115,7 +115,7 @@ app.get('/login', (req, res) => {
 
 
 app.post('/login',
-    passport.authenticate(['local-func','local-user'], {
+    passport.authenticate(['local-func', 'local-user'], {
         failureRedirect: '/login',
         failureFlash: true
     }),
@@ -144,7 +144,7 @@ app.use('/admin', admin);
 app.use('/funcionario', employee);
 
 //Rotas do Cliente
-app.use('/cliente', cliente);
+app.use('/cliente', client);
 
 //OUTRAS CONFIGURAÇÕES
 const PORT = 3308;
