@@ -98,12 +98,9 @@ router.post('/confirmar-pagamento/novo', nivel1, (req, res) => {
     }
 })
 
-//exportando uma variável local
-exports.route = function(req, res){
-    const id = req.app.locals.id;
-}
+
 router.get('/perfil-funcionario/', nivel1, (req, res) => {
-    Cliente.findOne({_id: id}).then((clientes)=>{
+    Cliente.findOne({_id: req.user._id}).then((clientes)=>{
         res.render("employee/perfil-funcionario", {clientes: clientes})
     }).catch((err)=>{
         req.flash("error_msg", "Erro ao ver perfil"+err)
