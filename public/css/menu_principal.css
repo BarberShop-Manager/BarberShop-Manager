@@ -97,7 +97,22 @@ body main section {
     background: url('../img/perfil_geral.png') center/cover;
 }
 
+/* IMAGENS DO MENU DO CLIENTE*/
+#menu1{
+    background: url('../img/mostrar_clientes.png') center/cover;
+}
 
+#menu2{
+    background: url('../img/agendamento_imagem.jpg') center/cover;
+}
+
+#menu3{
+    background: url('../img/perfil_geral.png') center/cover;
+}
+
+#menu4{
+    background: url('') center/cover;
+}
 
 body main section .menuCliente {
     display: grid;

@@ -33,7 +33,7 @@
                         {{#ifCond user.tele true}}
                         <div class="label-func">
                             <label for="telefone">Telefone:</label>
-                            <input type="number" id="telefone" name="telefone" value="{{user.telephone}}" disabled>
+                            <input type="number" id="telefone" name="tele" value="{{user.tele}}" disabled>
                         </div>
                         {{else}}
                         <div class="label-func">
@@ -43,7 +43,7 @@
                         {{/ifCond}}
                     </fieldset>
                     <div id="botao-alterary">
-                        <button type="button"><a href="/funcionario/perfil-funcionario/edit/{{user._id}}">Alterar dados</a></button>
+                        <button type="button"><a href="/funcionario/perfil-funcionario/edit">Alterar dados</a></button>
                     </div>
                 </form>
             {{/if}}
