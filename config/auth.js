@@ -6,9 +6,12 @@ const bcrypt = require("bcryptjs");
 require("../models/ClienteNovo");
 //Model do funcionario
 require("../models/FuncionarioNovo");
+//Model Administrador
+require("../models/Administrador")
 
 const Client = mongoose.model("clientes");
 const Func = mongoose.model("FuncionariosNovos")
+const Admin = mongoose.model("administradores")
 
 module.exports = function (passport) {
 
@@ -44,6 +47,23 @@ module.exports = function (passport) {
         })
     }))
 
+    passport.use('local-admin',new localStrategy({ usernameField: 'email', passwordField: "senha" }, (email, senha, done) => {
+        Admin.findOne({ email: email }).then((user) => {
+            if (!user) {
+                return done(null, false, { message: "Esta conta não existe" });
+            }
+
+            bcrypt.compare(senha, user.senha, (erro, batem) => {
+                if (batem) {
+                    return done(null, user)
+                } else {
+                    return done(null, false, { message: "Senha incorreta " })
+                }
+            })
+        })
+    }))
+    
+
 
     passport.serializeUser(function(user, done) {
         let nivel = user.nivel;
@@ -55,10 +75,14 @@ module.exports = function (passport) {
             Client.findById(data._id, function(err, user) {
             done(err, user);
           });
-        } else{
+        } else if(data.nivel == 1){
             Func.findById(data._id, function(err, user) {
             done(err, user);
           });
+        }else{
+            Admin.findById(data._id, function(err, user) {
+                done(err, user);
+              });
         }
       });
  }

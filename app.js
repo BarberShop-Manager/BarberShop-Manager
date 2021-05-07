@@ -115,7 +115,7 @@ app.get('/login', (req, res) => {
 
 
 app.post('/login',
-    passport.authenticate(['local-func', 'local-user'], {
+    passport.authenticate(['local-func', 'local-user', 'local-admin'], {
         failureRedirect: '/login',
         failureFlash: true
     }),

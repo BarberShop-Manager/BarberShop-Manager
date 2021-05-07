@@ -8,11 +8,11 @@ const Administrador = mongoose.model("administradores");
 const { nivel0 } = require("../helpers/nivel")
 const bcrypt = require("bcryptjs")
 
-router.get('/', (req, res) => {
+router.get('/',nivel0, (req, res) => {
     res.render("admin/menu-admin")
 })
 
-router.get('/cadastro-funcionario', (req, res) => {
+router.get('/cadastro-funcionario', nivel0, (req, res) => {
     res.render("admin/cadastro-funcionario")
 })
 
@@ -144,11 +144,11 @@ router.post('/cadastro-funcionario/novo', (req, res) => {
     }
 })
 
-router.get('/lista-de-clientes', (req, res) => {
+router.get('/lista-de-clientes',nivel0, (req, res) => {
     res.render("admin/lista-de-clientes")
 })
 
-router.get('/lista-de-funcionarios', (req, res) => {
+router.get('/lista-de-funcionarios',nivel0, (req, res) => {
     FuncionarioNovo.find().sort({ data: "desc" }).then((funcionariosnovos) => {
         res.render("admin/lista-de-funcionarios", { funcionariosnovos: funcionariosnovos })
     }).catch((err) => {
