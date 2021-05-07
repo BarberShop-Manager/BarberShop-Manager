@@ -1,25 +1,23 @@
 <main>
     <div class="lista-de-funcionarios">
         <div class="busca">
-            <input type="text" id="texbusca" placeholder="Funcionário..." />
+            <input type="text" id="texbusca" onkeyup="Filtro()" placeholder="Funcionário..." />
             <img src="/img/Buscar.png" id="btnBusca" alt="Buscar" />
         </div>
-        {{#each funcionariosnovos}}
         <div class="container-funcionarios">
-            <div class="card-funcionario1">
-                <!--<img src="/img/gustavo2.png" alt="">-->
-                <div class="body-card">
-                    <h4>{{nome}}</h4>
-                    <div class="estrelas">
+            <ul id="ulFuncs" class="card-funcionario">
 
-                    </div>
-                    <a href="/admin/perfil-funcionario/{{_id}}">Ver perfil</a>
-                </div>
-            </div>
+                {{#each funcionariosnovos}}
+                <li class="body-card">
+                    <!--<img src="/img/gustavo2.png" alt="">-->
+                    <a href="/admin/perfil-funcionario/{{_id}}">{{nome}}</a>
+                </li>
+                {{else}}
+
+                <p>Nenhum funcionário cadastrado</p>
+
+                {{/each}}
+            </ul>
         </div>
-        {{else}}
-        <p>Nenhum funcionário cadastrado</p>
-        {{/each}}
-    </div>
     </div>
 </main>

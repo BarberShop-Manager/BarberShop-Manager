@@ -87,8 +87,19 @@ form input:disabled {
     text-transform: uppercase;
 }
 
-#alterar {
-    margin: auto;
+#alterar button{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--cor-principal);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
+    color: var(--branco);
+    text-transform: uppercase;
 }
 
 #alterar-desktop input {
