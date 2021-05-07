@@ -7,7 +7,9 @@ const cadhorario = mongoose.model("cadhorario")
 require('../models/PagamentoNovo')
 const PagamentoNovo = mongoose.model("pagamento-cliente")
 require ('../models/ClienteNovo')
-const Cliente = mongoose.model('clientes')
+const clientes = mongoose.model('clientes')
+require ('../models/FuncionarioNovo')
+const FuncionarioNovo = mongoose.model("FuncionariosNovos")
 const { nivel1 } = require("../helpers/nivel")
 const bcrypt = require("bcryptjs")
 
@@ -109,112 +111,118 @@ router.post('/confirmar-pagamento/novo', nivel1, (req, res) => {
             res.redirect("/")
         }).catch((err) => {
             req.flash("error_msg", "Erro no pagamento" + err)
-            res.redirect("/funcionario/confirmar-pagamento")
-
-
-
+            res.redirect("/funcionario/confirmar-pagamento")    
         })
     }
 })
 
 
 router.get('/perfil-funcionario/', nivel1, (req, res) => {
-    Cliente.findOne({_id: req.user._id}).then((clientes)=>{
-        res.render("employee/perfil-funcionario", {clientes: clientes})
+    FuncionarioNovo.findOne({_id: req.user._id}).then((funcionario)=>{
+        res.render("employee/perfil-funcionario", {funcionario: funcionario})  
     }).catch((err)=>{
         req.flash("error_msg", "Erro ao ver perfil"+err)
+        res.redirect("/funcionario")
     })
 })
 
 
 
 router.get('/perfil-funcionario/edit/:id', nivel1, (req, res) => {
-    Cliente.findOne({_id: req.params.id}).then((clientes)=>{
-        res.render("employee/edit-perfil", {clientes: clientes})
+    FuncionarioNovo.findOne({_id: req.params.id}).then((funcionario)=>{
+        res.render("employee/edit-perfil", {funcionario: funcionario})
     }).catch((err)=>{
         req.flash("error_msg", "Erro"+err)
+        res.redirect("/funcionario/perfil-funcionario")
     })
 })
 
-router.post('/perfil-funcionario/edit', (req,res)=>{
-    let erros = [];
+router.post('/perfil-funcionario/edit/alterar', (req,res)=>{
+    var erros = []
 
     if (!req.body.nome || typeof req.body.nome == undefined || req.body.nome == null) {
-        erros.push({ mensagem: "Nome Inválido" })
+        erros.push({ texto: "Nome inválido" })
+    }
+
+    if (req.body.nome.length < 2) {
+        erros.push({ texto: "Nome muito pequeno!" })
     }
 
     if (!req.body.userName || typeof req.body.userName == undefined || req.body.userName == null) {
-        erros.push({ mensagem: "Usuário Inválido" })
+        erros.push({ texto: "Nome de usuário inválido" })
     }
+
+    if (req.body.userName.length < 2) {
+        erros.push({ texto: "Nome de usuário muito pequeno!" })
+    }
+
     if (!req.body.email || typeof req.body.email == undefined || req.body.email == null) {
-        erros.push({ mensagem: "Email Inválido" })
+        erros.push({ texto: "Email não foi informado." })
     }
 
     if (!req.body.cpf || typeof req.body.cpf == undefined || req.body.cpf == null) {
-        erros.push({ mensagem: "CPF Inválido" })
+        erros.push({ texto: "CPF não foi informado." })
     }
 
     if (!req.body.senha || typeof req.body.senha == undefined || req.body.senha == null) {
-        erros.push({ mensagem: "Senha Inválida" })
+        erros.push({ texto: "A senha não foi informada" })
     }
 
-    if (req.body.senha.length < 8 || req.body.senha.length > 30) {
-        erros.push({ mensagem: "Senha precisa pode ter mínimo de 8 e máximo 30 caracteres " })
+    if (req.body.senha.length < 4) {
+        erros.push({ texto: "Senha muito curta." })
     }
 
     if (req.body.senha != req.body.senha2) {
-        erros.push({ mensagem: "As senhas não batem!" })
+        erros.push({ texto: "As senhas não batem!" })
     }
 
     if (erros.length > 0) {
-        res.redirect("funcionario/perfil-funcionario/edit", { erros: erros });
+        res.render('funcionario/perfil-funcionario', { erros: erros })
     } else {
-        Cliente.findOne({ email: req.body.email }).then((clientes) => {
-            if (clientes) {
-                req.flash("success_msg", "Já existe uma conta com esse email e/ou usuario");
-                res.redirect("/funcionario/perfil-fucnionario/edit");
+        FuncionarioNovo.findOne({ email: req.body.email }).then((funcionario) => {
+            if (funcionario) {
+                req.flash("error_msg", "Já existe uma conta cadastrada neste email")
+                res.redirect("/funcionario/perfil-funcionario"+err)
             } else {
-                const novoCliente = new Cliente({
-                    nome: req.body.nome,
-                    userName: req.body.userName,
-                    email: req.body.email,
-                    cpf: req.body.cpf,
-                    dataNasc: req.body.dataNasc,
-                    senha: req.body.senha,
-                    tele: req.body.tele,
-                    nivel: req.body.nivel
-                })
+                FuncionarioNovo.findOne({_id: req.user._id}).then((funcionario)=>{
+                    nome = req.body.nome,
+                    userName = req.body.userName,
+                    email = req.body.email,
+                    cpf = req.body.cpf,
+                    dataNasc = req.body.dataNasc,
+                    senha = req.body.senha,
+                    nivel = req.body.nivel
 
-                bcrypt.genSalt(10, (erro, salt) => {
-                    bcrypt.hash(novoCliente.senha, salt, (erro, hash) => {
-                        if (erro) {
-                            req.flash("error_msg", "Houve um erro durante o a alteração de dados");
-                            res.redirect("/");
-                        }
-
-                        novoCliente.senha = hash;
-
-                        novoCliente.save().then(() => {
-                            req.flash("success_msg", "Dados alterados com sucesso");
-                            res.redirect("/");
-                        }).catch((err) => {
-                            req.flash("error_msg", "Houve um erro ao alterar os dados" + err);
-                            res.redirect("/funcionario/perfil-funcionario");
-                        });
-
+                    bcrypt.genSalt(10, (erro, salt) => {
+                        bcrypt.hash(funcionario.senha, salt, (erro, hash) => {
+                            if (erro) {
+                                req.flash("erro_msg", "Houve um erro durante o salvamento do funcionário")
+                                res.redirect("/funcionario/perfil-funcionario")
+                            }
+    
+                            funcionario.senha = hash;
+    
+                            FuncionarioNovo.save().then(() => {
+                                req.flash("success_msg", "Sucesso ao alterar dados!")
+                                res.redirect("funcionario/perfil-funcionario")
+                            }).catch((err) => {
+                                req.flash("error_msg", "Houve um erro ao tantar alterar os dados, tente novamente!")
+                                res.redirect("/funcionario/perfil-funcionario"+err)
+                            })
+                        })
                     })
-                })
+                })          
             }
         }).catch((err) => {
-            req.flash("error_msg", "Houve um erro interno " + err);
-            res.redirect("/funcionario/perfil-funcionario")
-        });
+            req.flash("error_msg", "Houve um erro interno"+err)
+            res.redirect("/funcionario")
+        })
     }
 })
-
+// trocar Cliente por clientes
 router.get('/apagar-cliente', nivel1, (req,res)=>{
-    Cliente.find({"clientes.nivel": 2}).then((clientes)=>{
-        res.render("/employee/apagar-cliente", {clientes: clientes})
+    clientes.find({nivel: 2}).then((clientes)=>{
+        res.render("employee/apagar-cliente", {clientes: clientes})
     }).catch((err)=>{
         console.flash("error_msg", "Erro ao listar clintes cadastrados"+err)
         res.redirect("/funcionario")
@@ -222,7 +230,7 @@ router.get('/apagar-cliente', nivel1, (req,res)=>{
 })
 
 router.post('/apagar-cliente/apagar', (req,res)=>{
-    Cliente.deleteOne({_id: req.body.id}).then(()=>{
+    clientes.deleteOne({_id: req.body.id}).then(()=>{
         req.flash("success_msg", "Cliente removido com sucesso!")
         res.redirect("/funcionario/apagar-cliente")
     }).catch((err)=>{

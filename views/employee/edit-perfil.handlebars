@@ -1,10 +1,9 @@
 <main>
     <div class="perfil-cliente">
-        <img src="assets/img/gustavo1.png">
         <div class="grupo-forms">
-            <h3>Alterar dados:</h3>
-             <form id="alterar-dados" action="/perfil-funcionario/edit" method="POST">
-             <input type="hidden" name="id" value={{clientes_id}}>
+             <form id="alterar-dados" action="/perfil-funcionario/edit/alterar" method="POST">
+             <h2>Alteração de dados</h2>
+             <input type="hidden" name="id" value="{{funcionario._id}}">
                 <div>
                     <label for="fname-alter">Nome:</label>
                     <input type="text" id="fname-alter" name="nome" placeholder="Digite seu novo nome">

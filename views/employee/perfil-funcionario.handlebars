@@ -1,46 +1,52 @@
 <main>
-    <div class="perfil-cliente">
-        <img src="assets/img/gustavo1.png">
+    <div class="perfil-func">
         <div class="grupo-forms">
             <!-- Fomulários com os dados atuais do cliente -->
-            {{#each clientes}}
+            {{#if user}}
                 <form id="dados-atuais">
                     <fieldset>
                         <legend>Perfil:</legend>
-                        <div>
+                        <div class="label-func">
                             <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="nome" value={{nome}} disabled>
+                            <input type="text" id="nome" name="nome" value="{{user.nome}}" disabled>
                         </div>
-                        <div>
+                        <div class="label-func">
                             <label for="apelido">Apelido:</label>
-                            <input type="text" id="apelido" name="apelido" value={{userName}} disabled>
+                            <input type="text" id="apelido" name="apelido" value="{{user.userName}}" disabled>
                         </div>
-                        <div>
+                        <div class="label-func">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" value={{email}} disabled>
+                            <input type="email" id="email" name="email" value="{{user.email}}" disabled>
                         </div>
-                        <div>
+                        <div class="label-func">
                             <label for="senha">Senha:</label>
-                            <input type="password" id="senha" name="senha" value="******" disabled>
+                            <input type="password" id="senha" name="senha" value="**********" disabled>
                         </div>
-                        <div>
+                        <div class="label-func">
                             <label for="aniversario">Aniversário:</label>
-                            <input type="date" id="aniversario" name="aniversario" value={{daraNasc}} disabled>
+                            <input type="date" id="aniversario" name="aniversario" value="{{user.dataNasc}}" disabled>
                         </div>
-                        <div>
+                        <div class="label-func">
                             <label for="cpf">CPF:</label>
-                            <input type="number" id="cpf" name="cpf" value={{cpf}} disabled>
+                            <input type="number" id="cpf" name="cpf" value="{{user.cpf}}" disabled>
                         </div>
-                        <div>
+                        {{#ifCond user.tele true}}
+                        <div class="label-func">
                             <label for="telefone">Telefone:</label>
-                            <input type="number" id="telefone" name="telefone" value={{tele}} disabled>
+                            <input type="number" id="telefone" name="telefone" value="{{user.telephone}}" disabled>
                         </div>
+                        {{else}}
+                        <div class="label-func">
+                            <label for="telefone">Telefone:</label>
+                            <input type="text" id="telefone" name="telefone" value="Nenhum Número cadastrado" disabled>
+                        </div>
+                        {{/ifCond}}
                     </fieldset>
-                    <div id="botao-alterar">
-                        <button type="button"><a href="funcionario/perfil-funcionario/edit-perfil/{{_id}}">Alterar dados</a></button>
+                    <div id="botao-alterary">
+                        <button type="button"><a href="/funcionario/perfil-funcionario/edit/{{user._id}}">Alterar dados</a></button>
                     </div>
                 </form>
-            {{/each}}
+            {{/if}}
         </div>
     </div>
 </main>
