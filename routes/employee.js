@@ -100,7 +100,7 @@ router.post('/confirmar-pagamento/novo', nivel1, (req, res) => {
 
 
 router.get('/perfil-funcionario/', nivel1, (req, res) => {
-    Cliente.find({_id: req.user._id}).then((clientes)=>{
+    Cliente.findOne({_id: req.user._id}).then((clientes)=>{
         res.render("employee/perfil-funcionario", {clientes: clientes})
     }).catch((err)=>{
         req.flash("error_msg", "Erro ao ver perfil"+err)
@@ -110,7 +110,7 @@ router.get('/perfil-funcionario/', nivel1, (req, res) => {
 
 
 router.get('/perfil-funcionario/edit/:id', nivel1, (req, res) => {
-    Cliente.find({_id: req.params.id}).then((clientes)=>{
+    Cliente.findOne({_id: req.params.id}).then((clientes)=>{
         res.render("employee/edit-perfil", {clientes: clientes})
     }).catch((err)=>{
         req.flash("error_msg", "Erro"+err)
