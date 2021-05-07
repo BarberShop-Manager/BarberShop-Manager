@@ -195,7 +195,7 @@ header .cabecalho img {
 
 
 #galeria .colagem {
-    background-image: url("/assets/img/colagem_desktop.png");
+    background-image: url("../img/colagem_desktop.png");
     background-position: center;
     height: 400px;
     background-repeat: no-repeat;
