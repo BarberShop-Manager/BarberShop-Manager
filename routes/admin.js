@@ -3,6 +3,8 @@ const router = express.Router();
 const mongoose = require("mongoose");
 require("../models/FuncionarioNovo");
 const FuncionarioNovo = mongoose.model("FuncionariosNovos");
+require("../models/Administrador");
+const Administrador = mongoose.model("administradores");
 const { nivel0 } = require("../helpers/nivel")
 const bcrypt = require("bcryptjs")
 
@@ -179,8 +181,74 @@ router.get('/controle-de-caixa', (req, res) => {
     res.render("admin/controle-de-caixa")
 })
 
-router.get('/perfil-administrador', nivel0, (req, res) => {
-    res.render("admin/perfil-admin")
+router.get('/perfil-admin', (req, res) => {
+    Administrador.find({ nivel: 0 }).then((administrador) => {
+        res.render("admin/perfil-admin", { administrador: administrador })
+    }).catch((err) => {
+        req.flash("error_msg", "Erro ao encontrar o administrador")
+        res.redirect("/admin")
+    })
+})
+
+router.post('/perfil-admin/edit', (req, res) => {
+
+    var erros = []
+
+    if (!req.body.nome || typeof req.body.nome == undefined || req.body.nome == null) {
+        erros.push({ texto: "Nome inválido" })
+    }
+
+    if (req.body.nome.length < 2) {
+        erros.push({ texto: "Nome muito pequeno!" })
+    }
+
+    if (!req.body.email || typeof req.body.email == undefined || req.body.email == null) {
+        erros.push({ texto: "Email não foi informado." })
+    }
+
+    if (!req.body.senha || typeof req.body.senha == undefined || req.body.senha == null) {
+        erros.push({ texto: "A senha não foi informada" })
+    }
+
+    if (req.body.senha.length < 4) {
+        erros.push({ texto: "Senha muito curta." })
+    }
+
+    if (req.body.senha != req.body.senha2) {
+        erros.push({ texto: "As senhas não batem!" })
+    }
+
+    if (erros.length > 0) {
+        res.render('admin/perfil-admin', { erros: erros })
+    } else {
+        Administrador.findOne({ nivel: 0 }).then((administrador) => {
+            administrador.nome = req.body.nome,
+                administrador.email = req.body.email,
+                administrador.senha = req.body.senha
+
+            bcrypt.genSalt(10, (erro, salt) => {
+                bcrypt.hash(administrador.senha, salt, (erro, hash) => {
+                    if (erro) {
+                        req.flash("erro_msg", "Houve um erro durante o salvamento do funcionário")
+                        res.redirect("/admin")
+                    }
+
+                    administrador.senha = hash;
+
+                    administrador.save().then(() => {
+                        req.flash("success_msg", "Perfil editado com sucesso!")
+                        res.redirect("/admin")
+                    }).catch((err) => {
+                        req.flash("error_msg", "Houve um erro ao editar o perfil.")
+                        res.redirect("/admin" + err)
+                    })
+                })
+            })
+        }).catch((err) => {
+            req.flash("error_msg", "Erro ao encontrar o administrador")
+            res.redirect("/admin")
+        })
+    }
 })
 
 module.exports = router;

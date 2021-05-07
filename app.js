@@ -56,15 +56,15 @@ const hbs = handlebars.create({
         nivel: function (user) {
             return user.nivel
         },
-        ifCond: function ( a,b, opts) {
-            if(a == b)
-            return opts.fn(this);
-        else
-            return opts.inverse(this);
+        ifCond: function (a, b, opts) {
+            if (a == b)
+                return opts.fn(this);
+            else
+                return opts.inverse(this);
         },
-        now: function() {
+        now: function () {
             let data = new Date();
-            let dataFormatada = ((data.getDate() )) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear(); ;
+            let dataFormatada = ((data.getDate())) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();;
             return dataFormatada;
         }
     }
@@ -115,7 +115,7 @@ app.get('/login', (req, res) => {
 
 
 app.post('/login',
-    passport.authenticate(['local-func','local-user'], {
+    passport.authenticate(['local-func', 'local-user'], {
         failureRedirect: '/login',
         failureFlash: true
     }),

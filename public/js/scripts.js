@@ -23,3 +23,20 @@ function fechar_menu() {
 var x = window.matchMedia("(min-width: 992px)")
 myFunction(x) // Chama a função que observa em tempo de execução
 x.addListener(myFunction)
+
+function Filtro() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("texbusca");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("ulFuncs");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}

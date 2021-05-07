@@ -172,7 +172,6 @@ h4 {
 .lista-de-funcionarios .container-funcionarios [class^="card-funcionario"] {
     background-color: var(--cinza2);
     border-radius: 8px;
-    display: flex;
     margin: 50px auto;
     
 }
