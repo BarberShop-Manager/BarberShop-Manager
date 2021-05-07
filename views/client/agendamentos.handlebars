@@ -1,53 +1,61 @@
+{{#each erros}}
+    <div class="alert">{{texto}}</div>
+{{else}}
+{{/each}}
+
 <main>
     <div class="container-agendamento">
-        <form>
-            <div class=nome-func>
+        <form action="/cliente/agendamentos/novo" method="POST">
+            <div class=func>
+
                 <label>Nome do funcionário</label><br>
-                <input type="text">
+                <input type="text" name="func">
+            </div>
+            <div class=cli>
+
+                <label>Nome do cliente</label><br>
+                <input type="text" name="cli">
             </div>
             <div class=SlctServiço>
-                <label for="serviços">Esscolha um serviço</label>
-                <select name="serviços" id="serviços">
-                    <option value="serviço1">serviço1</option>
-                    <option value="serviço2">serviço2</option>
-                    <option value="serviço3">serviço3</option>
+                <label for="servicos">Escolha um serviço</label>
+                <select name="servicos" id="servicos">
+                    <option value="Corte Social">Corte Social</option>
+                    <option value="Degrade">Degrade</option>
+                    <option value="Navalha">Navalha</option>
                 </select>
             </div>
             <div class="data-hora">
-                <div class="DataServiço">
+                <div class="DataServico">
                     <label>Data do serviço</label>
-                    <input type="date">
+                    <input type="date" name="DataServico">
                 </div>
-                <div class="hora-servico">
+                <div class="horaservico">
                     <label>Horário</label>
-                    <input type="time">
+                    <input type="time" name="horaservico" value="08:00" step="1800">
                 </div>
             </div>
             <div class="slctFormPagamento">
-                <label for="pagamento">Escolha um serviço</label>
+                <label for="pagamento">Escolha a forma de pagamento</label>
                 <select name="pagamento" id="pagamento">
-                    <option value="serviço1">Dinheiro</option>
-                    <option value="serviço2">Cartão</option>
-                    <option value="serviço3">Boleto</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Cartão">Cartão</option>
                 </select>
             </div>
             <div class="numero">
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" placeholder="(DDD)999999999">
+                <input type="tel" name = "numero" id="telefone" placeholder="(DDD)999999999">
             </div>
-            <div class="OBS">
+            <div class="obs">
                 <label>Observações:</label>
-                <textarea cols="30" rows="10"></textarea>
+                <textarea cols="30" rows="10" name='obs'></textarea>
             </div>
             <div class="grupo-botao">
 
             </div>
-        </form>
         <div id="botao-agend-confirm">
-            <button>Confirmar Agendamento</button>
+            <button type="submit">Confirmar Agendamento</button>
         </div>
-        <div id="botao-agend-cancel">
-            <button>Cancelar Pagamento</button>
-        </div>
+        
+        </form>
     </div>
 </main>

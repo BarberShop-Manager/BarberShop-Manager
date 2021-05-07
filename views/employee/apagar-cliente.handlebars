@@ -1,0 +1,27 @@
+<main>
+    
+        <h2>Lista de Clientes cadastrados</h2>
+{{#each clientes}}
+    <div class="carde" >
+        <h2>{{nome}} </h2>
+        <h3>Nome De usuário:...........{{userName}}</h3>
+        <h3>Email:...............................{{email}}</h3>
+        <h3>CPF:..................................{{cpf}}</h3>
+        <h3>Telefone:.........................{{tele}}</h3>
+    <div>
+        <form action="/funcionario/apagar-cliente/apagar" method="POST">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button type="submit" class="btn-deletar">Apagar Cliente</button>
+        </form>
+       
+  
+
+    </div>
+    </div>
+    </div>
+
+</main>
+{{else}}
+    <h3>Não há clientes cadastrado!</h3>
+{{/each}}
+

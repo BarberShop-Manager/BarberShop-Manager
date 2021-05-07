@@ -1,37 +1,39 @@
-const Sequelize  = require('sequelize');
-const sequelize = new Sequelize('db_bsm', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const newUser = new Schema({
+    nome: {
+        type: String,
+        required: true
+    },
+    userName: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    cpf: {
+        type: Number,
+        required: false
+    },
+    dataNasc: {
+        type: String,
+        required: false
+    },
+    senha: {
+        type: String,
+        required: true
+    },
+    tele: {
+        type: String,
+        required: false
+    },
+    nivel: {
+        type: Number,
+        default: 2
+    }
 });
 
-const userNew = sequelize.define('users',{
-    user_id: {
-        type: Sequelize.INTEGER,
-        primaryKey: true
-    },
-    _name: {
-        type: Sequelize.STRING(30)
-    },
-    _username: {
-        type: Sequelize.STRING(30)
-    },
-    _email: {
-        type: Sequelize.STRING(60)
-    },
-    _cpf: {
-        type: Sequelize.INTEGER
-    },
-    _date: {
-        type: Sequelize.DATE
-    },
-    _password: {
-        type: Sequelize.INTEGER(100)
-    },
-    _telephone: {
-        type: Sequelize.INTEGER
-    },
-    _nivel: {
-        type: Sequelize.INTEGER,
-        defaultValue: 0
-    }
-}); 
+mongoose.model("clientes", newUser);

@@ -1,18 +1,18 @@
-    <main>
-        <div class="formlogin">
-            <form action="menu_principal_cliente.html" method="get">
-                <div>
-                    <label for="user">Usuário</label><br>
-                    <input type="text" name="user" id="user">
-                </div>
-                <div>
-                    <label for="passw">Senha</label><br>
-                    <input type="password" name="passw" id="passw">
-                </div>
-                <div id="botao_login">
-                    <button>Logar</button>
-                </div>
-            </form>
-            <p>Não possui cadastro? <a href="/cadastro" class="cadas_cliente">Clique aqui</a></p>
-        </div>
-    </main>
+<main>
+    <div class="formlogin">
+        <form action="/login" method="post">
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="senha">Senha</label><br>
+                <input type="password" name="senha" id="senha">
+            </div>
+            <div id="botao_login">
+                <button type="submit">Logar</button>
+            </div>
+        </form>
+        <p>Não possui cadastro? <a href="/cadastro" class="cadas_cliente">Clique aqui</a></p>
+    </div>
+</main>

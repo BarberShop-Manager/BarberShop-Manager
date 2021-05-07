@@ -2,42 +2,87 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
+const mongoose = require("mongoose");
 const app = express();
 const admin = require("./routes/admin");
 const employee = require("./routes/employee");
-const cliente = require("./routes/client");
+const client = require("./routes/client");
 const path = require("path");
-const mongoose = require("mongoose");
-const session = require("express-session");
 const flash = require("connect-flash");
+const session = require("express-session");
+const passport = require("passport")
+require("./config/auth")(passport);
+
+require("./models/ClienteNovo");
+const Client = mongoose.model("clientes");
 
 // CONFIGURAÇÕES
-//Sessão
+// Sessão
 app.use(session({
-    secret: "barbershopmanager",
+    secret: "Uma barberada",
     resave: true,
     saveUninitialized: true
-}));
+}))
+
+app.use(passport.initialize())
+app.use(passport.session())
+
 app.use(flash())
-//Midleware
+
+
+//Middleware
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash("success_msg")
     res.locals.error_msg = req.flash("error_msg")
+    res.locals.error = req.flash("error")
+    res.locals.user = req.user || null
     next()
 })
+
 //Body Parser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 //Handlebars
-app.engine('handlebars', handlebars({ defaultLayout: 'main' }));
+
+const hbs = handlebars.create({
+    defaultLayout: 'main',
+    runtimeOptions: {
+        allowProtoPropertiesByDefault: true,
+        allowProtoMethodsByDefault: true,
+    },
+    //Criando um helper handlebars customizável
+
+    helpers: {
+        nivel: function (user) {
+            return user.nivel
+        },
+        ifCond: function (a, b, opts) {
+            if (a == b)
+                return opts.fn(this);
+            else
+                return opts.inverse(this);
+        },
+        now: function () {
+            let data = new Date();
+            let dataFormatada = ((data.getDate())) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear();;
+            return dataFormatada;
+        }
+    }
+});
+
+app.engine('handlebars', hbs.engine);
+
 app.set('view engine', 'handlebars');
+
 //Mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/barbershop').then(() => {
-    console.log("Conectado ao mongo")
-}).catch((err) => {
-    console.log("Erro ao se conectar" + err)
-})
+mongoose.connect("mongodb://localhost/db_bsm", {
+    useNewUrlParser: true, useUnifiedTopology: true
+}).then(function () {
+    console.log("BaberShop Manager conectado ao banco de dados mongo.")
+}).catch(function (err) {
+    console.log("Houve um erro ao conectar o BarberShop Manager ao bando de dados mongo, erro: " + err);
+});
 
 //Public
 app.use(express.static(path.join(__dirname, "public")))
@@ -53,14 +98,44 @@ app.get('/cadastro', (req, res) => {
     res.render("cadastro-cliente")
 });
 
-app.post('/cadastro/novo', (req, res) => {
-    res.render("novo")
-})
-
 //Login dos Usuários
 app.get('/login', (req, res) => {
     res.render("login")
 });
+
+// app.post('/login', (req, res, next) => {
+
+//     passport.authenticate(["local-user","local-func"], {
+//         successRedirect: "/cliente",
+//         failureRedirect: "/login",
+//         failureFlash: true
+//     })(req, res, next)
+
+// })
+
+
+app.post('/login',
+    passport.authenticate(['local-func', 'local-user'], {
+        failureRedirect: '/login',
+        failureFlash: true
+    }),
+    function (req, res, next) {
+        if (req.user.nivel == 0) {
+            res.redirect('/admin');
+        } else if (req.user.nivel == 1) {
+            res.redirect('/funcionario');
+        } else if (req.user.nivel == 2) {
+            res.redirect('/cliente');
+        }
+        next();
+    })
+
+
+app.get("/logout", (req, res) => {
+    req.session.destroy((err) => {
+        res.redirect('/')
+    })
+})
 
 //Rotas do Adminstrador
 app.use('/admin', admin);
@@ -69,10 +144,10 @@ app.use('/admin', admin);
 app.use('/funcionario', employee);
 
 //Rotas do Cliente
-app.use('/cliente', cliente);
+app.use('/cliente', client);
 
 //OUTRAS CONFIGURAÇÕES
 const PORT = 3308;
 app.listen(PORT, () => {
-    console.log(`Barbearia rodando no seguinte servidor: http://localhost:${PORT}`)
+    console.log(`BarberShop Manager rodando no seguinte servidor local: http://localhost:${PORT}`)
 })

@@ -1,28 +1,37 @@
+{{#each erros}}
+    <div class="alert">{{texto}}</div>
+{{else}}
+{{/each}}
 <main>
     <div id="formulario">
-        <form>
+        <form action="/funcionario/confirmar-pagamento/novo" method="POST">
             <label for="name" class="label_text_color">Nome do cliente</label>
             <input type="text" name="name" id="name" class="button" placeholder="Digite seu nome"><br />
 
             <label for="servico" class="label_text_color">Selecionar serviço</label><br />
-            <select id="servico" class="drop_down">
+            <select id="servico" class="drop_down" name="service">
                 <option value="serviço_1">serviço 1</option>
                 <option value="serviço_2">serviço 2</option>
                 <option value="serviço_3">serviço 3</option>
                 <option value="serviço_4">serviço 4</option>
             </select>
 
+
+
             <label for="date" class="text_esquerda">Data do serviço</label>
-            <label for="time" class="text_direita">Horário</label><br />
 
             <div id="div_1">
                 <input type="date" name="date" id="date" class="button_div_1">
-                <input type="time" name="time" id="time" class="button_div_1">
             </div>
 
+            <label for="time" class="text_direita">Horário</label><br />
+            <div id="div_1">
+                <input type="time" name="time" id="time" class="button_div_1">
+            </div>
+            
             <br />
             <label for="pagamento" class="label_text_color">Selecionar forma de pagamento</label><br />
-            <select id="pagamento" class="drop_down">
+            <select id="pagamento" class="drop_down" name="payform">
                 <option value="serviço_1">Cartão de crédito</option>
                 <option value="serviço_2">Dinheiro</option>
                 <option value="serviço_3">Boleto bancário</option>
@@ -30,13 +39,12 @@
             </select>
 
             <label for="valor" class="text_esquerda">Valor</label><br />
-            <input type="text" name="valor" id="valor" placeholder="Digite um valor">
+            <input type="text" name="valor" id="valor" placeholder="Digite o valor">
 
             <label for="observ" class="text_esquerda">Observações:</label>
             <textarea name="observ" id="observ" cols="30" rows="10"></textarea>
+            <button type="submit" id="button_confirmar_pagamento">CONFIRMAR PAGAMENTO</button>
         </form>
-        <div>
-            <button id="button_confirmar_pagamento">CONFIRMAR PAGAMENTO</button>
-        </div>
     </div>
 </main>
+

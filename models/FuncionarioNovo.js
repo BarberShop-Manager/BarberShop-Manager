@@ -15,7 +15,7 @@ const FuncionarioNovo = new Schema({
         required: true
     },
     cpf: {
-        type: String,
+        type: Number,
         required: true
     },
     diasDeTrabalho: {
@@ -32,6 +32,13 @@ const FuncionarioNovo = new Schema({
     senha: {
         type: String,
         required: true
+    },
+    tele:{
+        type: Number
+    },
+    nivel: {
+        type: Number,
+        default: 1
     }
 })
 

@@ -29,6 +29,15 @@ body main section {
     width: 320px;
     margin: 10px;
 }
+.carde {
+    
+    background: var(--cinza3);
+    border-radius: 8px;
+    width: 90%;
+    margin: 5%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
 
 .card h2 a {
     color: var(--branco);
@@ -88,7 +97,22 @@ body main section {
     background: url('../img/perfil_geral.png') center/cover;
 }
 
+/* IMAGENS DO MENU DO CLIENTE*/
+#menu1{
+    background: url('../img/mostrar_clientes.png') center/cover;
+}
 
+#menu2{
+    background: url('../img/agendamento_imagem.jpg') center/cover;
+}
+
+#menu3{
+    background: url('../img/perfil_geral.png') center/cover;
+}
+
+#menu4{
+    background: url('') center/cover;
+}
 
 body main section .menuCliente {
     display: grid;

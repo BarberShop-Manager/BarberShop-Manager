@@ -1,0 +1,54 @@
+{{#each erros}}
+
+    <div>{{texto}}</div>
+{{else}}
+
+{{/each}}
+<main>
+    <div class="perfil-cliente">
+        <div class="grupo-forms">
+             <form id="alterar-dados" action="/funcionario/perfil-funcionario/edit/" method="POST">
+             <h2>Alteração de dados</h2>
+             <input type="hidden" name="id" value="{{funcionario._id}}">
+                <div>
+                    <label for="fname-alter">Nome:</label>
+                    <input type="text" id="fname-alter" name="nome" placeholder="Digite seu novo nome" value="{{funcionario.nome}}" >
+                </div>
+                <div>
+                    <label for="lname-alter">Apelido:</label>
+                    <input type="text" id="lname-alter" name="userName" placeholder="Digite seu novo apelido" value="{{funcionario.userName}}">
+                </div>
+                <div>
+                    <label for="email-alter">Email:</label>
+                    <input type="email" id="email-alter" name="email" placeholder="Digite seu novo email" value="{{funcionario.email}}">
+                </div>
+                <div>
+                    <label for="senha-alter">Senha:</label>
+                    <input type="password" id="senha-alter" name="senha" placeholder="Digite sua nova senha" >
+                </div>
+                 <div>
+                    <label for="senha-alter">Confirmar senha:</label>
+                    <input type="password" id="senha-alterar" name="senha2" placeholder="Digite sua nova senha novamente">
+                </div>
+                <div>
+                    <label for="aniversario-alter">Aniversário:</label>
+                    <input type="date" id="aniversario-alter" name="dataNasc" value="{{funcionario.dataNasc}}">
+                </div>
+                <div>
+                    <label for="cpf">CPF:</label>
+                    <input type="number" id="cpf-alter" name="cpf" placeholder="Digite seu novo CPF" value="{{funcionario.cpf}}">
+                </div>
+                <div>
+                    <label for="telefone-alter">Telefone:</label>
+                    <input type="tel" id="telefone-alter" name="tele" placeholder="Digite seu novo telefone" value="{{funcionario.tele}}">
+                </div>
+                <div>
+                    <input type="hidden" id="nivel" name="nivel" value="1"><br>
+                </div>
+                <div id="alterar-desktop">
+                    <button type="submit">Alterar dados</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

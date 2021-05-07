@@ -1,4 +1,4 @@
-body main .perfil-cliente {
+body main .perfil-func {
     border-radius: 8px;
     width: 90%;
     height: auto;
@@ -7,18 +7,18 @@ body main .perfil-cliente {
     text-align: left;
 }
 
-body main .perfil-cliente img {
+body main .perfil-func img {
     display: block;
     margin: auto;
 }
 
-body main .perfil-cliente .grupo-forms {
+body main .perfil-func .grupo-forms {
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
-body main .perfil-cliente form {
+body main .perfil-func form {
     width: 80%;
     height: auto;
     font-size: 14pt;
@@ -26,7 +26,7 @@ body main .perfil-cliente form {
     margin: 25px;
 }
 
-body main .perfil-cliente #alterar-dados {
+body main .perfil-func #alterar-dados {
     display: none;
     background-color: var(--cinza2);
     padding: 25px;
@@ -35,7 +35,7 @@ body main .perfil-cliente #alterar-dados {
 
 
 
-body main .perfil-cliente #alterar-dados label {
+body main .perfil-func #alterar-dados label {
     color: var(--branco);
 }
 
@@ -47,6 +47,10 @@ form fieldset {
 form fieldset legend {
     margin: 25px;
     padding: 25px;
+}
+
+.label-func label {
+    color: var(--preto);
 }
 
 form div {
@@ -70,9 +74,10 @@ form input:disabled {
     color: var(--branco);
 }
 
+
 /* Botao alterar */
 
-#botao-alterar button {
+#botao-alterary button {
     display: block;
     margin: 25px auto;
     width: 200px;
@@ -87,8 +92,19 @@ form input:disabled {
     text-transform: uppercase;
 }
 
-#alterar {
-    margin: auto;
+#alterar button{
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    background-color: var(--cor-principal);
+    
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14pt;
+    color: var(--branco);
+    text-transform: uppercase;
 }
 
 #alterar-desktop input {

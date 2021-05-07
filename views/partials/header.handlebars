@@ -6,14 +6,40 @@
     <nav id="menu">
         <img id="fechar" onclick="fechar_menu()" src="/img/fechar_min.png" alt="fechar">
         <ul>
+            {{#ifCond user.nivel 0 }}
+                <li><a href="/administrador">Home</a></li>
+                <li><a href="/administrador/cadastra-funcionario">Cadastra Funcionário</a></li>
+                <li><a href="/administrador/lista-de-clientes">Todos os clientes do Sistema</a></li>
+                <li><a href="/administrador/lista-de-funcionarios">Todos os funcionários</a></li>
+                <li><a href="/administrador/controle-de-caixa">Controle de Caixa</a></li>
+                <li><a href="/administrador/perfil-administrador">Meu Perfil</a></li>
+                <li><a href="/logout">Sair</a></li>
+            {{else}}
+            {{#ifCond user.nivel 1}}
+                <li><a href="/funcionario">Home</a></li>
+                <li><a href="/funcionario/lista-de-agendamentos">Lista de Agendamentos Pedidos</a></li>
+                <li><a href="/funcionario/confirmar-pagamento">Confirmação de Agendamentos</a></li>
+                <li><a href="/funcionario/apagar-cliente">Mostrar cliente</a></li>
+                <li><a href="/funcionario/perfil-funcionario">Meu Perfil</a></li>
+                <li><a href="/logout">Sair</a></li>
+            {{else}}
+            {{#ifCond user.nivel 2}}
+                <li><a href="/cliente">Home</a></li>
+                <li><a href="/cliente/agendamentos">Realizar agendamentos</a></li>
+                <li><a href="/cliente/lista-de-funcionarios">Lista de Funcionário</a></li>
+                <li><a href="/cliente/perfil-cliente">Meu Perfil</a></li>
+                <li><a href="/logout">Sair</a></li>
+            {{else}}
             <li><a href="/">Home</a></li>
             <li><a href="/#servicos">Serviços</a></li>
             <li><a href="/#galeria">Galeria</a></li>
             <li><a href="/#sobre">Sobre</a></li>
             <li class="link-login"><a href="/login">Login</a></li>
+            {{/ifCond}}
+            {{/ifCond}}
+            {{/ifCond}}
         </ul>
     </nav>
     <div id="esconder" onclick="fechar_menu()">
-
     </div>
 </header>
