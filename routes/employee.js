@@ -133,12 +133,12 @@ router.get('/perfil-funcionario/edit/', nivel1, (req, res) => {
     FuncionarioNovo.findOne({ _id: req.user._id }).then((funcionario) => {
         res.render("employee/edit-perfil", { funcionario: funcionario })
     }).catch((err) => {
-        req.flash("error_msg", "Erro" + err)
-        res.redirect("/funcionario/perfil-funcionario")
+        req.flash("error_msg", "Erro ao ver perfil" + err)
+        res.redirect("/funcionario")
     })
 })
 
-router.post('/perfil-funcionario/edit', (req, res) => {
+router.post('/perfil-funcionario/edit/',nivel1, (req, res) => {
     var erros = []
 
     if (!req.body.nome || typeof req.body.nome == undefined || req.body.nome == null) {
@@ -178,16 +178,17 @@ router.post('/perfil-funcionario/edit', (req, res) => {
     }
 
     if (erros.length > 0) {
-        res.render('funcionario/perfil-funcionario', { erros: erros })
+        res.render('employee/perfil-funcionario', { erros: erros })
     } else {
 
-        FuncionarioNovo.findOne({ _id: req.user._id }).then((funcionario) => {
+        FuncionarioNovo.findOne({ _id: req.body.id }).then((funcionario) => {
             funcionario.nome = req.body.nome,
             funcionario.userName = req.body.userName,
             funcionario.email = req.body.email,
             funcionario.cpf = req.body.cpf,
             funcionario.dataNasc = req.body.dataNasc,
             funcionario.senha = req.body.senha,
+            funcionario.tele = req.body.tele,
             funcionario.nivel = req.body.nivel
 
             bcrypt.genSalt(10, (erro, salt) => {
@@ -201,13 +202,16 @@ router.post('/perfil-funcionario/edit', (req, res) => {
 
                     funcionario.save().then(() => {
                         req.flash("success_msg", "Sucesso ao alterar dados!")
-                        res.redirect("funcionario/perfil-funcionario")
+                        res.redirect("/funcionario/perfil-funcionario")
                     }).catch((err) => {
-                        req.flash("error_msg", "Houve um erro ao tantar alterar os dados, tente novamente!")
+                        req.flash("error_msg", "Houve um erro ao tentar alterar os dados, tente novamente!")
                         res.redirect("/funcionario/perfil-funcionario" + err)
                     })
                 })
             })
+        }).catch((err)=>{
+            req.flash("error_msg","Houve um erro ao editar o perfil");
+            req.redirect("/funcionario/perfil-funcionario")
         })
     }
 })

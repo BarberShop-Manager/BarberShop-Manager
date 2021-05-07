@@ -111,6 +111,7 @@ router.post('/cadastro-funcionario/novo', (req, res) => {
                     ],
 
                     dataNasc: req.body.dataNasc,
+                    tele: req.body.tele,
                     senha: req.body.senha,
                     nivel: req.body.nivel
                 })
@@ -145,7 +146,7 @@ router.get('/lista-de-clientes', (req, res) => {
 
 })
 
-router.get('/lista-de-funcionarios',nivel0, (req, res) => {
+router.get('/lista-de-funcionarios', (req, res) => {
     FuncionarioNovo.find().sort({ data: "desc" }).then((funcionariosnovos) => {
         res.render("admin/lista-de-funcionarios", { funcionariosnovos: funcionariosnovos })
     }).catch((err) => {
@@ -154,7 +155,7 @@ router.get('/lista-de-funcionarios',nivel0, (req, res) => {
     })
 })
 
-router.get('/perfil-funcionario/:_id',nivel0, (req, res) => {
+router.get('/perfil-funcionario/:_id', (req, res) => {
     FuncionarioNovo.findOne({ _id: req.params._id }).then((funcionario) => {
         if (funcionario) {
             res.render("funcionario/perfil-funcionario", { funcionario: funcionario })
