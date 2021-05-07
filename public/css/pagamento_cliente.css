@@ -8,7 +8,7 @@
 #formulario {
     background: #545454;
     width: 400px;
-    height: 750px;
+    height: 100%;
     padding: 2rem;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
@@ -19,6 +19,7 @@
 }
 
 .label_text_color{
+    margin-bottom: 10px;
     color: var(--branco);
 }
 
@@ -33,7 +34,7 @@
     background-color: var(--cor-principal);
     color: var(--branco);
     height: 80px;
-    width: 350px;
+    width: 100%;
     border-radius: 10px;
     text-align: center;  
 }
@@ -49,7 +50,7 @@
 
 #observ{
     height: auto;
-    width: auto;
+    width: 100%;
     border-radius: 10px;
     margin: 20px;
 }
@@ -63,7 +64,6 @@
 }
 
 .text_esquerda {
-    float: left;
     color: #F2F2F2;
 }
 
@@ -73,9 +73,8 @@
 }
 
 #div_1 {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
 }
 
 

@@ -38,6 +38,9 @@ const FuncionarioNovo = new Schema({
         type: String,
         required: true
     },
+    tele:{
+        type: Number
+    },
     nivel: {
         type: Number,
         default: 1

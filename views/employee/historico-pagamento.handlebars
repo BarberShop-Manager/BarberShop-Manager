@@ -1,0 +1,25 @@
+<main>
+    
+        <h2>Historico de Cortes</h2>
+{{#each PagamentoNovo}}
+    <div class="carde" >
+        <h2>{{nome_do_funcionario}}  </h2>
+        <h3>Cliente:.........................{{Name_client}}</h3>
+        <h3>Serviço:.........................{{Service}}</h3>
+        <h3>Data:.............................{{Data_service}}</h3>
+        <h3>Horario:........................{{Hour_service}}</h3>
+        <h3>Forma de pagamento: {{Payment_form}}</h3>
+        <h3>Valor:............................{{Value}}</h3>
+        <h3>{{Observ}}</h3>
+    <div>
+
+       
+  
+
+    </div>
+    </div>
+    </div>
+</main>
+{{else}}
+    <h3>Não há Registro de Pagamentos!</h3>
+{{/each}}

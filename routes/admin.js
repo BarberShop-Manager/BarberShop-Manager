@@ -113,6 +113,7 @@ router.post('/cadastro-funcionario/novo', (req, res) => {
                     ],
 
                     dataNasc: req.body.dataNasc,
+                    tele: req.body.tele,
                     senha: req.body.senha,
                     nivel: req.body.nivel
                 })
