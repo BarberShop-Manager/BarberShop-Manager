@@ -35,8 +35,27 @@ router.post('/lista-de-agendamentos/deletar', nivel1, (req,res)=>{
     })
 })
 
+router.post('/lista-de-agendamentos/realizar', nivel1, (req,res)=>{
+    cadhorario.deleteOne({_id: req.body.id}).then(()=>{
+        res.redirect("/funcionario/confirmar-pagamento")
+    }).catch((err)=>{
+        req.flash("error_msg", "Erro ao tentar excluir agendamento "+err)
+        res.redirect("/funcionario/lista-de-agendamentos")
+    })
+})
+
 router.get('/confirmar-pagamento', nivel1, (req, res) => {
     res.render("employee/confirmar-pagamento")
+})
+
+router.get('/historico-pagamento', nivel1, (req, res) => {
+    PagamentoNovo.find().then((PagamentoNovo)=>{
+        res.render("employee/historico-pagamento",{PagamentoNovo:PagamentoNovo})
+    }).catch((err)=>{
+        req.flash("Erro ao exibir agendamentos" + err)
+        res.redirect("/employeer")
+    })
+    
 })
 
 router.post('/confirmar-pagamento/novo', nivel1, (req, res) => {

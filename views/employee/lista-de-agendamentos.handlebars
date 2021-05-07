@@ -21,11 +21,20 @@
         <form action="/funcionario/lista-de-agendamentos/deletar" method="POST">
             <input type="hidden" name="id" value="{{_id}}">
             <button type="submit" class="btn-deletar">Excluir agendamento</button>
+            
         </form>
+
+
+
+        <form action="/funcionario/lista-de-agendamentos/realizar" method="POST">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button type="submit" class="btn-deletar">Realizar Pagamento</button>
+
+        </form>
+
 
        
         
-        <button><a href="/funcionario/confirmar-pagamento">Realizar Pagamento</a></button>
         
 
     </div>
