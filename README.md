@@ -1,4 +1,4 @@
-<h1 align="center" ><img alt="" title="" src="/img/bsm_logo3.svg" width="300" height="300"></h1>
+<h1 align="center" ><img alt="" title="" src="public/img/bsm_logo3.svg" width="300" height="300"></h1>
 
 <h2 align="center"> BEM-VINDO AO PROJETO BARBERSHOP MANAGER</h2>
 
